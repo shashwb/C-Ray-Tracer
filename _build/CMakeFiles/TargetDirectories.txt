@@ -1,0 +1,7 @@
+/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/test.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/rebuild_cache.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/edit_cache.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/unittests.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray_automoc.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/unittests_automoc.dir
