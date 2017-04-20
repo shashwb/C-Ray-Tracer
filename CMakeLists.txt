@@ -13,7 +13,8 @@ find_package(Qt5 COMPONENTS Gui REQUIRED)
 
 # EDIT: add your (non-test) source files to this list
 set(src
-  
+  json_parser.h
+  json_parser.cpp
   )
 
 # EDIT: add any additional test source files to this list
