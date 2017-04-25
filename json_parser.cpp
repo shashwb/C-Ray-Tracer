@@ -161,7 +161,10 @@ Ray JSONParser::createPrimaryRay() {
     cout << "the height: " << height << endl;
     cout << "the width: " << width << endl;
 
+    Ray exampleRay;
+
     Sphere *tempSphere;  //this will store the object that is intersected
+    MotherOfObjects *tempObject;
     Pixels pixel;
 
     //iterate through all pixels
@@ -200,7 +203,8 @@ Ray JSONParser::createPrimaryRay() {
             }
 
         }
-    }
+    } //end of forloop i
+    return exampleRay;
 }
 
 Ray JSONParser::calculatePrimaryRay(int i, int j) {
