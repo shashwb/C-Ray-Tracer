@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/json_parser.h</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - json_parser.h<span style="font-size: 80%;"> (source / <a href="json_parser.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-04-25 04:08:42</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryLo">0.0 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #ifndef JSON_PARSER_H</a>
+<span class="lineNum">       2 </span>            : #define JSON_PARSER_H
+<span class="lineNum">       3 </span>            : 
+<span class="lineNum">       4 </span>            : #include &lt;QCoreApplication&gt;
+<span class="lineNum">       5 </span>            : #include &lt;iostream&gt;
+<span class="lineNum">       6 </span>            : #include &lt;QFile&gt;
+<span class="lineNum">       7 </span>            : #include &lt;QJsonParseError&gt;
+<span class="lineNum">       8 </span>            : #include &lt;QVariant&gt;
+<span class="lineNum">       9 </span>            : #include &lt;QDebug&gt;
+<span class="lineNum">      10 </span>            : #include &lt;QIODevice&gt;
+<span class="lineNum">      11 </span>            : #include &lt;QByteArray&gt;
+<span class="lineNum">      12 </span>            : #include &lt;QVariantMap&gt;
+<span class="lineNum">      13 </span>            : #include &lt;QObject&gt;
+<span class="lineNum">      14 </span>            : #include &lt;QJsonDocument&gt;
+<span class="lineNum">      15 </span>            : #include &lt;QJsonObject&gt;
+<span class="lineNum">      16 </span>            : #include &lt;QJsonArray&gt;
+<span class="lineNum">      17 </span>            : #include &lt;QImage&gt;
+<span class="lineNum">      18 </span>            : 
+<span class="lineNum">      19 </span>            : #include &lt;vector&gt;
+<span class="lineNum">      20 </span>            : 
+<span class="lineNum">      21 </span>            : #include &quot;lights.h&quot;
+<span class="lineNum">      22 </span>            : #include &quot;sphere.h&quot;
+<span class="lineNum">      23 </span>            : #include &quot;camera.h&quot;
+<span class="lineNum">      24 </span>            : #include &quot;plane.h&quot;
+<span class="lineNum">      25 </span>            : #include &quot;mother_of_objects.h&quot;
+<span class="lineNum">      26 </span>            : 
+<span class="lineNum">      27 </span>            : 
+<a name="28"><span class="lineNum">      28 </span>            : using namespace std;</a>
+<span class="lineNum">      29 </span>            : 
+<span class="lineNum">      30 </span><span class="lineNoCov">          0 : struct Pixels {</span>
+<span class="lineNum">      31 </span>            :     Coordinate coordinate;
+<span class="lineNum">      32 </span>            :     Color color;
+<span class="lineNum">      33 </span>            : };
+<span class="lineNum">      34 </span>            : 
+<span class="lineNum">      35 </span>            : 
+<span class="lineNum">      36 </span>            : 
+<span class="lineNum">      37 </span>            : class JSONParser
+<span class="lineNum">      38 </span>            : {
+<span class="lineNum">      39 </span>            : public:
+<span class="lineNum">      40 </span>            : 
+<span class="lineNum">      41 </span>            :     //PARSER WILL STORE MEMBER VARIABLES OF SPHERE AND PLANE ETC
+<span class="lineNum">      42 </span>            : 
+<span class="lineNum">      43 </span>            :     Sphere *sphere;  // we don't need a premade one
+<span class="lineNum">      44 </span>            :     Lights *light;   //we don't need a premade one, made once we read in the json
+<span class="lineNum">      45 </span>            :     Plane *plane;
+<span class="lineNum">      46 </span>            :     Camera *camera;
+<span class="lineNum">      47 </span>            : 
+<span class="lineNum">      48 </span>            : 
+<span class="lineNum">      49 </span>            :     vector&lt;MotherOfObjects*&gt; vecObjects;
+<span class="lineNum">      50 </span>            :     Ray primaryRay;
+<span class="lineNum">      51 </span>            : 
+<span class="lineNum">      52 </span>            :     vector&lt;Sphere&gt; *vecSphere;
+<span class="lineNum">      53 </span>            :     vector&lt;Plane&gt; *vecPlane;
+<span class="lineNum">      54 </span>            :     vector&lt;Lights&gt; vecLights;
+<span class="lineNum">      55 </span>            : 
+<span class="lineNum">      56 </span>            :     vector&lt;Pixels *&gt; pixelsVector;
+<span class="lineNum">      57 </span>            : 
+<span class="lineNum">      58 </span>            :     JSONParser();
+<span class="lineNum">      59 </span>            : 
+<span class="lineNum">      60 </span>            : //    bool Parse();
+<span class="lineNum">      61 </span>            :     bool Parse(QTextStream &amp;stream, int num);
+<span class="lineNum">      62 </span>            :     Ray createPrimaryRay();
+<span class="lineNum">      63 </span>            : 
+<span class="lineNum">      64 </span>            :     Ray shadowRayTracer(Coordinate poi, MotherOfObjects* object);
+<span class="lineNum">      65 </span>            :     Ray calculatePrimaryRay(int i, int j);
+<span class="lineNum">      66 </span>            : 
+<span class="lineNum">      67 </span>            : private:
+<span class="lineNum">      68 </span>            : 
+<span class="lineNum">      69 </span>            : 
+<span class="lineNum">      70 </span>            : 
+<span class="lineNum">      71 </span>            : };
+<span class="lineNum">      72 </span>            : 
+<span class="lineNum">      73 </span>            : #endif // JSON_PARSER_H
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

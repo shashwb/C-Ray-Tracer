@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - Coverage.combined.cleaned - /vagrant/json_parser.cpp</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../index.html">top level</a> - <a href="index.html">vagrant</a> - json_parser.cpp<span style="font-size: 80%;"> (source / <a href="json_parser.cpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">Coverage.combined.cleaned</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">116</td>
+            <td class="headerCovTableEntryLo">0.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2017-04-25 04:08:42</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryLo">28.6 %</td>
+          </tr>
+          <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : #include &quot;json_parser.h&quot;</a>
+<span class="lineNum">       2 </span>            : #include &quot;lights.h&quot;
+<span class="lineNum">       3 </span>            : #include &quot;camera.h&quot;
+<span class="lineNum">       4 </span>            : 
+<span class="lineNum">       5 </span>            : #include &lt;iostream&gt;
+<span class="lineNum">       6 </span>            : 
+<a name="7"><span class="lineNum">       7 </span>            : using namespace std;</a>
+<span class="lineNum">       8 </span>            : 
+<span class="lineNum">       9 </span><span class="lineNoCov">          0 : JSONParser::JSONParser()</span>
+<span class="lineNum">      10 </span>            : {
+<span class="lineNum">      11 </span>            : 
+<span class="lineNum">      12 </span><span class="lineNoCov">          0 : }</span>
+<span class="lineNum">      13 </span>            : 
+<a name="14"><span class="lineNum">      14 </span>            : </a>
+<span class="lineNum">      15 </span>            : 
+<span class="lineNum">      16 </span><span class="lineNoCov">          0 : bool JSONParser::Parse(QTextStream &amp;stream, int num) {</span>
+<span class="lineNum">      17 </span>            : 
+<span class="lineNum">      18 </span><span class="lineNoCov">          0 :     QFile jsonFile(&quot;/Users/sethbalodi/CODE/proj3_temp/scene0.json&quot;);</span>
+<span class="lineNum">      19 </span>            : 
+<span class="lineNum">      20 </span><span class="lineNoCov">          0 :     if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)) {</span>
+<span class="lineNum">      21 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;Unable to open file, exiting....&quot;;</span>
+<span class="lineNum">      22 </span><span class="lineNoCov">          0 :         return false;</span>
+<span class="lineNum">      23 </span>            :     }
+<span class="lineNum">      24 </span>            : 
+<span class="lineNum">      25 </span><span class="lineNoCov">          0 :     QByteArray jsonData = jsonFile.readAll();</span>
+<span class="lineNum">      26 </span><span class="lineNoCov">          0 :     QJsonParseError *err = new QJsonParseError();</span>
+<span class="lineNum">      27 </span><span class="lineNoCov">          0 :     QJsonDocument doc = QJsonDocument::fromJson(jsonData, err);</span>
+<span class="lineNum">      28 </span>            : 
+<span class="lineNum">      29 </span><span class="lineNoCov">          0 :     if (err-&gt;error != 0) {</span>
+<span class="lineNum">      30 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; err-&gt;errorString();</span>
+<span class="lineNum">      31 </span>            :     }
+<span class="lineNum">      32 </span>            : 
+<span class="lineNum">      33 </span><span class="lineNoCov">          0 :     if (doc.isNull()) {</span>
+<span class="lineNum">      34 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;Invalid json document, exiting...&quot;;</span>
+<span class="lineNum">      35 </span><span class="lineNoCov">          0 :         return false;</span>
+<span class="lineNum">      36 </span>            :     }
+<span class="lineNum">      37 </span>            : 
+<span class="lineNum">      38 </span><span class="lineNoCov">          0 :     else if (doc.isObject()) {</span>
+<span class="lineNum">      39 </span>            : 
+<span class="lineNum">      40 </span>            : //        Sphere *newSphere;
+<span class="lineNum">      41 </span>            : //        newSphere-&gt;center.x = 80;
+<span class="lineNum">      42 </span>            : //        newSphere-&gt;center.y = 40;
+<span class="lineNum">      43 </span>            : //        newSphere-&gt;center.z = 10;
+<span class="lineNum">      44 </span>            : 
+<span class="lineNum">      45 </span>            : //        Plane *newPlane;
+<span class="lineNum">      46 </span>            : //        newPlane-&gt;center.x = 600;
+<span class="lineNum">      47 </span>            : //        newPlane-&gt;center.y = 300;
+<span class="lineNum">      48 </span>            : //        newPlane-&gt;center.z = 200;
+<span class="lineNum">      49 </span>            : 
+<span class="lineNum">      50 </span>            : 
+<span class="lineNum">      51 </span>            : //        vecObjects.push_back(newSphere);
+<span class="lineNum">      52 </span>            : //        vecObjects.push_back(newPlane);
+<span class="lineNum">      53 </span>            : 
+<span class="lineNum">      54 </span>            : //        cout &lt;&lt; &quot;SIZE OF VECOBJECTS: &quot; &lt;&lt; vecObjects.size() &lt;&lt; endl;
+<span class="lineNum">      55 </span>            : 
+<span class="lineNum">      56 </span>            : //        for (int i = 0; i &lt; vecObjects.size(); i++) {
+<span class="lineNum">      57 </span>            : //            cout &lt;&lt; endl;
+<span class="lineNum">      58 </span>            : //            cout &lt;&lt; &quot;values inside&quot; &lt;&lt; vecObjects.at(i) &lt;&lt; endl;
+<span class="lineNum">      59 </span>            : //            cout &lt;&lt; endl;
+<span class="lineNum">      60 </span>            : //        }
+<span class="lineNum">      61 </span>            : 
+<span class="lineNum">      62 </span>            : 
+<span class="lineNum">      63 </span><span class="lineNoCov">          0 :         QJsonObject jObject = doc.object();</span>
+<span class="lineNum">      64 </span><span class="lineNoCov">          0 :         QVariantMap mainMap = jObject.toVariantMap();</span>
+<span class="lineNum">      65 </span>            : 
+<span class="lineNum">      66 </span>            :         //ALL CAMERA PARSING
+<span class="lineNum">      67 </span><span class="lineNoCov">          0 :         QVariantMap cameraMap = mainMap[&quot;camera&quot;].toMap();</span>
+<span class="lineNum">      68 </span>            : 
+<span class="lineNum">      69 </span>            :             //camera center
+<span class="lineNum">      70 </span><span class="lineNoCov">          0 :         QVariantMap camera_centerMap = cameraMap[&quot;center&quot;].toMap();</span>
+<span class="lineNum">      71 </span><span class="lineNoCov">          0 :         camera-&gt;center.x = camera_centerMap[&quot;x&quot;].toDouble();</span>
+<span class="lineNum">      72 </span><span class="lineNoCov">          0 :         camera-&gt;center.y = camera_centerMap[&quot;y&quot;].toDouble();</span>
+<span class="lineNum">      73 </span><span class="lineNoCov">          0 :         camera-&gt;center.z = camera_centerMap[&quot;z&quot;].toDouble();</span>
+<span class="lineNum">      74 </span>            : 
+<span class="lineNum">      75 </span>            :             //camera focus
+<span class="lineNum">      76 </span><span class="lineNoCov">          0 :         camera-&gt;focus = cameraMap[&quot;focus&quot;].toInt();</span>
+<span class="lineNum">      77 </span>            : 
+<span class="lineNum">      78 </span>            :             //camera normal
+<span class="lineNum">      79 </span><span class="lineNoCov">          0 :         QVariantMap normalMap = cameraMap[&quot;normal&quot;].toMap();</span>
+<span class="lineNum">      80 </span><span class="lineNoCov">          0 :         camera-&gt;normal.x = normalMap[&quot;x&quot;].toDouble();</span>
+<span class="lineNum">      81 </span><span class="lineNoCov">          0 :         camera-&gt;normal.y = normalMap[&quot;y&quot;].toDouble();</span>
+<span class="lineNum">      82 </span><span class="lineNoCov">          0 :         camera-&gt;normal.z = normalMap[&quot;z&quot;].toDouble();</span>
+<span class="lineNum">      83 </span>            : 
+<span class="lineNum">      84 </span>            : 
+<span class="lineNum">      85 </span><span class="lineNoCov">          0 :         QVariantList resolutionList = cameraMap[&quot;resolution&quot;].toList();</span>
+<span class="lineNum">      86 </span><span class="lineNoCov">          0 :         cout &lt;&lt; &quot;resolutionList size: &quot; &lt;&lt; resolutionList.size() &lt;&lt; endl;</span>
+<span class="lineNum">      87 </span><span class="lineNoCov">          0 :         camera-&gt;resolution.resolution_one = resolutionList.first().toDouble();</span>
+<span class="lineNum">      88 </span><span class="lineNoCov">          0 :         camera-&gt;resolution.resolution_two = resolutionList.at(1).toDouble();</span>
+<span class="lineNum">      89 </span>            : 
+<span class="lineNum">      90 </span><span class="lineNoCov">          0 :         QVariantList sizeList = cameraMap[&quot;size&quot;].toList();</span>
+<span class="lineNum">      91 </span><span class="lineNoCov">          0 :         camera-&gt;size.size_one = resolutionList.first().toDouble();</span>
+<span class="lineNum">      92 </span><span class="lineNoCov">          0 :         camera-&gt;size.size_two = resolutionList.at(1).toDouble();</span>
+<span class="lineNum">      93 </span>            :         //FINISH CAMERA PARSING
+<span class="lineNum">      94 </span>            : 
+<span class="lineNum">      95 </span>            : 
+<span class="lineNum">      96 </span>            :         //LIGHT PARSING
+<span class="lineNum">      97 </span><span class="lineNoCov">          0 :         QVariantMap lightMap = mainMap[&quot;lights&quot;].toMap();</span>
+<span class="lineNum">      98 </span><span class="lineNoCov">          0 :         light-&gt;intensity = lightMap[&quot;intensity&quot;].toDouble();</span>
+<span class="lineNum">      99 </span>            : 
+<span class="lineNum">     100 </span><span class="lineNoCov">          0 :         QVariantMap lightMap_location = lightMap[&quot;location&quot;].toMap();</span>
+<span class="lineNum">     101 </span><span class="lineNoCov">          0 :         light-&gt;loc.x = lightMap_location[&quot;x&quot;].toDouble();</span>
+<span class="lineNum">     102 </span><span class="lineNoCov">          0 :         light-&gt;loc.y = lightMap_location[&quot;y&quot;].toDouble();</span>
+<span class="lineNum">     103 </span><span class="lineNoCov">          0 :         light-&gt;loc.z = lightMap_location[&quot;z&quot;].toDouble();</span>
+<span class="lineNum">     104 </span>            :         //FINISH LIGHT PARSING
+<span class="lineNum">     105 </span>            : 
+<span class="lineNum">     106 </span><span class="lineNoCov">          0 :         QVariantList objectsList = mainMap[&quot;objects&quot;].toList();</span>
+<span class="lineNum">     107 </span><span class="lineNoCov">          0 :         cout &lt;&lt; &quot;objectList size: &quot; &lt;&lt; objectsList.size() &lt;&lt; endl;</span>
+<span class="lineNum">     108 </span>            : 
+<span class="lineNum">     109 </span><span class="lineNoCov">          0 :         QJsonValue objects = jObject.value(&quot;objects&quot;);</span>
+<span class="lineNum">     110 </span><span class="lineNoCov">          0 :         QJsonArray objectsArray = objects.toArray();</span>
+<span class="lineNum">     111 </span><span class="lineNoCov">          0 :         foreach (const QJsonValue &amp; v, objectsArray) {</span>
+<span class="lineNum">     112 </span><span class="lineNoCov">          0 :             qDebug() &lt;&lt; &quot;objects lambert value: &quot; &lt;&lt; v.toObject().value(&quot;lambert&quot;).toDouble();</span>
+<span class="lineNum">     113 </span>            : //            qDebug() &lt;&lt; &quot;objects radius value: &quot; &lt;&lt; v.toObject();
+<span class="lineNum">     114 </span>            :         }
+<span class="lineNum">     115 </span>            : 
+<span class="lineNum">     116 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;Center: x equals &quot; &lt;&lt; camera-&gt;center.x;</span>
+<span class="lineNum">     117 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;Center: y equals &quot; &lt;&lt; camera-&gt;center.y;</span>
+<span class="lineNum">     118 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;Center: z equals &quot; &lt;&lt; camera-&gt;center.z;</span>
+<span class="lineNum">     119 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;focus &quot; &lt;&lt; camera-&gt;focus;</span>
+<span class="lineNum">     120 </span>            : 
+<span class="lineNum">     121 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;normal.x : &quot; &lt;&lt; camera-&gt;normal.x;</span>
+<span class="lineNum">     122 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;normal.y : &quot; &lt;&lt; camera-&gt;normal.y;</span>
+<span class="lineNum">     123 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;normal.z : &quot; &lt;&lt; camera-&gt;normal.z;</span>
+<span class="lineNum">     124 </span>            : 
+<span class="lineNum">     125 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;resolution[1]: &quot; &lt;&lt; resolutionList.first().toDouble();</span>
+<span class="lineNum">     126 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;resolution[2]: &quot; &lt;&lt; resolutionList.at(1).toDouble();</span>
+<span class="lineNum">     127 </span>            : 
+<span class="lineNum">     128 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;size[1]: &quot; &lt;&lt; sizeList.first().toDouble();</span>
+<span class="lineNum">     129 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;CAMERA-&gt;size[2]: &quot; &lt;&lt; sizeList.at(1).toDouble();</span>
+<span class="lineNum">     130 </span>            : 
+<span class="lineNum">     131 </span>            :         //lights
+<span class="lineNum">     132 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;Lights.intensity : &quot; &lt;&lt; light-&gt;intensity;</span>
+<span class="lineNum">     133 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;Lights.loc.x : &quot; &lt;&lt; light-&gt;loc.x;</span>
+<span class="lineNum">     134 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;Lights.loc.y : &quot; &lt;&lt; light-&gt;loc.y;</span>
+<span class="lineNum">     135 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;Lights.loc.z : &quot; &lt;&lt; light-&gt;loc.z;</span>
+<span class="lineNum">     136 </span>            : 
+<span class="lineNum">     137 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT CENTER X&quot; &lt;&lt; sphere-&gt;center.x;</span>
+<span class="lineNum">     138 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT CENTER Y&quot; &lt;&lt; sphere-&gt;center.y;</span>
+<span class="lineNum">     139 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT CENTER Z&quot; &lt;&lt; sphere-&gt;center.z;</span>
+<span class="lineNum">     140 </span>            : 
+<span class="lineNum">     141 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT COLOR R&quot; &lt;&lt; sphere-&gt;center.x;</span>
+<span class="lineNum">     142 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT COLOR G&quot; &lt;&lt; sphere-&gt;center.y;</span>
+<span class="lineNum">     143 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT COLOR B&quot; &lt;&lt; sphere-&gt;center.z;</span>
+<span class="lineNum">     144 </span>            : 
+<span class="lineNum">     145 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT LAMBERT&quot; &lt;&lt; sphere-&gt;lambert;</span>
+<span class="lineNum">     146 </span><span class="lineNoCov">          0 :         qDebug() &lt;&lt; &quot;DEBUG OBJECT RADIUS&quot; &lt;&lt; sphere-&gt;radius;</span>
+<span class="lineNum">     147 </span>            : 
+<span class="lineNum">     148 </span><span class="lineNoCov">          0 :         return true;</span>
+<span class="lineNum">     149 </span>            :     }
+<span class="lineNum">     150 </span>            : 
+<span class="lineNum">     151 </span><span class="lineNoCov">          0 :     return false;</span>
+<span class="lineNum">     152 </span>            : }
+<span class="lineNum">     153 </span>            : 
+<span class="lineNum">     154 </span>            : 
+<a name="155"><span class="lineNum">     155 </span>            : </a>
+<span class="lineNum">     156 </span>            : 
+<span class="lineNum">     157 </span><span class="lineNoCov">          0 : Ray JSONParser::createPrimaryRay() {</span>
+<span class="lineNum">     158 </span><span class="lineNoCov">          0 :     int height = camera-&gt;size.size_one;</span>
+<span class="lineNum">     159 </span><span class="lineNoCov">          0 :     int width = camera-&gt;size.size_two;</span>
+<span class="lineNum">     160 </span>            : 
+<span class="lineNum">     161 </span><span class="lineNoCov">          0 :     cout &lt;&lt; &quot;the height: &quot; &lt;&lt; height &lt;&lt; endl;</span>
+<span class="lineNum">     162 </span><span class="lineNoCov">          0 :     cout &lt;&lt; &quot;the width: &quot; &lt;&lt; width &lt;&lt; endl;</span>
+<span class="lineNum">     163 </span>            : 
+<span class="lineNum">     164 </span><span class="lineNoCov">          0 :     Ray exampleRay;</span>
+<span class="lineNum">     165 </span>            : 
+<span class="lineNum">     166 </span>            :     Sphere *tempSphere;  //this will store the object that is intersected
+<span class="lineNum">     167 </span>            :     MotherOfObjects *tempObject;
+<span class="lineNum">     168 </span><span class="lineNoCov">          0 :     Pixels pixel;</span>
+<span class="lineNum">     169 </span>            : 
+<span class="lineNum">     170 </span>            :     //iterate through all pixels
+<span class="lineNum">     171 </span><span class="lineNoCov">          0 :     for (int i = 0; i &lt; height; i++) {</span>
+<span class="lineNum">     172 </span><span class="lineNoCov">          0 :         for (int j = 0; i &lt; width; j++) {</span>
+<span class="lineNum">     173 </span>            : 
+<span class="lineNum">     174 </span>            :             //calculate primary ray
+<span class="lineNum">     175 </span>            :             //JUST DO THIS ENTIRE FUNCTION ALL IN HERE!
+<span class="lineNum">     176 </span><span class="lineNoCov">          0 :             Ray primaryRay = calculatePrimaryRay(i, j); //NEED TO CALCULATE THIS &lt;- call primary ray function</span>
+<span class="lineNum">     177 </span>            : 
+<span class="lineNum">     178 </span><span class="lineNoCov">          0 :             double nearest_t = INFINITY;</span>
+<span class="lineNum">     179 </span><span class="lineNoCov">          0 :             bool intersect =  false;</span>
+<span class="lineNum">     180 </span>            : 
+<span class="lineNum">     181 </span><span class="lineNoCov">          0 :             for (int object_iterator = 0; object_iterator &lt; vecSphere-&gt;size(); object_iterator++) {</span>
+<span class="lineNum">     182 </span><span class="lineNoCov">          0 :                 tempSphere = &amp;vecSphere-&gt;at(object_iterator);</span>
+<span class="lineNum">     183 </span><span class="lineNoCov">          0 :                 intersect = tempSphere-&gt;intersect(primaryRay, nearest_t);</span>
+<span class="lineNum">     184 </span><span class="lineNoCov">          0 :                 if (intersect) {</span>
+<span class="lineNum">     185 </span>            :                     //if it intersects, then mark the place
+<span class="lineNum">     186 </span><span class="lineNoCov">          0 :                     tempSphere = &amp;vecSphere-&gt;at(object_iterator);</span>
+<span class="lineNum">     187 </span>            :                 }
+<span class="lineNum">     188 </span>            :             }
+<span class="lineNum">     189 </span>            :             //if it doesn't hit an object
+<span class="lineNum">     190 </span>            : //            if (tempSphere == nullptr) {
+<span class="lineNum">     191 </span>            :             if (true) {
+<span class="lineNum">     192 </span><span class="lineNoCov">          0 :                 pixel.coordinate.x = i;</span>
+<span class="lineNum">     193 </span><span class="lineNoCov">          0 :                 pixel.coordinate.y = j;</span>
+<span class="lineNum">     194 </span><span class="lineNoCov">          0 :                 pixel.coordinate.z = 0;</span>
+<span class="lineNum">     195 </span><span class="lineNoCov">          0 :                 pixel.color.r = 0;</span>
+<span class="lineNum">     196 </span><span class="lineNoCov">          0 :                 pixel.color.g = 0;</span>
+<span class="lineNum">     197 </span><span class="lineNoCov">          0 :                 pixel.color.b = 0;</span>
+<span class="lineNum">     198 </span>            :             }
+<span class="lineNum">     199 </span>            :             else {
+<span class="lineNum">     200 </span>            :                 //callShadowRay function()
+<span class="lineNum">     201 </span>            : 
+<span class="lineNum">     202 </span>            :                 //get the point of intersection to pass into the callshadow ray function!
+<span class="lineNum">     203 </span>            :             }
+<span class="lineNum">     204 </span>            : 
+<span class="lineNum">     205 </span>            :         }
+<span class="lineNum">     206 </span>            :     } //end of forloop i
+<span class="lineNum">     207 </span><span class="lineNoCov">          0 :     return exampleRay;</span>
+<a name="208"><span class="lineNum">     208 </span>            : }</a>
+<span class="lineNum">     209 </span>            : 
+<span class="lineNum">     210 </span><span class="lineNoCov">          0 : Ray JSONParser::calculatePrimaryRay(int i, int j) {</span>
+<span class="lineNum">     211 </span><span class="lineNoCov">          0 :     Coordinate first_point = camera-&gt;center - camera-&gt;normal * camera-&gt;focus;</span>
+<span class="lineNum">     212 </span><span class="lineNoCov">          0 :     Coordinate second_point(i, j, 0);</span>
+<span class="lineNum">     213 </span>            : 
+<span class="lineNum">     214 </span><span class="lineNoCov">          0 :     Coordinate temporary = second_point - first_point;</span>
+<span class="lineNum">     215 </span><span class="lineNoCov">          0 :     Coordinate direction = temporary; // need to normalize this shit</span>
+<span class="lineNum">     216 </span>            : 
+<span class="lineNum">     217 </span><span class="lineNoCov">          0 :     Ray finalRay;</span>
+<span class="lineNum">     218 </span><span class="lineNoCov">          0 :     finalRay.origin = first_point;</span>
+<span class="lineNum">     219 </span><span class="lineNoCov">          0 :     finalRay.direction = direction;</span>
+<span class="lineNum">     220 </span>            : 
+<span class="lineNum">     221 </span><span class="lineNoCov">          0 :     primaryRay.origin = first_point;</span>
+<span class="lineNum">     222 </span><span class="lineNoCov">          0 :     primaryRay.direction = direction;</span>
+<span class="lineNum">     223 </span>            : 
+<span class="lineNum">     224 </span><span class="lineNoCov">          0 :     return finalRay;</span>
+<span class="lineNum">     225 </span>            : }
+<span class="lineNum">     226 </span>            : 
+<a name="227"><span class="lineNum">     227 </span>            : </a>
+<span class="lineNum">     228 </span>            : //pass in the point of intersection
+<span class="lineNum">     229 </span><span class="lineNoCov">          0 : Ray JSONParser::shadowRayTracer(Coordinate poi, MotherOfObjects* object) {</span>
+<span class="lineNum">     230 </span>            : 
+<span class="lineNum">     231 </span>            :     //this is where we check the lights
+<span class="lineNum">     232 </span>            :     double nearest_t;
+<span class="lineNum">     233 </span>            : 
+<span class="lineNum">     234 </span><span class="lineNoCov">          0 :     for (int i = 0; i &lt; vecLights.size(); i++) {</span>
+<span class="lineNum">     235 </span><span class="lineNoCov">          0 :         Coordinate p2 = vecLights.at(i).loc - poi;</span>
+<span class="lineNum">     236 </span>            :         //create shadow ray
+<span class="lineNum">     237 </span><span class="lineNoCov">          0 :         Ray shadowRay(poi, p2);</span>
+<span class="lineNum">     238 </span>            : 
+<span class="lineNum">     239 </span><span class="lineNoCov">          0 :         for (int j = 0; j &lt; vecObjects.size(); j++) {</span>
+<span class="lineNum">     240 </span><span class="lineNoCov">          0 :             if (object != vecObjects.at(j)) {</span>
+<span class="lineNum">     241 </span>            : 
+<span class="lineNum">     242 </span>            :                 //if it doesn't intersect the same object
+<span class="lineNum">     243 </span>            :                 //if intersects another object, then color black
+<span class="lineNum">     244 </span><span class="lineNoCov">          0 :                 if (vecObjects[j]-&gt;intersect(shadowRay, nearest_t)) {</span>
+<span class="lineNum">     245 </span><span class="lineNoCov">          0 :                     break;</span>
+<span class="lineNum">     246 </span>            :                 }
+<span class="lineNum">     247 </span>            :                 else {
+<span class="lineNum">     248 </span>            : //                    double scale = vecObjects.at(j)-&gt;normal.dotProduct(shadowRay) * vecObjects.at(j)-&gt;lambert;
+<span class="lineNum">     249 </span>            : //                    Coordinate pixel_color = scale * vecLights.at(i).intensity * vecObjects.at(i)-&gt;color;
+<span class="lineNum">     250 </span>            : 
+<span class="lineNum">     251 </span>            :                 }
+<span class="lineNum">     252 </span>            : 
+<span class="lineNum">     253 </span>            :             }
+<span class="lineNum">     254 </span>            : 
+<span class="lineNum">     255 </span>            :         }
+<span class="lineNum">     256 </span>            : 
+<span class="lineNum">     257 </span>            :     }
+<a name="258"><span class="lineNum">     258 </span>            : </a>
+<span class="lineNum">     259 </span>            : 
+<span class="lineNum">     260 </span><span class="lineCov">          3 : }</span>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.12</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

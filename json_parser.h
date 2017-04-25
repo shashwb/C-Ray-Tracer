@@ -38,8 +38,6 @@ class JSONParser
 {
 public:
 
-    //PARSER WILL STORE MEMBER VARIABLES OF SPHERE AND PLANE ETC
-
     Sphere *sphere;  // we don't need a premade one
     Lights *light;   //we don't need a premade one, made once we read in the json
     Plane *plane;
