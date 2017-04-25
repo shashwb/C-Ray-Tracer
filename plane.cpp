@@ -21,11 +21,12 @@ void Plane::print() {
 
 bool Plane::intersect(Ray ray, double &out) {
 
-    double denomintor = dotProduct(normal, ray.direction);
+    double denomintor = normal.dotProduct(ray.direction);
     if (denomintor > 1e-6) {
 
         Coordinate p0 = normal - ray.origin;
-        out = dotProduct(p0, normal) / denomintor;
+//        out = dotProduct(p0, normal) / denomintor;
+        out = p0.dotProduct(normal) / denomintor;
         if (out >= 0) {
             return true;
         }

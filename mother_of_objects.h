@@ -41,9 +41,9 @@ struct Coordinate {
         return Coordinate(x/mg,y/mg,z/mg);
     }
 
-//    double dotProduct(const Coordinate &coordinate_one, const Coordinate &coordinate_two) {
-//        return (coordinate_one.x*coordinate_two.x + coordinate_one.y*coordinate_two.y + coordinate_one.z*coordinate_two.z);
-//    }
+    double dotProduct(const Coordinate &coordinate_two) {
+        return (this->x*coordinate_two.x + this->y*coordinate_two.y + this->z*coordinate_two.z);
+    }
 
 };
 
@@ -72,6 +72,8 @@ public:
     Ray ray;
     Coordinate coordinate;
     Color color;
+
+
     string type;
 
     MotherOfObjects();
@@ -80,9 +82,9 @@ public:
 
     virtual bool intersect(Ray ray, double &out) = 0;
 
-    double dotProduct(const Coordinate &coordinate_one, const Coordinate &coordinate_two) {
-        return (coordinate_one.x*coordinate_two.x + coordinate_one.y*coordinate_two.y + coordinate_one.z*coordinate_two.z);
-    }
+//    double dotProduct(const Coordinate &coordinate_one, const Coordinate &coordinate_two) {
+//        return (coordinate_one.x*coordinate_two.x + coordinate_one.y*coordinate_two.y + coordinate_one.z*coordinate_two.z);
+//    }
 
 
 private:

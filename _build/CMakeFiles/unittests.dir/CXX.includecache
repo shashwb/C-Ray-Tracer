@@ -8,6 +8,12 @@
 
 /Users/sethbalodi/CODE/project3-shashwb/_build/unittests_automoc.cpp
 
+/Users/sethbalodi/CODE/project3-shashwb/camera.h
+QDebug
+-
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+
 /Users/sethbalodi/CODE/project3-shashwb/catch.hpp
 sstream
 -
@@ -241,6 +247,10 @@ assert.h
 /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp
 json_parser.h
 /Users/sethbalodi/CODE/project3-shashwb/json_parser.h
+lights.h
+/Users/sethbalodi/CODE/project3-shashwb/lights.h
+camera.h
+/Users/sethbalodi/CODE/project3-shashwb/camera.h
 iostream
 -
 
@@ -269,6 +279,50 @@ QJsonDocument
 -
 QJsonObject
 -
+QJsonArray
+-
+QImage
+-
+vector
+-
+lights.h
+/Users/sethbalodi/CODE/project3-shashwb/lights.h
+sphere.h
+/Users/sethbalodi/CODE/project3-shashwb/sphere.h
+camera.h
+/Users/sethbalodi/CODE/project3-shashwb/camera.h
+plane.h
+/Users/sethbalodi/CODE/project3-shashwb/plane.h
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+
+/Users/sethbalodi/CODE/project3-shashwb/lights.h
+QDebug
+-
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+string
+-
+iostream
+-
+QDebug
+-
+math.h
+-
+
+/Users/sethbalodi/CODE/project3-shashwb/plane.h
+QDebug
+-
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+
+/Users/sethbalodi/CODE/project3-shashwb/sphere.h
+QDebug
+-
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
 
 /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp
 catch.hpp
@@ -293,6 +347,10 @@ qfile.h
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QIODevice
 qiodevice.h
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qiodevice.h
+
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonArray
+qjsonarray.h
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsonarray.h
 
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonDocument
 qjsondocument.h
@@ -404,6 +462,14 @@ QtCore/qscopedpointer.h
 QtCore/qstring.h
 -
 
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsonarray.h
+QtCore/qjsonvalue.h
+-
+QtCore/qiterator.h
+-
+initializer_list
+-
+
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsondocument.h
 QtCore/qjsonvalue.h
 -
@@ -456,5 +522,31 @@ QtCore/qstringlist.h
 QtCore/qobject.h
 -
 QtCore/qbytearraylist.h
+-
+
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/QImage
+qimage.h
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
+
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
+QtGui/qtguiglobal.h
+-
+QtGui/qcolor.h
+-
+QtGui/qrgb.h
+-
+QtGui/qpaintdevice.h
+-
+QtGui/qpixelformat.h
+-
+QtGui/qtransform.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qrect.h
+-
+QtCore/qstring.h
+-
+QtCore/qstringlist.h
 -
 

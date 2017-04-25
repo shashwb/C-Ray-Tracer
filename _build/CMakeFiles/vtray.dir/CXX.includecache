@@ -51,6 +51,8 @@ QJsonObject
 -
 QJsonArray
 -
+QImage
+-
 vector
 -
 lights.h
@@ -117,8 +119,16 @@ QJsonDocument
 -
 QJsonObject
 -
+QImage
+-
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
 json_parser.h
 /Users/sethbalodi/CODE/project3-shashwb/json_parser.h
+sphere.h
+/Users/sethbalodi/CODE/project3-shashwb/sphere.h
+plane.h
+/Users/sethbalodi/CODE/project3-shashwb/plane.h
 
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QByteArray
 qbytearray.h
@@ -314,5 +324,31 @@ QtCore/qstringlist.h
 QtCore/qobject.h
 -
 QtCore/qbytearraylist.h
+-
+
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/QImage
+qimage.h
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
+
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
+QtGui/qtguiglobal.h
+-
+QtGui/qcolor.h
+-
+QtGui/qrgb.h
+-
+QtGui/qpaintdevice.h
+-
+QtGui/qpixelformat.h
+-
+QtGui/qtransform.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qrect.h
+-
+QtCore/qstring.h
+-
+QtCore/qstringlist.h
 -
 

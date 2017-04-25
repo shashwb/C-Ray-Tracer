@@ -24,12 +24,12 @@ bool Sphere::intersect(Ray ray, double &out) {
     double out1, out2;
 
     Coordinate length =  center - ray.origin;
-    double tca = dotProduct(ray.origin, ray.direction);
+    double tca = ray.origin.dotProduct(ray.direction);
 
     if (tca < 0) {
         return false;
     }
-    double dot_solution = dotProduct(length, length) - (tca * tca);
+    double dot_solution = length.dotProduct(length) - (tca * tca);
     double radius_squared = radius * radius;
 
     if (dot_solution > radius_squared) {

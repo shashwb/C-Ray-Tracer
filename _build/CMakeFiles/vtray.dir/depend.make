@@ -30,6 +30,8 @@ CMakeFiles/vtray.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/l
 CMakeFiles/vtray.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsonobject.h
 CMakeFiles/vtray.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qobject.h
 CMakeFiles/vtray.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qvariant.h
+CMakeFiles/vtray.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/QImage
+CMakeFiles/vtray.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
 
 CMakeFiles/vtray.dir/vtray.cpp.o: ../camera.h
 CMakeFiles/vtray.dir/vtray.cpp.o: ../json_parser.h
@@ -60,6 +62,8 @@ CMakeFiles/vtray.dir/vtray.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtC
 CMakeFiles/vtray.dir/vtray.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsonobject.h
 CMakeFiles/vtray.dir/vtray.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qobject.h
 CMakeFiles/vtray.dir/vtray.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qvariant.h
+CMakeFiles/vtray.dir/vtray.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/QImage
+CMakeFiles/vtray.dir/vtray.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
 
 CMakeFiles/vtray.dir/vtray_automoc.cpp.o: vtray_automoc.cpp
 

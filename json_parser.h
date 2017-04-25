@@ -14,6 +14,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
+#include <QImage>
 
 #include <vector>
 
@@ -26,14 +27,11 @@
 
 using namespace std;
 
-struct Pixel {
+struct Pixels {
     Coordinate coordinate;
     Color color;
 };
 
-//double dotProduct(const Coordinate &coordinate_one, const Coordinate &coordinate_two) {
-//    return (coordinate_one.x*coordinate_two.x + coordinate_one.y*coordinate_two.y + coordinate_one.z*coordinate_two.z);
-//}
 
 
 class JSONParser
@@ -42,24 +40,29 @@ public:
 
     //PARSER WILL STORE MEMBER VARIABLES OF SPHERE AND PLANE ETC
 
-    Sphere sphere;  // we don't need a premade one
-    Lights light;   //we don't need a premade one, made once we read in the json
-    Plane plane;
-    Camera camera;
+    Sphere *sphere;  // we don't need a premade one
+    Lights *light;   //we don't need a premade one, made once we read in the json
+    Plane *plane;
+    Camera *camera;
 
 
     vector<MotherOfObjects*> vecObjects;
+    Ray primaryRay;
 
     vector<Sphere> *vecSphere;
     vector<Plane> *vecPlane;
     vector<Lights> vecLights;
-    vector<Coordinate> *vecPixels;
+
+    vector<Pixels *> pixelsVector;
+
     JSONParser();
 
-    bool Parse();
+//    bool Parse();
+    bool Parse(QTextStream &stream, int num);
     Ray createPrimaryRay();
 
     Ray shadowRayTracer(Coordinate poi, MotherOfObjects* object);
+    Ray calculatePrimaryRay(int i, int j);
 
 private:
 
