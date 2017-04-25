@@ -13,37 +13,27 @@
 #include <QObject>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QJsonArray>
+
+#include <vector>
+
+#include "lights.h"
+#include "sphere.h"
+#include "camera.h"
+#include "plane.h"
+#include "mother_of_objects.h"
 
 
+using namespace std;
 
-struct DeskWallpaper {
-      int width;
-      int height;
-      QString url;
+struct Pixel {
+    Coordinate coordinate;
+    Color color;
+};
 
-      int previewWidth;
-      int previewHeight;
-      QString previewUrl;
-
-      int thumbWidth;
-      int thumbHeight;
-      QString thumbUrl;
-
-      void printAll() {
-          qDebug() << "Image width: " << this->width;
-          qDebug() << "Image height: " << height;
-          qDebug() << "Image url: " << url;
-
-          qDebug() << "Preview width: " << previewWidth;
-          qDebug() << "Preview height: " << previewHeight;
-          qDebug() << "Preview url: " << previewUrl;
-
-          qDebug() << "Thumb width: " << thumbWidth;
-          qDebug() << "Thumb height: " << thumbHeight;
-          qDebug() << "Thumb url: " << thumbUrl;
-      }
-  };
-
+//double dotProduct(const Coordinate &coordinate_one, const Coordinate &coordinate_two) {
+//    return (coordinate_one.x*coordinate_two.x + coordinate_one.y*coordinate_two.y + coordinate_one.z*coordinate_two.z);
+//}
 
 
 class JSONParser
@@ -52,15 +42,28 @@ public:
 
     //PARSER WILL STORE MEMBER VARIABLES OF SPHERE AND PLANE ETC
 
-    DeskWallpaper wallpaper;
+    Sphere sphere;  // we don't need a premade one
+    Lights light;   //we don't need a premade one, made once we read in the json
+    Plane plane;
+    Camera camera;
 
+
+    vector<MotherOfObjects*> vecObjects;
+
+    vector<Sphere> *vecSphere;
+    vector<Plane> *vecPlane;
+    vector<Lights> vecLights;
+    vector<Coordinate> *vecPixels;
     JSONParser();
 
     bool Parse();
+    Ray createPrimaryRay();
+
+    Ray shadowRayTracer(Coordinate poi, MotherOfObjects* object);
 
 private:
 
-    //store all the variables here
+
 
 };
 
