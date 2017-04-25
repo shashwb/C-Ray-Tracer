@@ -327,6 +327,10 @@ mother_of_objects.h
 /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp
 catch.hpp
 /Users/sethbalodi/CODE/project3-shashwb/catch.hpp
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+sphere.h
+/Users/sethbalodi/CODE/project3-shashwb/sphere.h
 
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QByteArray
 qbytearray.h

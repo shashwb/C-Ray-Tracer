@@ -34,7 +34,11 @@ CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
 
 CMakeFiles/unittests.dir/unittests.cpp.o: ../catch.hpp
+CMakeFiles/unittests.dir/unittests.cpp.o: ../mother_of_objects.h
+CMakeFiles/unittests.dir/unittests.cpp.o: ../sphere.h
 CMakeFiles/unittests.dir/unittests.cpp.o: ../unittests.cpp
+CMakeFiles/unittests.dir/unittests.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QDebug
+CMakeFiles/unittests.dir/unittests.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qdebug.h
 
 CMakeFiles/unittests.dir/unittests_automoc.cpp.o: unittests_automoc.cpp
 

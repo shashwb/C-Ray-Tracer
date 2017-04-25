@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 find_package(Qt5 COMPONENTS Gui REQUIRED)
+find_package(Qt5Core)
 
 # EDIT: add your (non-test) source files to this list
 set(src
