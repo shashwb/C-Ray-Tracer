@@ -74,20 +74,36 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
         QJsonArray jsonLights = jObject["lights"].toArray();
 
-        //size of this array?
-        cout << "*******size of Light list? : " << jsonLights.size() << endl;
-
         QVariantMap lightsMap = mainMap["lights"].toMap();
+
+        cout << endl;
+        cout << "////// LIGHTS" << endl;
+        cout << "size of the vecLights before everything: " << vecLights.size() << endl;
+        vecLights.clear();
+        cout << "clearing...." << endl;
+        cout << "size of vecLights after clearing: " << vecLights.size() << endl;
 
         for (QJsonValue lightsValue : jsonLights) {
 		        QJsonObject lightObj = lightsValue.toObject();
-            light.intensity = lightObj["intensity"].toDouble();
+
+            Lights newLight;
+
+            newLight.intensity = lightObj["intensity"].toDouble();
+            cout << "newLight->intensity: " << newLight.intensity << endl;
 
             QVariantMap lightVariant = lightObj.toVariantMap();
             QVariantMap lightLocationMap = lightVariant["location"].toMap();
-            light.loc.x = lightLocationMap["x"].toDouble();
-            light.loc.y = lightLocationMap["y"].toDouble();
-            light.loc.z = lightLocationMap["z"].toDouble();
+            newLight.loc.x = lightLocationMap["x"].toDouble();
+            newLight.loc.y = lightLocationMap["y"].toDouble();
+            newLight.loc.z = lightLocationMap["z"].toDouble();
+            cout << "newLight LOCATION x -> " << newLight.loc.x << endl;
+            cout << "newLight LOCATION y -> " << newLight.loc.y << endl;
+            cout << "newLight LOCATION z -> " << newLight.loc.z << endl;
+
+            vecLights.push_back(&newLight);
+
+            cout << "PUSH BACK A LIGHT, current size of vector: " << vecLights.size() << endl;
+            cout << endl;
 	      }
 
 
@@ -96,6 +112,10 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
         cout << endl;
         cout << "////// OBJECTS" << endl;
+        cout << "size of vecObjects before everything: " << vecObjects.size() << endl;
+        vecObjects.clear();
+        cout << "clearing...." << endl;
+        cout << "size of vecObjects after clearing: " << vecObjects.size() << endl;
 
         for (QJsonValue objectsValue : jsonObjects) {
           QJsonObject objectObj = objectsValue.toObject();
@@ -116,26 +136,28 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             cout << "newSphere->center.y: " << newSphere.center.y << endl;
             cout << "newSphere->center.z: " << newSphere.center.z << endl;
 
-            sphere.color.x = objectColor["r"].toInt();
-            sphere.color.y = objectColor["g"].toInt();
-            sphere.color.z = objectColor["b"].toInt();
-            cout << "Sphere->color.x: " << sphere.color.x << endl;
-            cout << "Sphere->color.y: " << sphere.color.y << endl;
-            cout << "Sphere->color.z: " << sphere.color.z << endl;
+            newSphere.color.x = objectColor["r"].toInt();
+            newSphere.color.y = objectColor["g"].toInt();
+            newSphere.color.z = objectColor["b"].toInt();
+            cout << "newSphere->color.x: " << newSphere.color.x << endl;
+            cout << "newSphere->color.y: " << newSphere.color.y << endl;
+            cout << "newSphere->color.z: " << newSphere.color.z << endl;
 
-            sphere.lambert = objectObj["lambert"].toDouble();
-            sphere.radius = objectObj["radius"].toDouble();
+            newSphere.lambert = objectObj["lambert"].toDouble();
+            newSphere.radius = objectObj["radius"].toDouble();
 
-            cout << "Sphere->lambert: " << sphere.lambert << endl;
-            cout << "Sphere->radius: " << sphere.radius << endl;
+            cout << "newSphere->lambert: " << newSphere.lambert << endl;
+            cout << "newSphere->radius: " << newSphere.radius << endl;
 
             vecObjects.push_back(&newSphere);
+            cout << "PUSHED BACK A SPHERE, current size of vector: " << vecObjects.size() << endl;
 
           }
 
           else if (objectObj["type"].toString() == "plane") {
             cout << endl;
             cout << "THIS FUCKING OBJECT IS A PLANE" << endl;
+
             QVariantMap objectVariant = objectObj.toVariantMap();
             QVariantMap objectCenter = objectVariant["center"].toMap();
             QVariantMap objectColor = objectVariant["color"].toMap();
@@ -150,25 +172,25 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             cout << "newPlane->center.y: " << newPlane.center.y << endl;
             cout << "newPlane->center.z: " << newPlane.center.z << endl;
 
-            plane.color.x = objectColor["r"].toInt();
-            plane.color.y = objectColor["g"].toInt();
-            plane.color.z = objectColor["b"].toInt();
-            cout << "Plane->color.x: " << plane.color.x << endl;
-            cout << "Plane->color.y: " << plane.color.y << endl;
-            cout << "Plane->color.z: " << plane.color.z << endl;
+            newPlane.color.x = objectColor["r"].toInt();
+            newPlane.color.y = objectColor["g"].toInt();
+            newPlane.color.z = objectColor["b"].toInt();
+            cout << "newPlane->color.x: " << newPlane.color.x << endl;
+            cout << "newPlane->color.y: " << newPlane.color.y << endl;
+            cout << "newPlane->color.z: " << newPlane.color.z << endl;
 
-            plane.lambert = objectObj["lambert"].toDouble();
-            cout << "Plane->lambert: " << plane.lambert << endl;
+            newPlane.lambert = objectObj["lambert"].toDouble();
+            cout << "newPlane->lambert: " << newPlane.lambert << endl;
 
-            plane.normal.x = objectNormal["x"].toDouble();
-            plane.normal.y = objectNormal["y"].toDouble();
-            plane.normal.z = objectNormal["z"].toDouble();
-            cout << "Plane->normal.x: " << plane.normal.x << endl;
-            cout << "Plane->normal.y: " << plane.normal.y << endl;
-            cout << "Plane->normal.z: " << plane.normal.z << endl;
+            newPlane.normal.x = objectNormal["x"].toDouble();
+            newPlane.normal.y = objectNormal["y"].toDouble();
+            newPlane.normal.z = objectNormal["z"].toDouble();
+            cout << "newPlane->normal.x: " << newPlane.normal.x << endl;
+            cout << "newPlane->normal.y: " << newPlane.normal.y << endl;
+            cout << "newPlane->normal.z: " << newPlane.normal.z << endl;
 
             vecObjects.push_back(&newPlane);
-
+            cout << "PUSHED BACK A PLANE, current size of vector: " << vecObjects.size() << endl;
           }
           else {
             cout << "NOT A VALID TYPE OF OBJECT FROM JSON, EXITING" << endl;
@@ -176,9 +198,8 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
           }
         }
-
         cout << endl;
-        cout << "SIZE OF THE OBJECT VECTOR: " << vecObjects.size() << endl;
+        cout << "FINAL SIZE OF THE OBJECT VECTOR: " << vecObjects.size() << endl;
 
       cout << endl;
       cout << "////// CAMERA" << endl;
@@ -191,14 +212,7 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
       cout << "Camera->normal.z: " << camera.normal.z << endl;
       cout << "Camera->size: " << camera.size.size_one << " " << camera.size.size_two << endl;
       cout << "Camera->resolution: " << camera.resolution.resolution_one << " " << camera.resolution.resolution_two << endl;
-
       cout << endl;
-      cout << "////// LIGHTS" << endl;
-      cout << "Light->intensity: " << light.intensity << endl;
-      cout << "LIGHT INTENSITY -> " << light.intensity << endl;
-      cout << "LIGHT LOCATION x -> " << light.loc.x << endl;
-      cout << "LIGHT LOCATION y -> " << light.loc.y << endl;
-      cout << "LIGHT LOCATION z -> " << light.loc.z << endl;
 
         return true;
     }
@@ -287,7 +301,7 @@ Ray JSONParser::shadowRayTracer(Coordinate poi, MotherOfObjects* object) {
     double nearest_t;
 
     for (int i = 0; i < vecLights.size(); i++) {
-        Coordinate p2 = vecLights.at(i).loc - poi;
+        Coordinate p2 = vecLights.at(i)->loc - poi;
         //create shadow ray
         Ray shadowRay(poi, p2);
 

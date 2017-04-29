@@ -48,6 +48,7 @@ public:
 
 
     vector<MotherOfObjects*> vecObjects;  //vector of objects!!
+    vector<Lights*> vecLights;
 
 
     Ray primaryRay;
@@ -56,8 +57,6 @@ public:
     vector<Sphere> *vecSphere;
     vector<Plane> *vecPlane;
 
-
-    vector<Lights> vecLights;
     vector<Pixels*> pixelsVector;
 
     JSONParser();
