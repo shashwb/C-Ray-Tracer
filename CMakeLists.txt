@@ -16,6 +16,16 @@ find_package(Qt5Core)
 set(src
   json_parser.h
   json_parser.cpp
+  camera.cpp
+  camera.h
+  lights.cpp
+  lights.h
+  mother_of_objects.cpp
+  mother_of_objects.h
+  sphere.cpp
+  sphere.h
+  plane.cpp
+  plane.h
   )
 
 # EDIT: add any additional test source files to this list

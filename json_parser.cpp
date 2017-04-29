@@ -8,17 +8,15 @@ using namespace std;
 
 JSONParser::JSONParser()
 {
-
+  cout << "PARSER CREATED" << endl;
 }
 
 
 
 bool JSONParser::Parse(QTextStream &stream, int num) {
 
-
-  cout << "in the motherfucking parser biiiitich" << endl;
-
     QFile jsonFile("/Users/sethbalodi/CODE/proj3_temp/scene0.json");
+    // /Users/sethbalodi/CODE/proj3_temp/scene0.json
 
     if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qDebug() << "Unable to open file, exiting....";
@@ -26,7 +24,6 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
     }
 
     QByteArray jsonData = jsonFile.readAll();
-
     cout << "JSON Data:" << endl;
     cout << jsonData.toStdString() << endl;
 
@@ -44,8 +41,6 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
     else if (doc.isObject()) {
 
-      cout << "THIS DOCUMENT IS FUCKING VALID YOU BITCH" << endl;
-
         QJsonObject jObject = doc.object();
         QVariantMap mainMap = jObject.toVariantMap();
 
@@ -54,82 +49,156 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
             //camera center
         QVariantMap camera_centerMap = cameraMap["center"].toMap();
-        camera->center.x = camera_centerMap["x"].toDouble();
-        camera->center.y = camera_centerMap["y"].toDouble();
-        camera->center.z = camera_centerMap["z"].toDouble();
+
+        camera.center.x = camera_centerMap["x"].toDouble();
+        camera.center.y = camera_centerMap["y"].toDouble();
+        camera.center.z = camera_centerMap["z"].toDouble();
 
             //camera focus
-        camera->focus = cameraMap["focus"].toInt();
+        camera.focus = cameraMap["focus"].toInt();
 
             //camera normal
         QVariantMap normalMap = cameraMap["normal"].toMap();
-        camera->normal.x = normalMap["x"].toDouble();
-        camera->normal.y = normalMap["y"].toDouble();
-        camera->normal.z = normalMap["z"].toDouble();
+        camera.normal.x = normalMap["x"].toDouble();
+        camera.normal.y = normalMap["y"].toDouble();
+        camera.normal.z = normalMap["z"].toDouble();
 
 
         QVariantList resolutionList = cameraMap["resolution"].toList();
-        cout << "resolutionList size: " << resolutionList.size() << endl;
-        camera->resolution.resolution_one = resolutionList.first().toDouble();
-        camera->resolution.resolution_two = resolutionList.at(1).toDouble();
+        camera.resolution.resolution_one = resolutionList.first().toDouble();
+        camera.resolution.resolution_two = resolutionList.at(1).toDouble();
 
         QVariantList sizeList = cameraMap["size"].toList();
-        camera->size.size_one = resolutionList.first().toDouble();
-        camera->size.size_two = resolutionList.at(1).toDouble();
-        //FINISH CAMERA PARSING
+        camera.size.size_one = sizeList.first().toDouble();
+        camera.size.size_two = sizeList.at(1).toDouble();
+
+        QJsonArray jsonLights = jObject["lights"].toArray();
+
+        //size of this array?
+        cout << "*******size of Light list? : " << jsonLights.size() << endl;
+
+        QVariantMap lightsMap = mainMap["lights"].toMap();
+
+        for (QJsonValue lightsValue : jsonLights) {
+		        QJsonObject lightObj = lightsValue.toObject();
+            light.intensity = lightObj["intensity"].toDouble();
+
+            QVariantMap lightVariant = lightObj.toVariantMap();
+            QVariantMap lightLocationMap = lightVariant["location"].toMap();
+            light.loc.x = lightLocationMap["x"].toDouble();
+            light.loc.y = lightLocationMap["y"].toDouble();
+            light.loc.z = lightLocationMap["z"].toDouble();
+	      }
 
 
-        //LIGHT PARSING
-        QVariantMap lightMap = mainMap["lights"].toMap();
-        light->intensity = lightMap["intensity"].toDouble();
+        QJsonArray jsonObjects = jObject["objects"].toArray();
+        QVariantMap objectsMap = mainMap["objects"].toMap();
 
-        QVariantMap lightMap_location = lightMap["location"].toMap();
-        light->loc.x = lightMap_location["x"].toDouble();
-        light->loc.y = lightMap_location["y"].toDouble();
-        light->loc.z = lightMap_location["z"].toDouble();
-        //FINISH LIGHT PARSING
+        cout << endl;
+        cout << "////// OBJECTS" << endl;
 
-        QVariantList objectsList = mainMap["objects"].toList();
-        cout << "objectList size: " << objectsList.size() << endl;
+        for (QJsonValue objectsValue : jsonObjects) {
+          QJsonObject objectObj = objectsValue.toObject();
+          if (objectObj["type"].toString() == "sphere") {
+            cout << endl;
+            cout << "THIS FUCKING OBJECT IS A SPHERE" << endl;
 
-        QJsonValue objects = jObject.value("objects");
-        QJsonArray objectsArray = objects.toArray();
-        foreach (const QJsonValue & v, objectsArray) {
-            qDebug() << "objects lambert value: " << v.toObject().value("lambert").toDouble();
-//            qDebug() << "objects radius value: " << v.toObject();
+            //create a new sphere
+            Sphere newSphere;
+
+            QVariantMap objectVariant = objectObj.toVariantMap();
+            QVariantMap objectCenter = objectVariant["center"].toMap();
+            QVariantMap objectColor = objectVariant["color"].toMap();
+            newSphere.center.x = objectCenter["x"].toDouble();
+            newSphere.center.y = objectCenter["y"].toDouble();
+            newSphere.center.z = objectCenter["z"].toDouble();
+            cout << "newphere->center.x: " << newSphere.center.x << endl;
+            cout << "newSphere->center.y: " << newSphere.center.y << endl;
+            cout << "newSphere->center.z: " << newSphere.center.z << endl;
+
+            sphere.color.x = objectColor["r"].toInt();
+            sphere.color.y = objectColor["g"].toInt();
+            sphere.color.z = objectColor["b"].toInt();
+            cout << "Sphere->color.x: " << sphere.color.x << endl;
+            cout << "Sphere->color.y: " << sphere.color.y << endl;
+            cout << "Sphere->color.z: " << sphere.color.z << endl;
+
+            sphere.lambert = objectObj["lambert"].toDouble();
+            sphere.radius = objectObj["radius"].toDouble();
+
+            cout << "Sphere->lambert: " << sphere.lambert << endl;
+            cout << "Sphere->radius: " << sphere.radius << endl;
+
+            vecObjects.push_back(&newSphere);
+
+          }
+
+          else if (objectObj["type"].toString() == "plane") {
+            cout << endl;
+            cout << "THIS FUCKING OBJECT IS A PLANE" << endl;
+            QVariantMap objectVariant = objectObj.toVariantMap();
+            QVariantMap objectCenter = objectVariant["center"].toMap();
+            QVariantMap objectColor = objectVariant["color"].toMap();
+            QVariantMap objectNormal = objectVariant["normal"].toMap();
+
+            Plane newPlane;
+
+            newPlane.center.x = objectCenter["x"].toDouble();
+            newPlane.center.y = objectCenter["y"].toDouble();
+            newPlane.center.z = objectCenter["z"].toDouble();
+            cout << "newPlane->center.x: " << newPlane.center.x << endl;
+            cout << "newPlane->center.y: " << newPlane.center.y << endl;
+            cout << "newPlane->center.z: " << newPlane.center.z << endl;
+
+            plane.color.x = objectColor["r"].toInt();
+            plane.color.y = objectColor["g"].toInt();
+            plane.color.z = objectColor["b"].toInt();
+            cout << "Plane->color.x: " << plane.color.x << endl;
+            cout << "Plane->color.y: " << plane.color.y << endl;
+            cout << "Plane->color.z: " << plane.color.z << endl;
+
+            plane.lambert = objectObj["lambert"].toDouble();
+            cout << "Plane->lambert: " << plane.lambert << endl;
+
+            plane.normal.x = objectNormal["x"].toDouble();
+            plane.normal.y = objectNormal["y"].toDouble();
+            plane.normal.z = objectNormal["z"].toDouble();
+            cout << "Plane->normal.x: " << plane.normal.x << endl;
+            cout << "Plane->normal.y: " << plane.normal.y << endl;
+            cout << "Plane->normal.z: " << plane.normal.z << endl;
+
+            vecObjects.push_back(&newPlane);
+
+          }
+          else {
+            cout << "NOT A VALID TYPE OF OBJECT FROM JSON, EXITING" << endl;
+            return false;
+
+          }
         }
 
-        qDebug() << "CAMERA->Center: x equals " << camera->center.x;
-        qDebug() << "CAMERA->Center: y equals " << camera->center.y;
-        qDebug() << "CAMERA->Center: z equals " << camera->center.z;
-        qDebug() << "CAMERA->focus " << camera->focus;
+        cout << endl;
+        cout << "SIZE OF THE OBJECT VECTOR: " << vecObjects.size() << endl;
 
-        qDebug() << "CAMERA->normal.x : " << camera->normal.x;
-        qDebug() << "CAMERA->normal.y : " << camera->normal.y;
-        qDebug() << "CAMERA->normal.z : " << camera->normal.z;
+      cout << endl;
+      cout << "////// CAMERA" << endl;
+      cout << "Camera->center.x: " << camera.center.x << endl;
+      cout << "Camera->center.y: " << camera.center.y << endl;
+      cout << "Camera->center.z: " << camera.center.z << endl;
+      cout << "Camera->focus: " << camera.focus << endl;
+      cout << "Camera->normal.x: " << camera.normal.x << endl;
+      cout << "Camera->normal.y: " << camera.normal.y << endl;
+      cout << "Camera->normal.z: " << camera.normal.z << endl;
+      cout << "Camera->size: " << camera.size.size_one << " " << camera.size.size_two << endl;
+      cout << "Camera->resolution: " << camera.resolution.resolution_one << " " << camera.resolution.resolution_two << endl;
 
-        qDebug() << "CAMERA->resolution[1]: " << resolutionList.first().toDouble();
-        qDebug() << "CAMERA->resolution[2]: " << resolutionList.at(1).toDouble();
-
-        qDebug() << "CAMERA->size[1]: " << sizeList.first().toDouble();
-        qDebug() << "CAMERA->size[2]: " << sizeList.at(1).toDouble();
-
-        //lights
-        qDebug() << "Lights.intensity : " << light->intensity;
-        qDebug() << "Lights.loc.x : " << light->loc.x;
-        qDebug() << "Lights.loc.y : " << light->loc.y;
-        qDebug() << "Lights.loc.z : " << light->loc.z;
-
-        qDebug() << "DEBUG OBJECT CENTER X" << sphere->center.x;
-        qDebug() << "DEBUG OBJECT CENTER Y" << sphere->center.y;
-        qDebug() << "DEBUG OBJECT CENTER Z" << sphere->center.z;
-
-        qDebug() << "DEBUG OBJECT COLOR R" << sphere->center.x;
-        qDebug() << "DEBUG OBJECT COLOR G" << sphere->center.y;
-        qDebug() << "DEBUG OBJECT COLOR B" << sphere->center.z;
-
-        qDebug() << "DEBUG OBJECT LAMBERT" << sphere->lambert;
-        qDebug() << "DEBUG OBJECT RADIUS" << sphere->radius;
+      cout << endl;
+      cout << "////// LIGHTS" << endl;
+      cout << "Light->intensity: " << light.intensity << endl;
+      cout << "LIGHT INTENSITY -> " << light.intensity << endl;
+      cout << "LIGHT LOCATION x -> " << light.loc.x << endl;
+      cout << "LIGHT LOCATION y -> " << light.loc.y << endl;
+      cout << "LIGHT LOCATION z -> " << light.loc.z << endl;
 
         return true;
     }
@@ -141,8 +210,8 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
 
 Ray JSONParser::createPrimaryRay() {
-    int height = camera->size.size_one;
-    int width = camera->size.size_two;
+    int height = camera.size.size_one;
+    int width = camera.size.size_two;
 
     cout << "the height: " << height << endl;
     cout << "the width: " << width << endl;
@@ -194,7 +263,7 @@ Ray JSONParser::createPrimaryRay() {
 }
 
 Ray JSONParser::calculatePrimaryRay(int i, int j) {
-    Coordinate first_point = camera->center - camera->normal * camera->focus;
+    Coordinate first_point = camera.center - camera.normal * camera.focus;
     Coordinate second_point(i, j, 0);
 
     Coordinate temporary = second_point - first_point;

@@ -22,18 +22,18 @@ class Camera
 
 public:
 
-    Camera();
-
-    Camera(Coordinate center_value, int focus_value, Coordinate normal_value, Resolution res_value, Size size_value);
-
-    void print();
-
     Coordinate center;
     Coordinate normal;
     int focus;
     Size size;
     Resolution resolution;
     string type;
+
+    Camera();
+
+    Camera(Coordinate center_value, int focus_value, Coordinate normal_value, Resolution res_value, Size size_value);
+
+    void print();
 
 private:
 

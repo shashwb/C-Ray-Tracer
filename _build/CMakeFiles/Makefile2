@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /Users/sethbalodi/CODE/project3-shashwb/_build
 CMakeFiles/vtray.dir/all: CMakeFiles/vtray_automoc.dir/all
 	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/depend
 	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=6,7,8,9 "Built target vtray"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19 "Built target vtray"
 .PHONY : CMakeFiles/vtray.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/vtray.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/vtray.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/vtray.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles 0
 .PHONY : CMakeFiles/vtray.dir/rule
@@ -103,7 +103,7 @@ clean: CMakeFiles/vtray.dir/clean
 CMakeFiles/unittests.dir/all: CMakeFiles/unittests_automoc.dir/all
 	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/depend
 	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=1,2,3,4 "Built target unittests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target unittests"
 .PHONY : CMakeFiles/unittests.dir/all
 
 # Include target in all.
@@ -113,7 +113,7 @@ all: CMakeFiles/unittests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/unittests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/unittests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles 0
 .PHONY : CMakeFiles/unittests.dir/rule
@@ -140,7 +140,7 @@ clean: CMakeFiles/unittests.dir/clean
 CMakeFiles/vtray_automoc.dir/all:
 	$(MAKE) -f CMakeFiles/vtray_automoc.dir/build.make CMakeFiles/vtray_automoc.dir/depend
 	$(MAKE) -f CMakeFiles/vtray_automoc.dir/build.make CMakeFiles/vtray_automoc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=10 "Built target vtray_automoc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=20 "Built target vtray_automoc"
 .PHONY : CMakeFiles/vtray_automoc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -172,7 +172,7 @@ clean: CMakeFiles/vtray_automoc.dir/clean
 CMakeFiles/unittests_automoc.dir/all:
 	$(MAKE) -f CMakeFiles/unittests_automoc.dir/build.make CMakeFiles/unittests_automoc.dir/depend
 	$(MAKE) -f CMakeFiles/unittests_automoc.dir/build.make CMakeFiles/unittests_automoc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=5 "Built target unittests_automoc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=10 "Built target unittests_automoc"
 .PHONY : CMakeFiles/unittests_automoc.dir/all
 
 # Build rule for subdir invocation for target.

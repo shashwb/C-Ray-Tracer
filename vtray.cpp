@@ -22,22 +22,22 @@ using namespace std;
 
 void pngViewer(JSONParser parser, QString outputName) {
 
-    vector<Pixels *> pixels = parser.pixelsVector;
-
-    //image init
-    int width = parser.camera->size.size_one;
-    int height = parser.camera->size.size_two;
-
-    QImage pngImage(width, height, QImage::Format_RGB32);
-
-    //go through pixels list
-    for (int i = 0; i < pixels.size(); i++) {
-        QRgb rgb_value;
-        rgb_value = qRgb(pixels[i]->color.r, pixels[i]->color.g, pixels[i]->color.b);
-        pngImage.setPixel(pixels[i]->coordinate.x, pixels[i]->coordinate.y, rgb_value);
-
-    }
-    pngImage.save("save.png");
+    // vector<Pixels *> pixels = parser.pixelsVector;
+    //
+    // //image init
+    // int width = parser.camera->size.size_one;
+    // int height = parser.camera->size.size_two;
+    //
+    // QImage pngImage(width, height, QImage::Format_RGB32);
+    //
+    // //go through pixels list
+    // for (int i = 0; i < pixels.size(); i++) {
+    //     QRgb rgb_value;
+    //     rgb_value = qRgb(pixels[i]->color.r, pixels[i]->color.g, pixels[i]->color.b);
+    //     pngImage.setPixel(pixels[i]->coordinate.x, pixels[i]->coordinate.y, rgb_value);
+    //
+    // }
+    // pngImage.save("save.png");
 }
 
 
@@ -68,12 +68,12 @@ int main(int argc, char *argv[])
           cout << "cannot open device" << endl;
             return EXIT_FAILURE;
         }
-        if (parser.Parse(streamParse, 1)) {
+        if (!parser.Parse(streamParse, 1)) {
           cout << "why does this fail?" << endl;
             return EXIT_FAILURE;
         }
         else {
-          cout << "else everything else looks good! Procced!" << endl;
+          cout << "everything else looks good! Procced!" << endl;
           parser.Parse(streamParse, 1); //default number of threads
             // pngViewer(parser, QString::fromStdString(argv[2]));
         }

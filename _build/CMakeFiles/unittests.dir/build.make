@@ -105,9 +105,129 @@ CMakeFiles/unittests.dir/json_parser.cpp.o.provides: CMakeFiles/unittests.dir/js
 CMakeFiles/unittests.dir/json_parser.cpp.o.provides.build: CMakeFiles/unittests.dir/json_parser.cpp.o
 
 
+CMakeFiles/unittests.dir/camera.cpp.o: CMakeFiles/unittests.dir/flags.make
+CMakeFiles/unittests.dir/camera.cpp.o: ../camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/unittests.dir/camera.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unittests.dir/camera.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/camera.cpp
+
+CMakeFiles/unittests.dir/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unittests.dir/camera.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/camera.cpp > CMakeFiles/unittests.dir/camera.cpp.i
+
+CMakeFiles/unittests.dir/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unittests.dir/camera.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/camera.cpp -o CMakeFiles/unittests.dir/camera.cpp.s
+
+CMakeFiles/unittests.dir/camera.cpp.o.requires:
+
+.PHONY : CMakeFiles/unittests.dir/camera.cpp.o.requires
+
+CMakeFiles/unittests.dir/camera.cpp.o.provides: CMakeFiles/unittests.dir/camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/camera.cpp.o.provides.build
+.PHONY : CMakeFiles/unittests.dir/camera.cpp.o.provides
+
+CMakeFiles/unittests.dir/camera.cpp.o.provides.build: CMakeFiles/unittests.dir/camera.cpp.o
+
+
+CMakeFiles/unittests.dir/lights.cpp.o: CMakeFiles/unittests.dir/flags.make
+CMakeFiles/unittests.dir/lights.cpp.o: ../lights.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/unittests.dir/lights.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unittests.dir/lights.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/lights.cpp
+
+CMakeFiles/unittests.dir/lights.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unittests.dir/lights.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/lights.cpp > CMakeFiles/unittests.dir/lights.cpp.i
+
+CMakeFiles/unittests.dir/lights.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unittests.dir/lights.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/lights.cpp -o CMakeFiles/unittests.dir/lights.cpp.s
+
+CMakeFiles/unittests.dir/lights.cpp.o.requires:
+
+.PHONY : CMakeFiles/unittests.dir/lights.cpp.o.requires
+
+CMakeFiles/unittests.dir/lights.cpp.o.provides: CMakeFiles/unittests.dir/lights.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/lights.cpp.o.provides.build
+.PHONY : CMakeFiles/unittests.dir/lights.cpp.o.provides
+
+CMakeFiles/unittests.dir/lights.cpp.o.provides.build: CMakeFiles/unittests.dir/lights.cpp.o
+
+
+CMakeFiles/unittests.dir/mother_of_objects.cpp.o: CMakeFiles/unittests.dir/flags.make
+CMakeFiles/unittests.dir/mother_of_objects.cpp.o: ../mother_of_objects.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/unittests.dir/mother_of_objects.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unittests.dir/mother_of_objects.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp
+
+CMakeFiles/unittests.dir/mother_of_objects.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unittests.dir/mother_of_objects.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp > CMakeFiles/unittests.dir/mother_of_objects.cpp.i
+
+CMakeFiles/unittests.dir/mother_of_objects.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unittests.dir/mother_of_objects.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp -o CMakeFiles/unittests.dir/mother_of_objects.cpp.s
+
+CMakeFiles/unittests.dir/mother_of_objects.cpp.o.requires:
+
+.PHONY : CMakeFiles/unittests.dir/mother_of_objects.cpp.o.requires
+
+CMakeFiles/unittests.dir/mother_of_objects.cpp.o.provides: CMakeFiles/unittests.dir/mother_of_objects.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/mother_of_objects.cpp.o.provides.build
+.PHONY : CMakeFiles/unittests.dir/mother_of_objects.cpp.o.provides
+
+CMakeFiles/unittests.dir/mother_of_objects.cpp.o.provides.build: CMakeFiles/unittests.dir/mother_of_objects.cpp.o
+
+
+CMakeFiles/unittests.dir/sphere.cpp.o: CMakeFiles/unittests.dir/flags.make
+CMakeFiles/unittests.dir/sphere.cpp.o: ../sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/unittests.dir/sphere.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unittests.dir/sphere.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp
+
+CMakeFiles/unittests.dir/sphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unittests.dir/sphere.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp > CMakeFiles/unittests.dir/sphere.cpp.i
+
+CMakeFiles/unittests.dir/sphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unittests.dir/sphere.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp -o CMakeFiles/unittests.dir/sphere.cpp.s
+
+CMakeFiles/unittests.dir/sphere.cpp.o.requires:
+
+.PHONY : CMakeFiles/unittests.dir/sphere.cpp.o.requires
+
+CMakeFiles/unittests.dir/sphere.cpp.o.provides: CMakeFiles/unittests.dir/sphere.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/sphere.cpp.o.provides.build
+.PHONY : CMakeFiles/unittests.dir/sphere.cpp.o.provides
+
+CMakeFiles/unittests.dir/sphere.cpp.o.provides.build: CMakeFiles/unittests.dir/sphere.cpp.o
+
+
+CMakeFiles/unittests.dir/plane.cpp.o: CMakeFiles/unittests.dir/flags.make
+CMakeFiles/unittests.dir/plane.cpp.o: ../plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/unittests.dir/plane.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unittests.dir/plane.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/plane.cpp
+
+CMakeFiles/unittests.dir/plane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unittests.dir/plane.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/plane.cpp > CMakeFiles/unittests.dir/plane.cpp.i
+
+CMakeFiles/unittests.dir/plane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unittests.dir/plane.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/plane.cpp -o CMakeFiles/unittests.dir/plane.cpp.s
+
+CMakeFiles/unittests.dir/plane.cpp.o.requires:
+
+.PHONY : CMakeFiles/unittests.dir/plane.cpp.o.requires
+
+CMakeFiles/unittests.dir/plane.cpp.o.provides: CMakeFiles/unittests.dir/plane.cpp.o.requires
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/plane.cpp.o.provides.build
+.PHONY : CMakeFiles/unittests.dir/plane.cpp.o.provides
+
+CMakeFiles/unittests.dir/plane.cpp.o.provides.build: CMakeFiles/unittests.dir/plane.cpp.o
+
+
 CMakeFiles/unittests.dir/unittests_automoc.cpp.o: CMakeFiles/unittests.dir/flags.make
 CMakeFiles/unittests.dir/unittests_automoc.cpp.o: unittests_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/unittests.dir/unittests_automoc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/unittests.dir/unittests_automoc.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unittests.dir/unittests_automoc.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/_build/unittests_automoc.cpp
 
 CMakeFiles/unittests.dir/unittests_automoc.cpp.i: cmake_force
@@ -133,6 +253,11 @@ CMakeFiles/unittests.dir/unittests_automoc.cpp.o.provides.build: CMakeFiles/unit
 unittests_OBJECTS = \
 "CMakeFiles/unittests.dir/unittests.cpp.o" \
 "CMakeFiles/unittests.dir/json_parser.cpp.o" \
+"CMakeFiles/unittests.dir/camera.cpp.o" \
+"CMakeFiles/unittests.dir/lights.cpp.o" \
+"CMakeFiles/unittests.dir/mother_of_objects.cpp.o" \
+"CMakeFiles/unittests.dir/sphere.cpp.o" \
+"CMakeFiles/unittests.dir/plane.cpp.o" \
 "CMakeFiles/unittests.dir/unittests_automoc.cpp.o"
 
 # External object files for target unittests
@@ -140,12 +265,17 @@ unittests_EXTERNAL_OBJECTS =
 
 unittests: CMakeFiles/unittests.dir/unittests.cpp.o
 unittests: CMakeFiles/unittests.dir/json_parser.cpp.o
+unittests: CMakeFiles/unittests.dir/camera.cpp.o
+unittests: CMakeFiles/unittests.dir/lights.cpp.o
+unittests: CMakeFiles/unittests.dir/mother_of_objects.cpp.o
+unittests: CMakeFiles/unittests.dir/sphere.cpp.o
+unittests: CMakeFiles/unittests.dir/plane.cpp.o
 unittests: CMakeFiles/unittests.dir/unittests_automoc.cpp.o
 unittests: CMakeFiles/unittests.dir/build.make
 unittests: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui
 unittests: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore
 unittests: CMakeFiles/unittests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable unittests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable unittests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/unittests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -155,6 +285,11 @@ CMakeFiles/unittests.dir/build: unittests
 
 CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/unittests.cpp.o.requires
 CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/json_parser.cpp.o.requires
+CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/camera.cpp.o.requires
+CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/lights.cpp.o.requires
+CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/mother_of_objects.cpp.o.requires
+CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/sphere.cpp.o.requires
+CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/plane.cpp.o.requires
 CMakeFiles/unittests.dir/requires: CMakeFiles/unittests.dir/unittests_automoc.cpp.o.requires
 
 .PHONY : CMakeFiles/unittests.dir/requires

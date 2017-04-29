@@ -173,6 +173,36 @@ unittests_automoc/fast:
 	$(MAKE) -f CMakeFiles/unittests_automoc.dir/build.make CMakeFiles/unittests_automoc.dir/build
 .PHONY : unittests_automoc/fast
 
+camera.o: camera.cpp.o
+
+.PHONY : camera.o
+
+# target to build an object file
+camera.cpp.o:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/camera.cpp.o
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/camera.cpp.o
+.PHONY : camera.cpp.o
+
+camera.i: camera.cpp.i
+
+.PHONY : camera.i
+
+# target to preprocess a source file
+camera.cpp.i:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/camera.cpp.i
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/camera.cpp.i
+.PHONY : camera.cpp.i
+
+camera.s: camera.cpp.s
+
+.PHONY : camera.s
+
+# target to generate assembly for a file
+camera.cpp.s:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/camera.cpp.s
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/camera.cpp.s
+.PHONY : camera.cpp.s
+
 json_parser.o: json_parser.cpp.o
 
 .PHONY : json_parser.o
@@ -202,6 +232,126 @@ json_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/json_parser.cpp.s
 	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/json_parser.cpp.s
 .PHONY : json_parser.cpp.s
+
+lights.o: lights.cpp.o
+
+.PHONY : lights.o
+
+# target to build an object file
+lights.cpp.o:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/lights.cpp.o
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/lights.cpp.o
+.PHONY : lights.cpp.o
+
+lights.i: lights.cpp.i
+
+.PHONY : lights.i
+
+# target to preprocess a source file
+lights.cpp.i:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/lights.cpp.i
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/lights.cpp.i
+.PHONY : lights.cpp.i
+
+lights.s: lights.cpp.s
+
+.PHONY : lights.s
+
+# target to generate assembly for a file
+lights.cpp.s:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/lights.cpp.s
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/lights.cpp.s
+.PHONY : lights.cpp.s
+
+mother_of_objects.o: mother_of_objects.cpp.o
+
+.PHONY : mother_of_objects.o
+
+# target to build an object file
+mother_of_objects.cpp.o:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/mother_of_objects.cpp.o
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/mother_of_objects.cpp.o
+.PHONY : mother_of_objects.cpp.o
+
+mother_of_objects.i: mother_of_objects.cpp.i
+
+.PHONY : mother_of_objects.i
+
+# target to preprocess a source file
+mother_of_objects.cpp.i:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/mother_of_objects.cpp.i
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/mother_of_objects.cpp.i
+.PHONY : mother_of_objects.cpp.i
+
+mother_of_objects.s: mother_of_objects.cpp.s
+
+.PHONY : mother_of_objects.s
+
+# target to generate assembly for a file
+mother_of_objects.cpp.s:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/mother_of_objects.cpp.s
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/mother_of_objects.cpp.s
+.PHONY : mother_of_objects.cpp.s
+
+plane.o: plane.cpp.o
+
+.PHONY : plane.o
+
+# target to build an object file
+plane.cpp.o:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/plane.cpp.o
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/plane.cpp.o
+.PHONY : plane.cpp.o
+
+plane.i: plane.cpp.i
+
+.PHONY : plane.i
+
+# target to preprocess a source file
+plane.cpp.i:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/plane.cpp.i
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/plane.cpp.i
+.PHONY : plane.cpp.i
+
+plane.s: plane.cpp.s
+
+.PHONY : plane.s
+
+# target to generate assembly for a file
+plane.cpp.s:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/plane.cpp.s
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/plane.cpp.s
+.PHONY : plane.cpp.s
+
+sphere.o: sphere.cpp.o
+
+.PHONY : sphere.o
+
+# target to build an object file
+sphere.cpp.o:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/sphere.cpp.o
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/sphere.cpp.o
+.PHONY : sphere.cpp.o
+
+sphere.i: sphere.cpp.i
+
+.PHONY : sphere.i
+
+# target to preprocess a source file
+sphere.cpp.i:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/sphere.cpp.i
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/sphere.cpp.i
+.PHONY : sphere.cpp.i
+
+sphere.s: sphere.cpp.s
+
+.PHONY : sphere.s
+
+# target to generate assembly for a file
+sphere.cpp.s:
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/sphere.cpp.s
+	$(MAKE) -f CMakeFiles/unittests.dir/build.make CMakeFiles/unittests.dir/sphere.cpp.s
+.PHONY : sphere.cpp.s
 
 unittests.o: unittests.cpp.o
 
@@ -324,9 +474,24 @@ help:
 	@echo "... unittests"
 	@echo "... vtray_automoc"
 	@echo "... unittests_automoc"
+	@echo "... camera.o"
+	@echo "... camera.i"
+	@echo "... camera.s"
 	@echo "... json_parser.o"
 	@echo "... json_parser.i"
 	@echo "... json_parser.s"
+	@echo "... lights.o"
+	@echo "... lights.i"
+	@echo "... lights.s"
+	@echo "... mother_of_objects.o"
+	@echo "... mother_of_objects.i"
+	@echo "... mother_of_objects.s"
+	@echo "... plane.o"
+	@echo "... plane.i"
+	@echo "... plane.s"
+	@echo "... sphere.o"
+	@echo "... sphere.i"
+	@echo "... sphere.s"
 	@echo "... unittests.o"
 	@echo "... unittests.i"
 	@echo "... unittests.s"

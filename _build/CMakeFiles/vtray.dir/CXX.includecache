@@ -8,6 +8,10 @@
 
 /Users/sethbalodi/CODE/project3-shashwb/_build/vtray_automoc.cpp
 
+/Users/sethbalodi/CODE/project3-shashwb/camera.cpp
+camera.h
+/Users/sethbalodi/CODE/project3-shashwb/camera.h
+
 /Users/sethbalodi/CODE/project3-shashwb/camera.h
 QDebug
 -
@@ -66,9 +70,17 @@ plane.h
 mother_of_objects.h
 /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
 
+/Users/sethbalodi/CODE/project3-shashwb/lights.cpp
+lights.h
+/Users/sethbalodi/CODE/project3-shashwb/lights.h
+
 /Users/sethbalodi/CODE/project3-shashwb/lights.h
 QDebug
 -
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp
 mother_of_objects.h
 /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
 
@@ -82,11 +94,21 @@ QDebug
 math.h
 -
 
+/Users/sethbalodi/CODE/project3-shashwb/plane.cpp
+plane.h
+/Users/sethbalodi/CODE/project3-shashwb/plane.h
+math.h
+-
+
 /Users/sethbalodi/CODE/project3-shashwb/plane.h
 QDebug
 -
 mother_of_objects.h
 /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+
+/Users/sethbalodi/CODE/project3-shashwb/sphere.cpp
+sphere.h
+/Users/sethbalodi/CODE/project3-shashwb/sphere.h
 
 /Users/sethbalodi/CODE/project3-shashwb/sphere.h
 QDebug

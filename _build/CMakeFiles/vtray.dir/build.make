@@ -105,9 +105,129 @@ CMakeFiles/vtray.dir/json_parser.cpp.o.provides: CMakeFiles/vtray.dir/json_parse
 CMakeFiles/vtray.dir/json_parser.cpp.o.provides.build: CMakeFiles/vtray.dir/json_parser.cpp.o
 
 
+CMakeFiles/vtray.dir/camera.cpp.o: CMakeFiles/vtray.dir/flags.make
+CMakeFiles/vtray.dir/camera.cpp.o: ../camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vtray.dir/camera.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtray.dir/camera.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/camera.cpp
+
+CMakeFiles/vtray.dir/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtray.dir/camera.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/camera.cpp > CMakeFiles/vtray.dir/camera.cpp.i
+
+CMakeFiles/vtray.dir/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtray.dir/camera.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/camera.cpp -o CMakeFiles/vtray.dir/camera.cpp.s
+
+CMakeFiles/vtray.dir/camera.cpp.o.requires:
+
+.PHONY : CMakeFiles/vtray.dir/camera.cpp.o.requires
+
+CMakeFiles/vtray.dir/camera.cpp.o.provides: CMakeFiles/vtray.dir/camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/camera.cpp.o.provides.build
+.PHONY : CMakeFiles/vtray.dir/camera.cpp.o.provides
+
+CMakeFiles/vtray.dir/camera.cpp.o.provides.build: CMakeFiles/vtray.dir/camera.cpp.o
+
+
+CMakeFiles/vtray.dir/lights.cpp.o: CMakeFiles/vtray.dir/flags.make
+CMakeFiles/vtray.dir/lights.cpp.o: ../lights.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/vtray.dir/lights.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtray.dir/lights.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/lights.cpp
+
+CMakeFiles/vtray.dir/lights.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtray.dir/lights.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/lights.cpp > CMakeFiles/vtray.dir/lights.cpp.i
+
+CMakeFiles/vtray.dir/lights.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtray.dir/lights.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/lights.cpp -o CMakeFiles/vtray.dir/lights.cpp.s
+
+CMakeFiles/vtray.dir/lights.cpp.o.requires:
+
+.PHONY : CMakeFiles/vtray.dir/lights.cpp.o.requires
+
+CMakeFiles/vtray.dir/lights.cpp.o.provides: CMakeFiles/vtray.dir/lights.cpp.o.requires
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/lights.cpp.o.provides.build
+.PHONY : CMakeFiles/vtray.dir/lights.cpp.o.provides
+
+CMakeFiles/vtray.dir/lights.cpp.o.provides.build: CMakeFiles/vtray.dir/lights.cpp.o
+
+
+CMakeFiles/vtray.dir/mother_of_objects.cpp.o: CMakeFiles/vtray.dir/flags.make
+CMakeFiles/vtray.dir/mother_of_objects.cpp.o: ../mother_of_objects.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/vtray.dir/mother_of_objects.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtray.dir/mother_of_objects.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp
+
+CMakeFiles/vtray.dir/mother_of_objects.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtray.dir/mother_of_objects.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp > CMakeFiles/vtray.dir/mother_of_objects.cpp.i
+
+CMakeFiles/vtray.dir/mother_of_objects.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtray.dir/mother_of_objects.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp -o CMakeFiles/vtray.dir/mother_of_objects.cpp.s
+
+CMakeFiles/vtray.dir/mother_of_objects.cpp.o.requires:
+
+.PHONY : CMakeFiles/vtray.dir/mother_of_objects.cpp.o.requires
+
+CMakeFiles/vtray.dir/mother_of_objects.cpp.o.provides: CMakeFiles/vtray.dir/mother_of_objects.cpp.o.requires
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/mother_of_objects.cpp.o.provides.build
+.PHONY : CMakeFiles/vtray.dir/mother_of_objects.cpp.o.provides
+
+CMakeFiles/vtray.dir/mother_of_objects.cpp.o.provides.build: CMakeFiles/vtray.dir/mother_of_objects.cpp.o
+
+
+CMakeFiles/vtray.dir/sphere.cpp.o: CMakeFiles/vtray.dir/flags.make
+CMakeFiles/vtray.dir/sphere.cpp.o: ../sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/vtray.dir/sphere.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtray.dir/sphere.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp
+
+CMakeFiles/vtray.dir/sphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtray.dir/sphere.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp > CMakeFiles/vtray.dir/sphere.cpp.i
+
+CMakeFiles/vtray.dir/sphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtray.dir/sphere.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp -o CMakeFiles/vtray.dir/sphere.cpp.s
+
+CMakeFiles/vtray.dir/sphere.cpp.o.requires:
+
+.PHONY : CMakeFiles/vtray.dir/sphere.cpp.o.requires
+
+CMakeFiles/vtray.dir/sphere.cpp.o.provides: CMakeFiles/vtray.dir/sphere.cpp.o.requires
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/sphere.cpp.o.provides.build
+.PHONY : CMakeFiles/vtray.dir/sphere.cpp.o.provides
+
+CMakeFiles/vtray.dir/sphere.cpp.o.provides.build: CMakeFiles/vtray.dir/sphere.cpp.o
+
+
+CMakeFiles/vtray.dir/plane.cpp.o: CMakeFiles/vtray.dir/flags.make
+CMakeFiles/vtray.dir/plane.cpp.o: ../plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/vtray.dir/plane.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtray.dir/plane.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/plane.cpp
+
+CMakeFiles/vtray.dir/plane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/vtray.dir/plane.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sethbalodi/CODE/project3-shashwb/plane.cpp > CMakeFiles/vtray.dir/plane.cpp.i
+
+CMakeFiles/vtray.dir/plane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/vtray.dir/plane.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sethbalodi/CODE/project3-shashwb/plane.cpp -o CMakeFiles/vtray.dir/plane.cpp.s
+
+CMakeFiles/vtray.dir/plane.cpp.o.requires:
+
+.PHONY : CMakeFiles/vtray.dir/plane.cpp.o.requires
+
+CMakeFiles/vtray.dir/plane.cpp.o.provides: CMakeFiles/vtray.dir/plane.cpp.o.requires
+	$(MAKE) -f CMakeFiles/vtray.dir/build.make CMakeFiles/vtray.dir/plane.cpp.o.provides.build
+.PHONY : CMakeFiles/vtray.dir/plane.cpp.o.provides
+
+CMakeFiles/vtray.dir/plane.cpp.o.provides.build: CMakeFiles/vtray.dir/plane.cpp.o
+
+
 CMakeFiles/vtray.dir/vtray_automoc.cpp.o: CMakeFiles/vtray.dir/flags.make
 CMakeFiles/vtray.dir/vtray_automoc.cpp.o: vtray_automoc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/vtray.dir/vtray_automoc.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/vtray.dir/vtray_automoc.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/vtray.dir/vtray_automoc.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/_build/vtray_automoc.cpp
 
 CMakeFiles/vtray.dir/vtray_automoc.cpp.i: cmake_force
@@ -133,6 +253,11 @@ CMakeFiles/vtray.dir/vtray_automoc.cpp.o.provides.build: CMakeFiles/vtray.dir/vt
 vtray_OBJECTS = \
 "CMakeFiles/vtray.dir/vtray.cpp.o" \
 "CMakeFiles/vtray.dir/json_parser.cpp.o" \
+"CMakeFiles/vtray.dir/camera.cpp.o" \
+"CMakeFiles/vtray.dir/lights.cpp.o" \
+"CMakeFiles/vtray.dir/mother_of_objects.cpp.o" \
+"CMakeFiles/vtray.dir/sphere.cpp.o" \
+"CMakeFiles/vtray.dir/plane.cpp.o" \
 "CMakeFiles/vtray.dir/vtray_automoc.cpp.o"
 
 # External object files for target vtray
@@ -140,12 +265,17 @@ vtray_EXTERNAL_OBJECTS =
 
 vtray: CMakeFiles/vtray.dir/vtray.cpp.o
 vtray: CMakeFiles/vtray.dir/json_parser.cpp.o
+vtray: CMakeFiles/vtray.dir/camera.cpp.o
+vtray: CMakeFiles/vtray.dir/lights.cpp.o
+vtray: CMakeFiles/vtray.dir/mother_of_objects.cpp.o
+vtray: CMakeFiles/vtray.dir/sphere.cpp.o
+vtray: CMakeFiles/vtray.dir/plane.cpp.o
 vtray: CMakeFiles/vtray.dir/vtray_automoc.cpp.o
 vtray: CMakeFiles/vtray.dir/build.make
 vtray: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui
 vtray: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore
 vtray: CMakeFiles/vtray.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable vtray"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable vtray"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vtray.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -155,6 +285,11 @@ CMakeFiles/vtray.dir/build: vtray
 
 CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/vtray.cpp.o.requires
 CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/json_parser.cpp.o.requires
+CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/camera.cpp.o.requires
+CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/lights.cpp.o.requires
+CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/mother_of_objects.cpp.o.requires
+CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/sphere.cpp.o.requires
+CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/plane.cpp.o.requires
 CMakeFiles/vtray.dir/requires: CMakeFiles/vtray.dir/vtray_automoc.cpp.o.requires
 
 .PHONY : CMakeFiles/vtray.dir/requires

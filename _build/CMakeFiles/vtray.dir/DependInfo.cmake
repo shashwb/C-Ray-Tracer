@@ -4,7 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/sethbalodi/CODE/project3-shashwb/camera.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/camera.cpp.o"
   "/Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/json_parser.cpp.o"
+  "/Users/sethbalodi/CODE/project3-shashwb/lights.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/lights.cpp.o"
+  "/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/mother_of_objects.cpp.o"
+  "/Users/sethbalodi/CODE/project3-shashwb/plane.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/plane.cpp.o"
+  "/Users/sethbalodi/CODE/project3-shashwb/sphere.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/sphere.cpp.o"
   "/Users/sethbalodi/CODE/project3-shashwb/vtray.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/vtray.cpp.o"
   "/Users/sethbalodi/CODE/project3-shashwb/_build/vtray_automoc.cpp" "/Users/sethbalodi/CODE/project3-shashwb/_build/CMakeFiles/vtray.dir/vtray_automoc.cpp.o"
   )

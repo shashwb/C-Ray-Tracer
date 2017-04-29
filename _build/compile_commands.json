@@ -11,6 +11,31 @@
 },
 {
   "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/camera.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/camera.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/camera.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/lights.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/lights.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/lights.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/mother_of_objects.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/sphere.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/sphere.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/plane.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/plane.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/plane.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
   "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/vtray.dir/vtray_automoc.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/_build/vtray_automoc.cpp",
   "file": "/Users/sethbalodi/CODE/project3-shashwb/_build/vtray_automoc.cpp"
 },
@@ -23,6 +48,31 @@
   "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
   "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/json_parser.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp",
   "file": "/Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/camera.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/camera.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/camera.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/lights.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/lights.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/lights.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/mother_of_objects.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/sphere.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/sphere.cpp"
+},
+{
+  "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -I/Users/sethbalodi/CODE/project3-shashwb/_build -I/Users/sethbalodi/CODE/project3-shashwb -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk   -fPIC -std=gnu++11 -o CMakeFiles/unittests.dir/plane.cpp.o -c /Users/sethbalodi/CODE/project3-shashwb/plane.cpp",
+  "file": "/Users/sethbalodi/CODE/project3-shashwb/plane.cpp"
 },
 {
   "directory": "/Users/sethbalodi/CODE/project3-shashwb/_build",

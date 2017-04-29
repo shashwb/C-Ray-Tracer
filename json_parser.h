@@ -24,8 +24,9 @@
 #include "plane.h"
 #include "mother_of_objects.h"
 
-
 using namespace std;
+
+
 
 struct Pixels {
     Coordinate coordinate;
@@ -33,29 +34,34 @@ struct Pixels {
 };
 
 
-
 class JSONParser
 {
 public:
 
-    Sphere *sphere;  // we don't need a premade one
-    Lights *light;   //we don't need a premade one, made once we read in the json
-    Plane *plane;
-    Camera *camera;
+    Sphere sphere;  // we don't need a premade one
+    Lights light;   //we don't need a premade one, made once we read in the json
+
+    Plane plane;
+    Camera camera;
+
+    // Camera normalCamera;
 
 
-    vector<MotherOfObjects*> vecObjects;
+    vector<MotherOfObjects*> vecObjects;  //vector of objects!!
+
+
     Ray primaryRay;
 
+    //CAN PROBABLY GET RID OF ALL OF THIS SHIT
     vector<Sphere> *vecSphere;
     vector<Plane> *vecPlane;
-    vector<Lights> vecLights;
 
-    vector<Pixels *> pixelsVector;
+
+    vector<Lights> vecLights;
+    vector<Pixels*> pixelsVector;
 
     JSONParser();
 
-//    bool Parse();
     bool Parse(QTextStream &stream, int num);
     Ray createPrimaryRay();
 
