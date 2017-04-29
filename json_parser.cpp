@@ -15,6 +15,9 @@ JSONParser::JSONParser()
 
 bool JSONParser::Parse(QTextStream &stream, int num) {
 
+
+  cout << "in the motherfucking parser biiiitich" << endl;
+
     QFile jsonFile("/Users/sethbalodi/CODE/proj3_temp/scene0.json");
 
     if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -23,6 +26,10 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
     }
 
     QByteArray jsonData = jsonFile.readAll();
+
+    cout << "JSON Data:" << endl;
+    cout << jsonData.toStdString() << endl;
+
     QJsonParseError *err = new QJsonParseError();
     QJsonDocument doc = QJsonDocument::fromJson(jsonData, err);
 
@@ -37,28 +44,7 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
     else if (doc.isObject()) {
 
-//        Sphere *newSphere;
-//        newSphere->center.x = 80;
-//        newSphere->center.y = 40;
-//        newSphere->center.z = 10;
-
-//        Plane *newPlane;
-//        newPlane->center.x = 600;
-//        newPlane->center.y = 300;
-//        newPlane->center.z = 200;
-
-
-//        vecObjects.push_back(newSphere);
-//        vecObjects.push_back(newPlane);
-
-//        cout << "SIZE OF VECOBJECTS: " << vecObjects.size() << endl;
-
-//        for (int i = 0; i < vecObjects.size(); i++) {
-//            cout << endl;
-//            cout << "values inside" << vecObjects.at(i) << endl;
-//            cout << endl;
-//        }
-
+      cout << "THIS DOCUMENT IS FUCKING VALID YOU BITCH" << endl;
 
         QJsonObject jObject = doc.object();
         QVariantMap mainMap = jObject.toVariantMap();

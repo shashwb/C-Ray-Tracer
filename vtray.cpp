@@ -46,34 +46,42 @@ int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
+    cout << "MAIN FUNCTION" << endl;
+
     JSONParser parser;
 
     if (argc < 3) {
+        cout << "Too little arguments!" << endl;
         return EXIT_FAILURE;
     }
-    else if (argc == 3) {
-        QFile inputFile(argv[1]);
+    else if (argc == 4) {
+
+        cout << "proper number of arguments!" << endl;
+
+        QFile inputFile(argv[2]);
+
+        cout << "input file: " << argv[2] << endl;
+
         QTextStream streamParse(&inputFile);
+
         if (!inputFile.open(QIODevice::ReadWrite | QIODevice::Text)) {
+          cout << "cannot open device" << endl;
             return EXIT_FAILURE;
         }
         if (parser.Parse(streamParse, 1)) {
+          cout << "why does this fail?" << endl;
             return EXIT_FAILURE;
         }
         else {
-            pngViewer(parser, QString::fromStdString(argv[2]));
+          cout << "else everything else looks good! Procced!" << endl;
+          parser.Parse(streamParse, 1); //default number of threads
+            // pngViewer(parser, QString::fromStdString(argv[2]));
         }
         return EXIT_SUCCESS;
     }
-    else if (argc == 5) {
-
-        QFile inputFile(argv[3]);
-        QTextStream streamParse(&inputFile);
-        int threads;
-
-//        else if (string(argv[2]) == "-t") {
-//            threads = stoii(argv[1]);
-//        }
+    else if (argc >= 5) {
+      cout << "way too many arguments, calm down there buddy!" << endl;
+        return EXIT_FAILURE;
 
     }
 
