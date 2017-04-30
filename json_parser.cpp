@@ -1,8 +1,9 @@
 #include "json_parser.h"
 #include "lights.h"
 #include "camera.h"
-
+#include <typeinfo>
 #include <iostream>
+#include "mother_of_objects.h"
 
 using namespace std;
 
@@ -16,8 +17,6 @@ JSONParser::JSONParser()
 bool JSONParser::Parse(QTextStream &stream, int num) {
 
     QFile jsonFile("/Users/sethbalodi/CODE/proj3_temp/scene0.json");
-    // /Users/sethbalodi/CODE/proj3_temp/scene0.json
-
     if (!jsonFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         qDebug() << "Unable to open file, exiting....";
         return false;
@@ -26,7 +25,6 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
     QByteArray jsonData = jsonFile.readAll();
     cout << "JSON Data:" << endl;
     cout << jsonData.toStdString() << endl;
-
     QJsonParseError *err = new QJsonParseError();
     QJsonDocument doc = QJsonDocument::fromJson(jsonData, err);
 
@@ -44,25 +42,37 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
         QJsonObject jObject = doc.object();
         QVariantMap mainMap = jObject.toVariantMap();
 
-        //ALL CAMERA PARSING
         QVariantMap cameraMap = mainMap["camera"].toMap();
-
-            //camera center
         QVariantMap camera_centerMap = cameraMap["center"].toMap();
+
+        //DEBUGGING CODE
+        double double_val = 0;
+        string double_type = typeid(double_val).name();
+        cout << "****TYPE OF DOUBLE VAL : " << double_type << endl;
+        int int_val = 20;
+        string int_type = typeid(int_val).name();
+        cout << "****TYPE OF INT VAL : " << int_type << endl;
+        string camera_type_x = typeid(camera.center.x).name();
+        cout << "******TYPE OF CAMERA CENTER X -> " << camera_type_x << endl;
+        string camera_type_y = typeid(camera_centerMap["y"].toDouble()).name();
+        string camera_type_z = typeid(camera_centerMap["z"].toDouble()).name();
+        if (camera_type_x != double_type || camera_type_y != double_type || camera_type_z != double_type) {
+          cout << "ERROR: did not parse a valid double value into camera center" << endl;
+          return false;
+        }
+        //DEBUGGING CODE
+
+        cout << "SUCCESS: parsed a valid double value" << endl;
 
         camera.center.x = camera_centerMap["x"].toDouble();
         camera.center.y = camera_centerMap["y"].toDouble();
         camera.center.z = camera_centerMap["z"].toDouble();
 
-            //camera focus
         camera.focus = cameraMap["focus"].toInt();
-
-            //camera normal
         QVariantMap normalMap = cameraMap["normal"].toMap();
         camera.normal.x = normalMap["x"].toDouble();
         camera.normal.y = normalMap["y"].toDouble();
         camera.normal.z = normalMap["z"].toDouble();
-
 
         QVariantList resolutionList = cameraMap["resolution"].toList();
         camera.resolution.resolution_one = resolutionList.first().toDouble();
@@ -73,7 +83,6 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
         camera.size.size_two = sizeList.at(1).toDouble();
 
         QJsonArray jsonLights = jObject["lights"].toArray();
-
         QVariantMap lightsMap = mainMap["lights"].toMap();
 
         cout << endl;
@@ -124,32 +133,35 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             cout << "THIS FUCKING OBJECT IS A SPHERE" << endl;
 
             //create a new sphere
-            Sphere newSphere;
+            // MotherOfObjects newSphere = new Sphere;
+            MotherOfObjects *newSphere = new Sphere;
+
+            // newSphere.type = objectObj["type"].toString();
 
             QVariantMap objectVariant = objectObj.toVariantMap();
             QVariantMap objectCenter = objectVariant["center"].toMap();
             QVariantMap objectColor = objectVariant["color"].toMap();
-            newSphere.center.x = objectCenter["x"].toDouble();
-            newSphere.center.y = objectCenter["y"].toDouble();
-            newSphere.center.z = objectCenter["z"].toDouble();
-            cout << "newphere->center.x: " << newSphere.center.x << endl;
-            cout << "newSphere->center.y: " << newSphere.center.y << endl;
-            cout << "newSphere->center.z: " << newSphere.center.z << endl;
+            newSphere->center.x = objectCenter["x"].toDouble();
+            newSphere->center.y = objectCenter["y"].toDouble();
+            newSphere->center.z = objectCenter["z"].toDouble();
+            cout << "newphere->center.x: " << newSphere->center.x << endl;
+            cout << "newSphere->center.y: " << newSphere->center.y << endl;
+            cout << "newSphere->center.z: " << newSphere->center.z << endl;
 
-            newSphere.color.x = objectColor["r"].toInt();
-            newSphere.color.y = objectColor["g"].toInt();
-            newSphere.color.z = objectColor["b"].toInt();
-            cout << "newSphere->color.x: " << newSphere.color.x << endl;
-            cout << "newSphere->color.y: " << newSphere.color.y << endl;
-            cout << "newSphere->color.z: " << newSphere.color.z << endl;
+            newSphere->color.x = objectColor["r"].toInt();
+            newSphere->color.y = objectColor["g"].toInt();
+            newSphere->color.z = objectColor["b"].toInt();
+            cout << "newSphere->color.x: " << newSphere->color.x << endl;
+            cout << "newSphere->color.y: " << newSphere->color.y << endl;
+            cout << "newSphere->color.z: " << newSphere->color.z << endl;
 
-            newSphere.lambert = objectObj["lambert"].toDouble();
-            newSphere.radius = objectObj["radius"].toDouble();
+            newSphere->lambert = objectObj["lambert"].toDouble();
+            newSphere->radius = objectObj["radius"].toDouble();
 
-            cout << "newSphere->lambert: " << newSphere.lambert << endl;
-            cout << "newSphere->radius: " << newSphere.radius << endl;
+            cout << "newSphere->lambert: " << newSphere->lambert << endl;
+            cout << "newSphere->radius: " << newSphere->radius << endl;
 
-            vecObjects.push_back(&newSphere);
+            vecObjects.push_back(newSphere);
             cout << "PUSHED BACK A SPHERE, current size of vector: " << vecObjects.size() << endl;
 
           }
@@ -163,39 +175,38 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             QVariantMap objectColor = objectVariant["color"].toMap();
             QVariantMap objectNormal = objectVariant["normal"].toMap();
 
-            Plane newPlane;
+            MotherOfObjects *newPlane = new Plane;
 
-            newPlane.center.x = objectCenter["x"].toDouble();
-            newPlane.center.y = objectCenter["y"].toDouble();
-            newPlane.center.z = objectCenter["z"].toDouble();
-            cout << "newPlane->center.x: " << newPlane.center.x << endl;
-            cout << "newPlane->center.y: " << newPlane.center.y << endl;
-            cout << "newPlane->center.z: " << newPlane.center.z << endl;
+            newPlane->center.x = objectCenter["x"].toDouble();
+            newPlane->center.y = objectCenter["y"].toDouble();
+            newPlane->center.z = objectCenter["z"].toDouble();
+            cout << "newPlane->center.x: " << newPlane->center.x << endl;
+            cout << "newPlane->center.y: " << newPlane->center.y << endl;
+            cout << "newPlane->center.z: " << newPlane->center.z << endl;
 
-            newPlane.color.x = objectColor["r"].toInt();
-            newPlane.color.y = objectColor["g"].toInt();
-            newPlane.color.z = objectColor["b"].toInt();
-            cout << "newPlane->color.x: " << newPlane.color.x << endl;
-            cout << "newPlane->color.y: " << newPlane.color.y << endl;
-            cout << "newPlane->color.z: " << newPlane.color.z << endl;
+            newPlane->color.x = objectColor["r"].toInt();
+            newPlane->color.y = objectColor["g"].toInt();
+            newPlane->color.z = objectColor["b"].toInt();
+            cout << "newPlane->color.x: " << newPlane->color.x << endl;
+            cout << "newPlane->color.y: " << newPlane->color.y << endl;
+            cout << "newPlane->color.z: " << newPlane->color.z << endl;
 
-            newPlane.lambert = objectObj["lambert"].toDouble();
-            cout << "newPlane->lambert: " << newPlane.lambert << endl;
+            newPlane->lambert = objectObj["lambert"].toDouble();
+            cout << "newPlane->lambert: " << newPlane->lambert << endl;
 
-            newPlane.normal.x = objectNormal["x"].toDouble();
-            newPlane.normal.y = objectNormal["y"].toDouble();
-            newPlane.normal.z = objectNormal["z"].toDouble();
-            cout << "newPlane->normal.x: " << newPlane.normal.x << endl;
-            cout << "newPlane->normal.y: " << newPlane.normal.y << endl;
-            cout << "newPlane->normal.z: " << newPlane.normal.z << endl;
+            newPlane->normal.x = objectNormal["x"].toDouble();
+            newPlane->normal.y = objectNormal["y"].toDouble();
+            newPlane->normal.z = objectNormal["z"].toDouble();
+            cout << "newPlane->normal.x: " << newPlane->normal.x << endl;
+            cout << "newPlane->normal.y: " << newPlane->normal.y << endl;
+            cout << "newPlane->normal.z: " << newPlane->normal.z << endl;
 
-            vecObjects.push_back(&newPlane);
+            vecObjects.push_back(newPlane);
             cout << "PUSHED BACK A PLANE, current size of vector: " << vecObjects.size() << endl;
           }
           else {
             cout << "NOT A VALID TYPE OF OBJECT FROM JSON, EXITING" << endl;
             return false;
-
           }
         }
         cout << endl;
@@ -213,10 +224,8 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
       cout << "Camera->size: " << camera.size.size_one << " " << camera.size.size_two << endl;
       cout << "Camera->resolution: " << camera.resolution.resolution_one << " " << camera.resolution.resolution_two << endl;
       cout << endl;
-
         return true;
     }
-
     return false;
 }
 
@@ -224,56 +233,93 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
 
 Ray JSONParser::createPrimaryRay() {
+
+    cout << "IN THE PRIMARY RAY FUNCTION" << endl;
+
     int height = camera.size.size_one;
     int width = camera.size.size_two;
 
-    cout << "the height: " << height << endl;
-    cout << "the width: " << width << endl;
+    cout << "the height (pixels): " << height << endl;
+    cout << "the width (pixels): " << width << endl;
 
-    Ray exampleRay;
+    Ray finalRay;
 
-    Sphere *tempSphere;  //this will store the object that is intersected
-    MotherOfObjects *tempObject;
-    Pixels pixel;
+    // Sphere *tempSphere;  //this will store the object that is intersected
+//    MotherOfObjects *tempObject;
 
-    //iterate through all pixels
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; i < width; j++) {
+    cout << "____SIZE OF OBJECT VECTOR: " << vecObjects.size() << endl;
 
-            //calculate primary ray
-            //JUST DO THIS ENTIRE FUNCTION ALL IN HERE!
-            Ray primaryRay = calculatePrimaryRay(i, j); //NEED TO CALCULATE THIS <- call primary ray function
+   MotherOfObjects *tempObject;
 
-            double nearest_t = INFINITY;
-            bool intersect =  false;
+    for (int i = 0; i < height; ++i) {
+      for (int j = 0; j < width; ++j) {
 
-            for (int object_iterator = 0; object_iterator < vecSphere->size(); object_iterator++) {
-                tempSphere = &vecSphere->at(object_iterator);
-                intersect = tempSphere->intersect(primaryRay, nearest_t);
-                if (intersect) {
-                    //if it intersects, then mark the place
-                    tempSphere = &vecSphere->at(object_iterator);
-                }
-            }
-            //if it doesn't hit an object
-//            if (tempSphere == nullptr) {
-            if (true) {
-                pixel.coordinate.x = i;
-                pixel.coordinate.y = j;
-                pixel.coordinate.z = 0;
-                pixel.color.r = 0;
-                pixel.color.g = 0;
-                pixel.color.b = 0;
-            }
-            else {
-                //callShadowRay function()
+        //create a primary ray for each pixel coordinate value
+        Ray primaryRay = calculatePrimaryRay(i, j);
 
-                //get the point of intersection to pass into the callshadow ray function!
-            }
+        double nearest_t;
+        for (int k = 0; k < vecObjects.size(); ++k) {
+          tempObject = vecObjects[k];
+          // cout << "tempObject.center.x : " << tempObject->center.x << endl;
+          // cout << "tempObject.center.y : " << tempObject->center.y<< endl;
+          // cout << "tempObject.center.z : " << tempObject->center.z << endl;
+          if (tempObject->intersect(primaryRay, nearest_t)) {
+            //this is intersecting object[k]
+            cout << endl;
+            cout << "SUCCESS :: this intersects!!!" << endl;
+            cout << endl;
+          }
+          else {
+            cout << "---" << endl;
+          }
+        } // end vecObject for loop
+      } //end j for loop
+    } //end i for loop
 
-        }
-    } //end of forloop i
-    return exampleRay;
+
+
+//     Pixels pixel;
+//
+//     cout << "does it reach this?" << endl;
+//
+//     //iterate through all pixels
+//     for (int i = 0; i < height; i++) {
+//         for (int j = 0; i < width; j++) {
+//
+//             //calculate primary ray
+//             //JUST DO THIS ENTIRE FUNCTION ALL IN HERE!
+//             Ray primaryRay = calculatePrimaryRay(i, j); //NEED TO CALCULATE THIS <- call primary ray function
+//
+//             double nearest_t = INFINITY;
+//             bool intersect =  false;
+//
+//             for (int object_iterator = 0; object_iterator < vecSphere->size(); object_iterator++) {
+//                 tempObject = &vecSphere->at(object_iterator);
+//                 intersect = tempSphere->intersect(primaryRay, nearest_t);
+//                 if (intersect) {
+//                     //if it intersects, then mark the place
+//                     tempSphere = &vecSphere->at(object_iterator);
+//                 }
+//             }
+//             //if it doesn't hit an object
+// //            if (tempSphere == nullptr) {
+//             if (true) {
+//                 pixel.coordinate.x = i;
+//                 pixel.coordinate.y = j;
+//                 pixel.coordinate.z = 0;
+//                 pixel.color.r = 0;
+//                 pixel.color.g = 0;
+//                 pixel.color.b = 0;
+//             }
+//             else {
+//                 //callShadowRay function()
+//
+//                 //get the point of intersection to pass into the callshadow ray function!
+//             }
+//
+//         }
+//     } //end of forloop i
+    return finalRay;
 }
 
 Ray JSONParser::calculatePrimaryRay(int i, int j) {

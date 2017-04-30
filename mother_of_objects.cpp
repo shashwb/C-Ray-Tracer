@@ -8,5 +8,3 @@ void MotherOfObjects::print() {
     //can't really happen
     qDebug() << "MotherOfAllObjects created";
 }
-
-

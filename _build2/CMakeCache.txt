@@ -153,8 +153,17 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
+//Path to a program.
+PDIFF:FILEPATH=PDIFF-NOTFOUND
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/cmake/Qt5Gui
+
 //The directory containing a CMake configuration file for Qt5.
-Qt5_DIR:PATH=Qt5_DIR-NOTFOUND
+Qt5_DIR:PATH=/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/cmake/Qt5
 
 //Value Computed by CMake
 VTRAY_BINARY_DIR:STATIC=/Users/sethbalodi/CODE/project3-shashwb/_build2
@@ -167,6 +176,8 @@ VTRAY_SOURCE_DIR:STATIC=/Users/sethbalodi/CODE/project3-shashwb
 # INTERNAL cache entries
 ########################
 
+//Stored Xcode object GUID
+ALL_BUILD_GUID_CMAKE:INTERNAL=A2FEEA53F778475BAACD5B5D
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -274,4 +285,18 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Stored Xcode object GUID
+PROJECT_VTRAY_GUID_CMAKE:INTERNAL=DF9EB48DF288464E8E23F090
+//Stored Xcode object GUID
+RUN_TESTS_GUID_CMAKE:INTERNAL=0B3565E99DD44111B39FFE54
+//Stored Xcode object GUID
+ZERO_CHECK_GUID_CMAKE:INTERNAL=3DCC1BAFBE304F27A407FBDC
+//Stored Xcode object GUID
+unittests_GUID_CMAKE:INTERNAL=86BC53E50F8B4FE994E39EA8
+//Stored Xcode object GUID
+unittests_autogen_GUID_CMAKE:INTERNAL=49E142E29CA548DDB0A70C8F
+//Stored Xcode object GUID
+vtray_GUID_CMAKE:INTERNAL=C9E1BAA6DEE94A358654E299
+//Stored Xcode object GUID
+vtray_autogen_GUID_CMAKE:INTERNAL=BCB3256A5F5B4509B13E3209
 

@@ -25,6 +25,7 @@ CMakeFiles/vtray.dir/json_parser.cpp.o
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonObject
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonParseError
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QObject
+ /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QString
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QVariant
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QVariantMap
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qbytearray.h
@@ -36,6 +37,7 @@ CMakeFiles/vtray.dir/json_parser.cpp.o
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsondocument.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsonobject.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qobject.h
+ /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qstring.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qvariant.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/QImage
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h
@@ -80,6 +82,7 @@ CMakeFiles/vtray.dir/vtray.cpp.o
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonObject
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonParseError
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QObject
+ /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QString
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QVariant
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QVariantMap
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qbytearray.h
@@ -91,6 +94,7 @@ CMakeFiles/vtray.dir/vtray.cpp.o
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsondocument.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsonobject.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qobject.h
+ /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qstring.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qvariant.h
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/QImage
  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h

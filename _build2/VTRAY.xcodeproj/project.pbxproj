@@ -1,0 +1,1479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0B3565E99DD44111B39FFE54 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F6DB2070EC1441BE85F616F3 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				F9D60F93A79C483D9056CD61 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+		3DCC1BAFBE304F27A407FBDC /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8DF37660C8EF4177A9E24DA5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				D40530FFFEF342AEAF389271 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		49E142E29CA548DDB0A70C8F /* unittests_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3A7F741F33F2484CBB9714F3 /* Build configuration list for PBXAggregateTarget "unittests_autogen" */;
+			buildPhases = (
+				56BCAB38278849AB92BB7432 /* CMake Rules */,
+			);
+			dependencies = (
+				D8E51E4C5911436E99B5B38A /* PBXTargetDependency */,
+			);
+			name = unittests_autogen;
+			productName = unittests_autogen;
+		};
+		A2FEEA53F778475BAACD5B5D /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D9655517C7744499994279FD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				F223699CE91842F9B5AA6596 /* CMake Rules */,
+			);
+			dependencies = (
+				B157A9C2D164472BA136AB01 /* PBXTargetDependency */,
+				9D638C260F4E40FFA7178B8D /* PBXTargetDependency */,
+				C36EE27E882B48169639CB88 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		BCB3256A5F5B4509B13E3209 /* vtray_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E3FAA05FB5154E5B8E561078 /* Build configuration list for PBXAggregateTarget "vtray_autogen" */;
+			buildPhases = (
+				6EA57180C6B746E6B781DC6A /* CMake Rules */,
+			);
+			dependencies = (
+				2DDB86B83BD24993B5079727 /* PBXTargetDependency */,
+			);
+			name = vtray_autogen;
+			productName = vtray_autogen;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0886781CF96749EC9BF5F862 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */ = {isa = PBXBuildFile; fileRef = 507F9D1167D14B36BCB2C9C3 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */; };
+		0DE2BC5D70EB41E99F5A5436 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */ = {isa = PBXBuildFile; fileRef = F1D2EA03C51F4CFA9A510211 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */; };
+		142F9E41026D42658D0BCA3B /* /Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/moc_compilation.cpp */ = {isa = PBXBuildFile; fileRef = FDC27FAB620344A0BF2375D7 /* /Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/moc_compilation.cpp */; };
+		158C77219AA54F5BAF322D17 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */ = {isa = PBXBuildFile; fileRef = 081E46C76BE245DFB95FC154 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */; };
+		234C9397B7304211A898FFBC /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */ = {isa = PBXBuildFile; fileRef = 47B9872B283047E7AA915AB2 /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */; };
+		27A12C53168940EC841B2D19 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */ = {isa = PBXBuildFile; fileRef = 724CDBFDBC59426DB40DC388 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */; };
+		2AB5DE9B6F3E495EA51FD267 /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */ = {isa = PBXBuildFile; fileRef = 4BC622B12091441E9B58028D /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */; };
+		2EC69260D43844CF8145BAD4 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */ = {isa = PBXBuildFile; fileRef = 09A427FC51DB4FF9A0FFE6B2 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */; };
+		3BF3339E55CF43FAB080BBB4 /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */ = {isa = PBXBuildFile; fileRef = F77F21BCC3C74B3B8BC6C0ED /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */; };
+		3F1DC03B668D41F4A27F7A82 /* /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp */ = {isa = PBXBuildFile; fileRef = C439198E9D20414D8B0E4926 /* /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp */; };
+		4AB64F766DBE4A30903BE74A /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = C3F752C546954863A6A5A1F8 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */; };
+		61725F30A16E4E66A905E86F /* /Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/moc_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 47463280474C4B53949A277B /* /Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/moc_compilation.cpp */; };
+		6810909709834875AF066A5F /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */ = {isa = PBXBuildFile; fileRef = 80D04B9680484D6F9674991A /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */; };
+		7FCB4F9321CA4F70B03D4777 /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */ = {isa = PBXBuildFile; fileRef = 82F72C126B224D779405EB2A /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */; };
+		81C514BE7D4544D98EAF4D7E /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */ = {isa = PBXBuildFile; fileRef = C4AAD4AF67F648A9BCC76134 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */; };
+		87F3360492FE44B3A9DD2FA9 /* /Users/sethbalodi/CODE/project3-shashwb/catch.hpp */ = {isa = PBXBuildFile; fileRef = A40CB0A09BCC4E3F99257FC1 /* /Users/sethbalodi/CODE/project3-shashwb/catch.hpp */; };
+		93B1FD75FEA4484691B10613 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */ = {isa = PBXBuildFile; fileRef = A3F403EAA53944B4A9279FB0 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */; };
+		94591E5EE62949A6AF0D4592 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */ = {isa = PBXBuildFile; fileRef = E06383E09D294404B8FE3AC6 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */; };
+		995B6E66D21E41FF98CB3F40 /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */ = {isa = PBXBuildFile; fileRef = F3412A18073E49F69C62DC1E /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */; };
+		A38EDA2592BC42A992E2F39A /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */ = {isa = PBXBuildFile; fileRef = 44B9B4517EC94AB5B9AC679C /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */; };
+		A45C8B21338349458886C7DA /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */ = {isa = PBXBuildFile; fileRef = 3EF2D06F0BB449A991618D22 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */; };
+		BD103C23512140DDA3439D11 /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */ = {isa = PBXBuildFile; fileRef = C3720B94C6ED4C95B60E034B /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */; };
+		C3AB5D6CC94A48268528C9E8 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D7FC8CD2B64743E0BBD1C168 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */; };
+		C3ADA04148294C1AA491758E /* /Users/sethbalodi/CODE/project3-shashwb/vtray.cpp */ = {isa = PBXBuildFile; fileRef = 21C69434780941439379C520 /* /Users/sethbalodi/CODE/project3-shashwb/vtray.cpp */; };
+		D16C2A8CC22C44789F164FE4 /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */ = {isa = PBXBuildFile; fileRef = BA76F76705C3428787167200 /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */; };
+		D5B6C7FF2657419B83D5FED5 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */ = {isa = PBXBuildFile; fileRef = FBC673081F684B75956B7531 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */; };
+		D6271F49FD734F8ABD1826DC /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */ = {isa = PBXBuildFile; fileRef = 8E93CFA26CC6484D94093DCC /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */; };
+		E2538B3F13234E1EAB2A0F97 /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */ = {isa = PBXBuildFile; fileRef = EF1F9A4EFB4E46FCBB5DE23C /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */; };
+		F6D8F5B01B9B4F979AE2BFB5 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */ = {isa = PBXBuildFile; fileRef = D4E33EAE0BFD4086812DB5B6 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */; };
+		FB61540CB6FD46D18E6559B2 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */ = {isa = PBXBuildFile; fileRef = 0FA5B82F4D3E4DA79DFBA45C /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */; };
+		FF7F3D7A42E24DADAA5C2BB2 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */ = {isa = PBXBuildFile; fileRef = 6FAA0F1F8E46444793D7F7D3 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		61FFE8CE81B041138DB0C0C6 = {
+			isa = PBXBuildStyle;
+		};
+		6D9F211CF72B495AB861510F /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		78FB524372854FEE8D84C779 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		7F077DEE06CF4EF3B743B09F /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		BC00925F978E43B8A1C4B295 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		3F0D907E20964C46965B85F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DCC1BAFBE304F27A407FBDC;
+			remoteInfo = ZERO_CHECK;
+		};
+		8DBACEDF22B44821AD58676D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCB3256A5F5B4509B13E3209;
+			remoteInfo = vtray_autogen;
+		};
+		9403EC39CAC34FD8A1695618 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9E1BAA6DEE94A358654E299;
+			remoteInfo = vtray;
+		};
+		972CFD9CB7144158B03215EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DCC1BAFBE304F27A407FBDC;
+			remoteInfo = ZERO_CHECK;
+		};
+		97E0D5FC143F4048B0A4D79F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DCC1BAFBE304F27A407FBDC;
+			remoteInfo = ZERO_CHECK;
+		};
+		A16F176C94C64E85B1EC8484 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86BC53E50F8B4FE994E39EA8;
+			remoteInfo = unittests;
+		};
+		E0F88F59A4CB4D298A975A7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49E142E29CA548DDB0A70C8F;
+			remoteInfo = unittests_autogen;
+		};
+		E9CEC699CE204BB392C94FE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DCC1BAFBE304F27A407FBDC;
+			remoteInfo = ZERO_CHECK;
+		};
+		FD336D35B7F4449F8E91398C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9EB48DF288464E8E23F090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DCC1BAFBE304F27A407FBDC;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		081E46C76BE245DFB95FC154 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sphere.cpp; path = sphere.cpp; sourceTree = SOURCE_ROOT; };
+		09A427FC51DB4FF9A0FFE6B2 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sphere.h; path = sphere.h; sourceTree = SOURCE_ROOT; };
+		0BBD948ABD114B08959C9568 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0FA5B82F4D3E4DA79DFBA45C /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mother_of_objects.cpp; path = mother_of_objects.cpp; sourceTree = SOURCE_ROOT; };
+		21C69434780941439379C520 /* /Users/sethbalodi/CODE/project3-shashwb/vtray.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vtray.cpp; path = vtray.cpp; sourceTree = SOURCE_ROOT; };
+		297E1A688DB74DABB4209016 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3EF2D06F0BB449A991618D22 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mother_of_objects.h; path = mother_of_objects.h; sourceTree = SOURCE_ROOT; };
+		44B9B4517EC94AB5B9AC679C /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_parser.cpp; path = json_parser.cpp; sourceTree = SOURCE_ROOT; };
+		47463280474C4B53949A277B /* /Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/moc_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = moc_compilation.cpp; path = _build2/unittests_autogen/moc_compilation.cpp; sourceTree = SOURCE_ROOT; };
+		47B9872B283047E7AA915AB2 /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = lights.h; path = lights.h; sourceTree = SOURCE_ROOT; };
+		4BC622B12091441E9B58028D /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = plane.cpp; path = plane.cpp; sourceTree = SOURCE_ROOT; };
+		507F9D1167D14B36BCB2C9C3 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json_parser.h; path = json_parser.h; sourceTree = SOURCE_ROOT; };
+		63A6C63300CF4B0D9576B4B2 /* vtray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = vtray; sourceTree = BUILT_PRODUCTS_DIR; };
+		6542224F0ABF450386C6883D /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6FAA0F1F8E46444793D7F7D3 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = camera.h; path = camera.h; sourceTree = SOURCE_ROOT; };
+		724CDBFDBC59426DB40DC388 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sphere.cpp; path = sphere.cpp; sourceTree = SOURCE_ROOT; };
+		7B9216AACF3E405D9F7CF00C /* unittests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = unittests; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D04B9680484D6F9674991A /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = plane.h; path = plane.h; sourceTree = SOURCE_ROOT; };
+		82F72C126B224D779405EB2A /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = lights.h; path = lights.h; sourceTree = SOURCE_ROOT; };
+		8E93CFA26CC6484D94093DCC /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = plane.cpp; path = plane.cpp; sourceTree = SOURCE_ROOT; };
+		A3F403EAA53944B4A9279FB0 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sphere.h; path = sphere.h; sourceTree = SOURCE_ROOT; };
+		A40CB0A09BCC4E3F99257FC1 /* /Users/sethbalodi/CODE/project3-shashwb/catch.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = catch.hpp; path = catch.hpp; sourceTree = SOURCE_ROOT; };
+		BA76F76705C3428787167200 /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = camera.cpp; path = camera.cpp; sourceTree = SOURCE_ROOT; };
+		C3720B94C6ED4C95B60E034B /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = plane.h; path = plane.h; sourceTree = SOURCE_ROOT; };
+		C3F752C546954863A6A5A1F8 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C439198E9D20414D8B0E4926 /* /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unittests.cpp; path = unittests.cpp; sourceTree = SOURCE_ROOT; };
+		C4AAD4AF67F648A9BCC76134 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_parser.cpp; path = json_parser.cpp; sourceTree = SOURCE_ROOT; };
+		D4E33EAE0BFD4086812DB5B6 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mother_of_objects.cpp; path = mother_of_objects.cpp; sourceTree = SOURCE_ROOT; };
+		D7FC8CD2B64743E0BBD1C168 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DEAED8F0252D463497256C75 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E06383E09D294404B8FE3AC6 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = camera.h; path = camera.h; sourceTree = SOURCE_ROOT; };
+		EF1F9A4EFB4E46FCBB5DE23C /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lights.cpp; path = lights.cpp; sourceTree = SOURCE_ROOT; };
+		F1D2EA03C51F4CFA9A510211 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mother_of_objects.h; path = mother_of_objects.h; sourceTree = SOURCE_ROOT; };
+		F3412A18073E49F69C62DC1E /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lights.cpp; path = lights.cpp; sourceTree = SOURCE_ROOT; };
+		F77F21BCC3C74B3B8BC6C0ED /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = camera.cpp; path = camera.cpp; sourceTree = SOURCE_ROOT; };
+		FBC673081F684B75956B7531 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json_parser.h; path = json_parser.h; sourceTree = SOURCE_ROOT; };
+		FDC27FAB620344A0BF2375D7 /* /Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/moc_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = moc_compilation.cpp; path = _build2/vtray_autogen/moc_compilation.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		022C8FE38E4B473DA3C5063A = {
+			isa = PBXGroup;
+			children = (
+				0DCA505FDA9744F596237E34 /* Sources */,
+				AFCCDA6B5A6246508F3511D1 /* Resources */,
+				3EEBFA1BB7CE4A1C829FA0E6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0DCA505FDA9744F596237E34 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C919D95199424BFF86BA6160 /* vtray */,
+				AE2CA9CA5B6C43B88C1A4884 /* unittests */,
+				CC789073A2E94D158DBE6002 /* vtray_autogen */,
+				562C8E710BEB45EE8CDA2B61 /* unittests_autogen */,
+				B5247C69D43840B5AFAC2418 /* ALL_BUILD */,
+				C63CA4812E9D4B229827E4DB /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		0F74941F27E94AF18FA18FCC /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDC27FAB620344A0BF2375D7 /* /Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/moc_compilation.cpp */,
+				BA76F76705C3428787167200 /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */,
+				C4AAD4AF67F648A9BCC76134 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */,
+				EF1F9A4EFB4E46FCBB5DE23C /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */,
+				0FA5B82F4D3E4DA79DFBA45C /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */,
+				8E93CFA26CC6484D94093DCC /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */,
+				081E46C76BE245DFB95FC154 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */,
+				21C69434780941439379C520 /* /Users/sethbalodi/CODE/project3-shashwb/vtray.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		149A6E5E33284E659D05672A /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				E06383E09D294404B8FE3AC6 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */,
+				A40CB0A09BCC4E3F99257FC1 /* /Users/sethbalodi/CODE/project3-shashwb/catch.hpp */,
+				FBC673081F684B75956B7531 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */,
+				82F72C126B224D779405EB2A /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */,
+				3EF2D06F0BB449A991618D22 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */,
+				80D04B9680484D6F9674991A /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */,
+				09A427FC51DB4FF9A0FFE6B2 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		2DAC890437EF423CB5F5664D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		3608E496F93041B7BBC446EA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				47463280474C4B53949A277B /* /Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/moc_compilation.cpp */,
+				F77F21BCC3C74B3B8BC6C0ED /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */,
+				44B9B4517EC94AB5B9AC679C /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */,
+				F3412A18073E49F69C62DC1E /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */,
+				D4E33EAE0BFD4086812DB5B6 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */,
+				4BC622B12091441E9B58028D /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */,
+				724CDBFDBC59426DB40DC388 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */,
+				C439198E9D20414D8B0E4926 /* /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		38B451213C994A20A818DB47 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		3EEBFA1BB7CE4A1C829FA0E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B9216AACF3E405D9F7CF00C /* unittests */,
+				63A6C63300CF4B0D9576B4B2 /* vtray */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		562C8E710BEB45EE8CDA2B61 /* unittests_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				6DAD5A210B494316983F8B04 /* CMake Rules */,
+				DEAED8F0252D463497256C75 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */,
+			);
+			name = unittests_autogen;
+			sourceTree = "<group>";
+		};
+		6ADF5F5EA95D436FACBD9A8F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		6DAD5A210B494316983F8B04 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		70DF79FB60224D76976311C6 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FAA0F1F8E46444793D7F7D3 /* /Users/sethbalodi/CODE/project3-shashwb/camera.h */,
+				507F9D1167D14B36BCB2C9C3 /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.h */,
+				47B9872B283047E7AA915AB2 /* /Users/sethbalodi/CODE/project3-shashwb/lights.h */,
+				F1D2EA03C51F4CFA9A510211 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h */,
+				C3720B94C6ED4C95B60E034B /* /Users/sethbalodi/CODE/project3-shashwb/plane.h */,
+				A3F403EAA53944B4A9279FB0 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		AE2CA9CA5B6C43B88C1A4884 /* unittests */ = {
+			isa = PBXGroup;
+			children = (
+				149A6E5E33284E659D05672A /* Header Files */,
+				3608E496F93041B7BBC446EA /* Source Files */,
+				D7FC8CD2B64743E0BBD1C168 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */,
+			);
+			name = unittests;
+			sourceTree = "<group>";
+		};
+		AFCCDA6B5A6246508F3511D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B5247C69D43840B5AFAC2418 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				6ADF5F5EA95D436FACBD9A8F /* CMake Rules */,
+				0BBD948ABD114B08959C9568 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		C63CA4812E9D4B229827E4DB /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				2DAC890437EF423CB5F5664D /* CMake Rules */,
+				6542224F0ABF450386C6883D /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		C919D95199424BFF86BA6160 /* vtray */ = {
+			isa = PBXGroup;
+			children = (
+				0F74941F27E94AF18FA18FCC /* Source Files */,
+				70DF79FB60224D76976311C6 /* Header Files */,
+				C3F752C546954863A6A5A1F8 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */,
+			);
+			name = vtray;
+			sourceTree = "<group>";
+		};
+		CC789073A2E94D158DBE6002 /* vtray_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				38B451213C994A20A818DB47 /* CMake Rules */,
+				297E1A688DB74DABB4209016 /* /Users/sethbalodi/CODE/project3-shashwb/CMakeLists.txt */,
+			);
+			name = vtray_autogen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86BC53E50F8B4FE994E39EA8 /* unittests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E86729361EB24ED483889049 /* Build configuration list for PBXNativeTarget "unittests" */;
+			buildPhases = (
+				E9292F53D3714823ABCF0364 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6285721030F845AD821CB4EA /* PBXTargetDependency */,
+				16197861BBF84A08B0A80352 /* PBXTargetDependency */,
+			);
+			name = unittests;
+			productName = unittests;
+			productReference = 7B9216AACF3E405D9F7CF00C /* unittests */;
+			productType = "com.apple.product-type.tool";
+		};
+		C9E1BAA6DEE94A358654E299 /* vtray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9777D5758184AD6B2DEE66C /* Build configuration list for PBXNativeTarget "vtray" */;
+			buildPhases = (
+				C8979EEE82B844928568B25A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5ED0F4D085C44767ADE76236 /* PBXTargetDependency */,
+				B57C0A4984FE4A20B8C03D52 /* PBXTargetDependency */,
+			);
+			name = vtray;
+			productName = vtray;
+			productReference = 63A6C63300CF4B0D9576B4B2 /* vtray */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF9EB48DF288464E8E23F090 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0820;
+			};
+			buildConfigurationList = FE9D42C7C2F141639C581300 /* Build configuration list for PBXProject "VTRAY" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				BC00925F978E43B8A1C4B295 /* Debug */,
+				6D9F211CF72B495AB861510F /* Release */,
+				78FB524372854FEE8D84C779 /* MinSizeRel */,
+				7F077DEE06CF4EF3B743B09F /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 022C8FE38E4B473DA3C5063A;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				A2FEEA53F778475BAACD5B5D /* ALL_BUILD */,
+				0B3565E99DD44111B39FFE54 /* RUN_TESTS */,
+				3DCC1BAFBE304F27A407FBDC /* ZERO_CHECK */,
+				86BC53E50F8B4FE994E39EA8 /* unittests */,
+				49E142E29CA548DDB0A70C8F /* unittests_autogen */,
+				C9E1BAA6DEE94A358654E299 /* vtray */,
+				BCB3256A5F5B4509B13E3209 /* vtray_autogen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		56BCAB38278849AB92BB7432 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/sethbalodi/CODE/project3-shashwb/_build2 -f /Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeScripts/unittests_autogen_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		6EA57180C6B746E6B781DC6A /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/sethbalodi/CODE/project3-shashwb/_build2 -f /Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeScripts/vtray_autogen_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		880F6CC6EEC548A19CCD1BC9 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9929050FA3914EE7AA5C80E9 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		D40530FFFEF342AEAF389271 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/sethbalodi/CODE/project3-shashwb/_build2 -f /Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		EA2AF26D99884A1886AAEF95 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F223699CE91842F9B5AA6596 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/sethbalodi/CODE/project3-shashwb/_build2 -f /Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		F9D60F93A79C483D9056CD61 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/sethbalodi/CODE/project3-shashwb/_build2 -f /Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		FA9ED359EB214E8E80E486F1 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		FC3A47F438984C5DA4D19FAC = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8979EEE82B844928568B25A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142F9E41026D42658D0BCA3B /* /Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/moc_compilation.cpp */,
+				D16C2A8CC22C44789F164FE4 /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */,
+				81C514BE7D4544D98EAF4D7E /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */,
+				E2538B3F13234E1EAB2A0F97 /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */,
+				FB61540CB6FD46D18E6559B2 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */,
+				D6271F49FD734F8ABD1826DC /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */,
+				158C77219AA54F5BAF322D17 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */,
+				C3ADA04148294C1AA491758E /* /Users/sethbalodi/CODE/project3-shashwb/vtray.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9292F53D3714823ABCF0364 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61725F30A16E4E66A905E86F /* /Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/moc_compilation.cpp */,
+				3BF3339E55CF43FAB080BBB4 /* /Users/sethbalodi/CODE/project3-shashwb/camera.cpp */,
+				A38EDA2592BC42A992E2F39A /* /Users/sethbalodi/CODE/project3-shashwb/json_parser.cpp */,
+				995B6E66D21E41FF98CB3F40 /* /Users/sethbalodi/CODE/project3-shashwb/lights.cpp */,
+				F6D8F5B01B9B4F979AE2BFB5 /* /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.cpp */,
+				2AB5DE9B6F3E495EA51FD267 /* /Users/sethbalodi/CODE/project3-shashwb/plane.cpp */,
+				27A12C53168940EC841B2D19 /* /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp */,
+				3F1DC03B668D41F4A27F7A82 /* /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16197861BBF84A08B0A80352 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DCC1BAFBE304F27A407FBDC /* ZERO_CHECK */;
+			targetProxy = 3F0D907E20964C46965B85F8 /* PBXContainerItemProxy */;
+		};
+		2DDB86B83BD24993B5079727 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DCC1BAFBE304F27A407FBDC /* ZERO_CHECK */;
+			targetProxy = 97E0D5FC143F4048B0A4D79F /* PBXContainerItemProxy */;
+		};
+		5ED0F4D085C44767ADE76236 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCB3256A5F5B4509B13E3209 /* vtray_autogen */;
+			targetProxy = 8DBACEDF22B44821AD58676D /* PBXContainerItemProxy */;
+		};
+		6285721030F845AD821CB4EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49E142E29CA548DDB0A70C8F /* unittests_autogen */;
+			targetProxy = E0F88F59A4CB4D298A975A7A /* PBXContainerItemProxy */;
+		};
+		9D638C260F4E40FFA7178B8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86BC53E50F8B4FE994E39EA8 /* unittests */;
+			targetProxy = A16F176C94C64E85B1EC8484 /* PBXContainerItemProxy */;
+		};
+		B157A9C2D164472BA136AB01 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9E1BAA6DEE94A358654E299 /* vtray */;
+			targetProxy = 9403EC39CAC34FD8A1695618 /* PBXContainerItemProxy */;
+		};
+		B57C0A4984FE4A20B8C03D52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DCC1BAFBE304F27A407FBDC /* ZERO_CHECK */;
+			targetProxy = FD336D35B7F4449F8E91398C /* PBXContainerItemProxy */;
+		};
+		C36EE27E882B48169639CB88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DCC1BAFBE304F27A407FBDC /* ZERO_CHECK */;
+			targetProxy = E9CEC699CE204BB392C94FE9 /* PBXContainerItemProxy */;
+		};
+		D8E51E4C5911436E99B5B38A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DCC1BAFBE304F27A407FBDC /* ZERO_CHECK */;
+			targetProxy = 972CFD9CB7144158B03215EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0B00B70CC1E94CB7BDDBFA01 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		107C7B979AA1412E859E6BD7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1C04BBB948A64211AEAB01C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		32C55950742D4F34B23C68C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		37B384CEDF0F466E90214B44 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3D3168BED2BC4D51BC10B4B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		3D4014D23DCA440FA7648757 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4CFA1B5F4FDA44A097F2CEFB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2/build";
+			};
+			name = MinSizeRel;
+		};
+		4DF4E299766A4FAB946DE071 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		55933690DFA44A0790F1D406 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2/build";
+			};
+			name = RelWithDebInfo;
+		};
+		6404DA101AD34554BA98577B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6B1BC77C888E4DB6BF337140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		72ECDACDEC764196BD54FF08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		73A184B6B5DE480E936B82A6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7C01F598B3194873B3A844D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2/build";
+			};
+			name = Debug;
+		};
+		7C4B9797463A440B8EBC2542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2/build";
+			};
+			name = Release;
+		};
+		8F2B372B794946DBAB6FBDC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		932BE08A25F741E5AA046ED9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		93B6D7821612440CB1865874 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9974E8899B0746588795DC94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9EEF50B48B0C45CBB4F8F161 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		A8A24A14B2C74A05A58DEB92 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B399B2F65E7F45C09503F626 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B3C42B9E60F14C908D127FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C83C5497C4304064B76255BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C9104DAB01A74253B6271018 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB,QT_NO_DEBUG);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/vtray_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D20307F466BE4960B4F420BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_GUI_LIB,QT_CORE_LIB);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb","/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include",/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers,/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers,"/Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang");
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CPLUSPLUSFLAGS = "   -fPIC '-std=gnu++11' -I/Users/sethbalodi/CODE/project3-shashwb/_build2 -I/Users/sethbalodi/CODE/project3-shashwb -I/Users/sethbalodi/CODE/project3-shashwb/_build2/unittests_autogen/include -iframework /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers -isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/OpenGL.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers -isystem /Users/sethbalodi/Qt5.8.0/5.8/clang_64/./mkspecs/macx-clang   ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/QtGui /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/QtCore";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = unittests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		DAA03C331EA94775A39BC87D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DB70C4DFE2CC4A46A336C6D2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		EBBE6068D77E454398E1DB9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		EC9BE47FB8A941B78B138141 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = vtray_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		FAF8C05C86DA4083997547CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/sethbalodi/CODE/project3-shashwb/_build2","/Users/sethbalodi/CODE/project3-shashwb");
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/sethbalodi/CODE/project3-shashwb/_build2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A7F741F33F2484CBB9714F3 /* Build configuration list for PBXAggregateTarget "unittests_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C42B9E60F14C908D127FC8 /* Debug */,
+				32C55950742D4F34B23C68C0 /* Release */,
+				107C7B979AA1412E859E6BD7 /* MinSizeRel */,
+				4DF4E299766A4FAB946DE071 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8DF37660C8EF4177A9E24DA5 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72ECDACDEC764196BD54FF08 /* Debug */,
+				FAF8C05C86DA4083997547CD /* Release */,
+				0B00B70CC1E94CB7BDDBFA01 /* MinSizeRel */,
+				73A184B6B5DE480E936B82A6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A9777D5758184AD6B2DEE66C /* Build configuration list for PBXNativeTarget "vtray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9974E8899B0746588795DC94 /* Debug */,
+				6B1BC77C888E4DB6BF337140 /* Release */,
+				C9104DAB01A74253B6271018 /* MinSizeRel */,
+				93B6D7821612440CB1865874 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D9655517C7744499994279FD /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D3168BED2BC4D51BC10B4B4 /* Debug */,
+				8F2B372B794946DBAB6FBDC9 /* Release */,
+				A8A24A14B2C74A05A58DEB92 /* MinSizeRel */,
+				DB70C4DFE2CC4A46A336C6D2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E3FAA05FB5154E5B8E561078 /* Build configuration list for PBXAggregateTarget "vtray_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932BE08A25F741E5AA046ED9 /* Debug */,
+				EBBE6068D77E454398E1DB9D /* Release */,
+				EC9BE47FB8A941B78B138141 /* MinSizeRel */,
+				37B384CEDF0F466E90214B44 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E86729361EB24ED483889049 /* Build configuration list for PBXNativeTarget "unittests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20307F466BE4960B4F420BF /* Debug */,
+				6404DA101AD34554BA98577B /* Release */,
+				3D4014D23DCA440FA7648757 /* MinSizeRel */,
+				9EEF50B48B0C45CBB4F8F161 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F6DB2070EC1441BE85F616F3 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C83C5497C4304064B76255BE /* Debug */,
+				1C04BBB948A64211AEAB01C3 /* Release */,
+				DAA03C331EA94775A39BC87D /* MinSizeRel */,
+				B399B2F65E7F45C09503F626 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FE9D42C7C2F141639C581300 /* Build configuration list for PBXProject "VTRAY" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C01F598B3194873B3A844D0 /* Debug */,
+				7C4B9797463A440B8EBC2542 /* Release */,
+				4CFA1B5F4FDA44A097F2CEFB /* MinSizeRel */,
+				55933690DFA44A0790F1D406 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF9EB48DF288464E8E23F090 /* Project object */;
+}

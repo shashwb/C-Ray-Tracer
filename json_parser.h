@@ -17,6 +17,8 @@
 #include <QImage>
 
 #include <vector>
+#include <string>
+#include <QString>
 
 #include "lights.h"
 #include "sphere.h"
@@ -30,7 +32,7 @@ using namespace std;
 
 struct Pixels {
     Coordinate coordinate;
-    Color color;
+    // Color color;
 };
 
 
@@ -40,36 +42,24 @@ public:
 
     Sphere sphere;  // we don't need a premade one
     Lights light;   //we don't need a premade one, made once we read in the json
-
     Plane plane;
     Camera camera;
 
-    // Camera normalCamera;
-
-
     vector<MotherOfObjects*> vecObjects;  //vector of objects!!
     vector<Lights*> vecLights;
-
 
     Ray primaryRay;
 
     //CAN PROBABLY GET RID OF ALL OF THIS SHIT
     vector<Sphere> *vecSphere;
     vector<Plane> *vecPlane;
-
     vector<Pixels*> pixelsVector;
 
     JSONParser();
-
     bool Parse(QTextStream &stream, int num);
     Ray createPrimaryRay();
-
     Ray shadowRayTracer(Coordinate poi, MotherOfObjects* object);
     Ray calculatePrimaryRay(int i, int j);
-
-private:
-
-
 
 };
 

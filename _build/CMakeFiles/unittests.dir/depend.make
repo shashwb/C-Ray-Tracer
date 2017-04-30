@@ -24,6 +24,7 @@ CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonObject
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QJsonParseError
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QObject
+CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QString
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QVariant
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QVariantMap
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qbytearray.h
@@ -35,6 +36,7 @@ CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsondocument.h
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qjsonobject.h
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qobject.h
+CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qstring.h
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qvariant.h
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/QImage
 CMakeFiles/unittests.dir/json_parser.cpp.o: /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtGui.framework/Headers/qimage.h

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7100D6188D289DDC9328C34E67223F3742CE370B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D52B19A69B98865CFCF8C638BDF18B8396597354" : 9223372036854775807,
+    "7100D6188D289DDC9328C34E67223F3742CE370B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3B043E7C-66DD-4CC6-9705-AD9D1749D524",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D52B19A69B98865CFCF8C638BDF18B8396597354" : "",
+    "7100D6188D289DDC9328C34E67223F3742CE370B" : "project3-shashwb\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VTRAY",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "_build2\/VTRAY.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ECE3574Sp2017\/project3-shashwb",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7100D6188D289DDC9328C34E67223F3742CE370B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shashwb\/hello_app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D52B19A69B98865CFCF8C638BDF18B8396597354"
+    }
+  ]
+}

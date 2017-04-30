@@ -15,6 +15,10 @@ Plane::Plane(Coordinate center_val, Coordinate normal_val, Coordinate color_val,
 
 }
 
+Coordinate Plane::getCenter() {
+  return center;
+}
+
 void Plane::print() {
     qDebug() << "created a Plane object";
 }

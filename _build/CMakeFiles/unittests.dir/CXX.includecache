@@ -255,8 +255,12 @@ lights.h
 /Users/sethbalodi/CODE/project3-shashwb/lights.h
 camera.h
 /Users/sethbalodi/CODE/project3-shashwb/camera.h
+typeinfo
+-
 iostream
 -
+mother_of_objects.h
+/Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
 
 /Users/sethbalodi/CODE/project3-shashwb/json_parser.h
 QCoreApplication
@@ -288,6 +292,10 @@ QJsonArray
 QImage
 -
 vector
+-
+string
+-
+QString
 -
 lights.h
 /Users/sethbalodi/CODE/project3-shashwb/lights.h
@@ -335,6 +343,8 @@ QDebug
 -
 mother_of_objects.h
 /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+string
+-
 
 /Users/sethbalodi/CODE/project3-shashwb/sphere.cpp
 sphere.h
@@ -345,6 +355,8 @@ QDebug
 -
 mother_of_objects.h
 /Users/sethbalodi/CODE/project3-shashwb/mother_of_objects.h
+string
+-
 
 /Users/sethbalodi/CODE/project3-shashwb/unittests.cpp
 catch.hpp
@@ -393,6 +405,10 @@ qjsondocument.h
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QObject
 qobject.h
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qobject.h
+
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QString
+qstring.h
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qstring.h
 
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/QVariant
 qvariant.h
@@ -526,6 +542,24 @@ QtCore/qscopedpointer.h
 QtCore/qmetatype.h
 -
 QtCore/qobject_impl.h
+-
+
+/Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qstring.h
+QtCore/qchar.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qrefcount.h
+-
+QtCore/qnamespace.h
+-
+string
+-
+iterator
+-
+stdarg.h
+-
+QtCore/qstringbuilder.h
 -
 
 /Users/sethbalodi/Qt5.8.0/5.8/clang_64/lib/QtCore.framework/Headers/qvariant.h

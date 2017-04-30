@@ -1,0 +1,7 @@
+/Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeFiles/RUN_TESTS.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeFiles/vtray.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeFiles/unittests.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeFiles/vtray_autogen.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeFiles/unittests_autogen.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeFiles/ALL_BUILD.dir
+/Users/sethbalodi/CODE/project3-shashwb/_build2/CMakeFiles/ZERO_CHECK.dir

@@ -19,12 +19,16 @@ void Sphere::print() {
     qDebug() << "created a Sphere object";
 }
 
+Coordinate Sphere::getCenter() {
+  return center;
+}
+
 bool Sphere::intersect(Ray ray, double &out) {
 
     double out1, out2;
 
     Coordinate length =  center - ray.origin;
-    double tca = ray.origin.dotProduct(ray.direction);
+    double tca = length.dotProduct(ray.direction);
 
     if (tca < 0) {
         return false;
