@@ -59,8 +59,8 @@ public:
   Coordinate normal;
   double radius;
 
-  Ray ray;
-  Coordinate coordinate;
+//  Ray ray;
+//  Coordinate coordinate;
 
     MotherOfObjects();
     virtual void print() = 0;

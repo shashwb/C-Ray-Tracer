@@ -23,8 +23,8 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
     }
 
     QByteArray jsonData = jsonFile.readAll();
-    cout << "JSON Data:" << endl;
-    cout << jsonData.toStdString() << endl;
+//    cout << "JSON Data:" << endl;
+//    cout << jsonData.toStdString() << endl;
     QJsonParseError *err = new QJsonParseError();
     QJsonDocument doc = QJsonDocument::fromJson(jsonData, err);
 
@@ -46,20 +46,20 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
         QVariantMap camera_centerMap = cameraMap["center"].toMap();
 
         //DEBUGGING CODE
-        double double_val = 0;
-        string double_type = typeid(double_val).name();
-        cout << "****TYPE OF DOUBLE VAL : " << double_type << endl;
-        int int_val = 20;
-        string int_type = typeid(int_val).name();
-        cout << "****TYPE OF INT VAL : " << int_type << endl;
-        string camera_type_x = typeid(camera.center.x).name();
-        cout << "******TYPE OF CAMERA CENTER X -> " << camera_type_x << endl;
-        string camera_type_y = typeid(camera_centerMap["y"].toDouble()).name();
-        string camera_type_z = typeid(camera_centerMap["z"].toDouble()).name();
-        if (camera_type_x != double_type || camera_type_y != double_type || camera_type_z != double_type) {
-          cout << "ERROR: did not parse a valid double value into camera center" << endl;
-          return false;
-        }
+//        double double_val = 0;
+//        string double_type = typeid(double_val).name();
+//        cout << "****TYPE OF DOUBLE VAL : " << double_type << endl;
+//        int int_val = 20;
+//        string int_type = typeid(int_val).name();
+//        cout << "****TYPE OF INT VAL : " << int_type << endl;
+//        string camera_type_x = typeid(camera.center.x).name();
+//        cout << "******TYPE OF CAMERA CENTER X -> " << camera_type_x << endl;
+//        string camera_type_y = typeid(camera_centerMap["y"].toDouble()).name();
+//        string camera_type_z = typeid(camera_centerMap["z"].toDouble()).name();
+//        if (camera_type_x != double_type || camera_type_y != double_type || camera_type_z != double_type) {
+//          cout << "ERROR: did not parse a valid double value into camera center" << endl;
+//          return false;
+//        }
         //DEBUGGING CODE
 
         cout << "SUCCESS: parsed a valid double value" << endl;
@@ -134,29 +134,39 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
             //create a new sphere
             // MotherOfObjects newSphere = new Sphere;
-            MotherOfObjects *newSphere = new Sphere;
+//            MotherOfObjects *newSphere = new Sphere;
 
             // newSphere.type = objectObj["type"].toString();
 
             QVariantMap objectVariant = objectObj.toVariantMap();
             QVariantMap objectCenter = objectVariant["center"].toMap();
             QVariantMap objectColor = objectVariant["color"].toMap();
-            newSphere->center.x = objectCenter["x"].toDouble();
-            newSphere->center.y = objectCenter["y"].toDouble();
-            newSphere->center.z = objectCenter["z"].toDouble();
-            cout << "newphere->center.x: " << newSphere->center.x << endl;
-            cout << "newSphere->center.y: " << newSphere->center.y << endl;
-            cout << "newSphere->center.z: " << newSphere->center.z << endl;
+              
+            Coordinate center_value(objectCenter["x"].toDouble(), objectCenter["y"].toDouble(), objectCenter["z"].toDouble());
+            Coordinate color_value(objectColor["r"].toInt(), objectColor["g"].toInt(), objectColor["b"].toInt());
+            double lambert_value = objectObj["lambert"].toDouble();
+            double radius_value = objectObj["lambert"].toDouble();
+              
+            Sphere *newSphere = new Sphere(center_value, color_value, lambert_value, radius_value);
+//              Sphere newSphere = new Sphere(center_value, color_value, lambert_value, radius);
+              
+//            newSphere->
+//            newSphere->center.x = objectCenter["x"].toDouble();
+//            newSphere->center.y = objectCenter["y"].toDouble();
+//            newSphere->center.z = objectCenter["z"].toDouble();
+//            cout << "newphere->center.x: " << newSphere->center.x << endl;
+//            cout << "newSphere->center.y: " << newSphere->center.y << endl;
+//            cout << "newSphere->center.z: " << newSphere->center.z << endl;
+//
+//            newSphere->color.x = objectColor["r"].toInt();
+//            newSphere->color.y = objectColor["g"].toInt();
+//            newSphere->color.z = objectColor["b"].toInt();
+//            cout << "newSphere->color.x: " << newSphere->color.x << endl;
+//            cout << "newSphere->color.y: " << newSphere->color.y << endl;
+//            cout << "newSphere->color.z: " << newSphere->color.z << endl;
 
-            newSphere->color.x = objectColor["r"].toInt();
-            newSphere->color.y = objectColor["g"].toInt();
-            newSphere->color.z = objectColor["b"].toInt();
-            cout << "newSphere->color.x: " << newSphere->color.x << endl;
-            cout << "newSphere->color.y: " << newSphere->color.y << endl;
-            cout << "newSphere->color.z: " << newSphere->color.z << endl;
-
-            newSphere->lambert = objectObj["lambert"].toDouble();
-            newSphere->radius = objectObj["radius"].toDouble();
+//            newSphere->lambert = objectObj["lambert"].toDouble();
+//            newSphere->radius = objectObj["radius"].toDouble();
 
             cout << "newSphere->lambert: " << newSphere->lambert << endl;
             cout << "newSphere->radius: " << newSphere->radius << endl;
@@ -174,32 +184,47 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             QVariantMap objectCenter = objectVariant["center"].toMap();
             QVariantMap objectColor = objectVariant["color"].toMap();
             QVariantMap objectNormal = objectVariant["normal"].toMap();
+              
+//              Plane newPlane
+              
+              
+              
+              Coordinate center_value(objectCenter["x"].toDouble(), objectCenter["y"].toDouble(), objectCenter["z"].toDouble());
+              Coordinate color_value(objectColor["r"].toInt(), objectColor["g"].toInt(), objectColor["b"].toInt());
+              Coordinate normal_value(objectNormal["x"].toInt(), objectNormal["y"].toInt(), objectNormal["z"].toInt());
+              double lambert_value = objectObj["lambert"].toDouble();
+              
+              
+              Plane *newPlane = new Plane(center_value, normal_value, color_value, lambert_value);
+              
+//              double radius_value = objectObj["lambert"].toDouble();
+              
 
-            MotherOfObjects *newPlane = new Plane;
-
-            newPlane->center.x = objectCenter["x"].toDouble();
-            newPlane->center.y = objectCenter["y"].toDouble();
-            newPlane->center.z = objectCenter["z"].toDouble();
-            cout << "newPlane->center.x: " << newPlane->center.x << endl;
-            cout << "newPlane->center.y: " << newPlane->center.y << endl;
-            cout << "newPlane->center.z: " << newPlane->center.z << endl;
-
-            newPlane->color.x = objectColor["r"].toInt();
-            newPlane->color.y = objectColor["g"].toInt();
-            newPlane->color.z = objectColor["b"].toInt();
-            cout << "newPlane->color.x: " << newPlane->color.x << endl;
-            cout << "newPlane->color.y: " << newPlane->color.y << endl;
-            cout << "newPlane->color.z: " << newPlane->color.z << endl;
-
-            newPlane->lambert = objectObj["lambert"].toDouble();
-            cout << "newPlane->lambert: " << newPlane->lambert << endl;
-
-            newPlane->normal.x = objectNormal["x"].toDouble();
-            newPlane->normal.y = objectNormal["y"].toDouble();
-            newPlane->normal.z = objectNormal["z"].toDouble();
-            cout << "newPlane->normal.x: " << newPlane->normal.x << endl;
-            cout << "newPlane->normal.y: " << newPlane->normal.y << endl;
-            cout << "newPlane->normal.z: " << newPlane->normal.z << endl;
+//            MotherOfObjects *newPlane = new Plane;
+//
+//            newPlane->center.x = objectCenter["x"].toDouble();
+//            newPlane->center.y = objectCenter["y"].toDouble();
+//            newPlane->center.z = objectCenter["z"].toDouble();
+//            cout << "newPlane->center.x: " << newPlane->center.x << endl;
+//            cout << "newPlane->center.y: " << newPlane->center.y << endl;
+//            cout << "newPlane->center.z: " << newPlane->center.z << endl;
+//
+//            newPlane->color.x = objectColor["r"].toInt();
+//            newPlane->color.y = objectColor["g"].toInt();
+//            newPlane->color.z = objectColor["b"].toInt();
+//            cout << "newPlane->color.x: " << newPlane->color.x << endl;
+//            cout << "newPlane->color.y: " << newPlane->color.y << endl;
+//            cout << "newPlane->color.z: " << newPlane->color.z << endl;
+//
+//            newPlane->lambert = objectObj["lambert"].toDouble();
+//            cout << "newPlane->lambert: " << newPlane->lambert << endl;
+//
+//            newPlane->normal.x = objectNormal["x"].toDouble();
+//            newPlane->normal.y = objectNormal["y"].toDouble();
+//            newPlane->normal.z = objectNormal["z"].toDouble();
+//            cout << "newPlane->normal.x: " << newPlane->normal.x << endl;
+//            cout << "newPlane->normal.y: " << newPlane->normal.y << endl;
+//            cout << "newPlane->normal.z: " << newPlane->normal.z << endl;
 
             vecObjects.push_back(newPlane);
             cout << "PUSHED BACK A PLANE, current size of vector: " << vecObjects.size() << endl;
@@ -230,8 +255,6 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 }
 
 
-
-// should be void no reason to return a ray from here, only used to call shadowRay()
 void JSONParser::createPrimaryRay() {
 
     cout << "IN THE PRIMARY RAY FUNCTION" << endl;
@@ -251,7 +274,6 @@ void JSONParser::createPrimaryRay() {
    MotherOfObjects *tempObject;
 
     for (int i = 0; i < height; i++) {
-
       for (int j = 0; j < width; j++) {
 
         // cout << "RAY is being send through pixel value: (" << i << "," << j << ")";
@@ -276,9 +298,21 @@ void JSONParser::createPrimaryRay() {
 
                 //because it intersected, we have to run the shadow ray
                 //point of intersection
+                
+                
+                if (i == 62 && j == 118) {
+                    cout << endl;
+                    cout << "::::::::::::::::::::::::::::::::::::::::::::WE DID IT!!!!" << endl;
+                    cout << endl;
+                }
+                else {
+                    cout << "___________________________________________THIS IS NOT THE PROPER INTERSECTION" << endl;
+                }
+                
+                
                 cout << endl;
-                cout << "intersecting at: (" << i << "," << j <<  ")" << endl;
-                Coordinate poi(i, j, nearest_t);
+                cout << "*********intersecting at: (" << i << "," << j <<  ")" << endl;
+                Coordinate poi = primaryRay.origin + primaryRay.direction * nearest_t;
                 shadowRayTracer(poi, tempObject, i, j);
 
           }
@@ -321,61 +355,85 @@ Ray JSONParser::calculatePrimaryRay(int i, int j) {
 void JSONParser::shadowRayTracer(Coordinate pointOfIntersection, MotherOfObjects* object, int i, int j) {
 
   cout << "IN THE SHADOW RAY FUNCTION" << endl;
+    
+    double max_intensity = 0;
 
     //this is where we check the lights
-    double nearest_t;
 
-    for (int i = 0; i < vecLights.size(); i++) {
+    for (int vecIndex = 0; vecIndex < vecLights.size(); vecIndex++) {
         cout << "FIRST VECLIGHTS LOOP" << endl;
-        Coordinate p2 = vecLights.at(i)->loc - pointOfIntersection;
+        Coordinate p2 = vecLights.at(vecIndex)->loc - pointOfIntersection;
         cout << "FIRST VECLIGHT LOOP PAST COORDINATE" << endl;
         Coordinate p2_normal = p2.normalize();
         //create shadow ray
         Ray shadowRay(pointOfIntersection, p2_normal);
+        cout << "Ray origin -> " << shadowRay.origin.x << " " << shadowRay.origin.y << " " << shadowRay.origin.z << endl;
+        
+        
+        cout << "Ray direction -> " << shadowRay.direction.x << " " << shadowRay.direction.y << " " << shadowRay.direction.z << endl;
+        double nearest_t;
 
-        for (int j = 0; j < vecObjects.size(); j++) {
+         //MotherOfObjects *tempObjects;
+        
+        
+        
+        
+        
+            //get the light intensity, make sure it's MAX of all lights
+            //compare to previous maximum, store this value
+            //calculations can be outside
+            //scale inside
+            
+            double scale = object->normal.dotProduct(shadowRay.direction) * object->lambert;
+            
+            if (vecLights[vecIndex]->intensity > max_intensity) {
+                max_intensity = vecLights[vecIndex]->intensity;
+            }
+            
+            if (scale > 0) {
+                //overload multiplication
+                Coordinate pixel_color = object->color * scale * max_intensity;
+                Pixels *newPixel = new Pixels;
+                //CHANGE THIS TO RGB
+                newPixel->coordinate.x = i;
+                newPixel->coordinate.y = j;
+                newPixel->coordinate.z = 0;
+                newPixel->color = pixel_color;
+                pixelsVector.push_back(newPixel);
+            }
+        
+        
+        
+        for (int vecObj = 0; vecObj < vecObjects.size(); vecObj++) {
             
             cout << "VECOBJECTS FOR LOOP" << endl;
 
-            if (object != vecObjects.at(j)) {
+            if (object != vecObjects.at(vecObj)) {
 //            if (true) {
             
                 //if the object is not in this
                 cout << "INSIDE OF WHERE I SET THE PIXELS" << endl;
 
-                MotherOfObjects *tempObjects;
-                tempObjects = vecObjects[j];
+               // tempObjects = ;
+                
+                cout << "value of nearest_t: " << nearest_t << endl;
 
-                if (tempObjects->intersect(shadowRay, nearest_t)) {
-
-                  // Pixels *newPixel = new Pixels;
+                if (vecObjects[vecObj]->intersect(shadowRay, nearest_t)) {
+//                if (true) {
+                    
                   Pixels *newPixel = new Pixels;
                   //CHANGE THIS TO RGB
                   newPixel->coordinate.x = i;
                   newPixel->coordinate.y = j;
-                  newPixel->color.x = 233;
-                    
-                    cout << "newPixel->coordinate.x: " << newPixel->coordinate.x << endl;
-                    
+                  newPixel->coordinate.z = 0;
+                  newPixel->color.x = 0;
                   newPixel->color.y = 0;
                   newPixel->color.z = 0;
                   pixelsVector.push_back(newPixel);
 
-                  cout << "pushed pixel at coordinates ()" << newPixel->coordinate.x << "," << newPixel->coordinate.y << ")" << endl;
+                  cout << "pushed pixel at coordinates (" << newPixel->coordinate.x << "," << newPixel->coordinate.y << ")" << endl;
 
                   // break;
-                }
-                else {
-                    
-                    cout << "DID NOT INTERSECT" << endl;
-
-                    //get the light intensity, make sure it's MAX of all lights
-                    //compare to previous maximum, store this value
-                    //calculations can be outside
-                    //scale inside
-
-//                 double scale = vecObjects.at(j)->normal.dotProduct(shadowRay) * vecObjects.at(j)->lambert;
-//                 Coordinate pixel_color = scale * vecLights.at(i).intensity * vecObjects.at(i)->color;
                 }
             }
             else {

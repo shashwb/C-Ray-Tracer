@@ -1,0 +1,9 @@
+unit 1 0.0136299
+test0 1 0.255293
+test1 1 0.255793
+test2 1 0.255046
+test3 0 0
+test4 0 0
+---
+test3
+test4

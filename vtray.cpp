@@ -22,7 +22,7 @@ using namespace std;
 
 void pngViewer(JSONParser parser) {
 
-     vector<Pixels *> pixels = parser.pixelsVector;
+//     vector<Pixels *> pixels = parser.pixelsVector;
 
      //image init
      int width = parser.camera.size.size_one;
@@ -31,13 +31,13 @@ void pngViewer(JSONParser parser) {
      QImage pngImage(width, height, QImage::Format_RGB32);
 
      //go through pixels list
-     for (int i = 0; i < pixels.size(); i++) {
+     for (int i = 0; i < parser.pixelsVector.size(); i++) {
          QRgb rgb_value;
          //these need to be changed to an actual "color" struct!!!!
-         rgb_value = qRgb(pixels[i]->color.x, pixels[i]->color.y, pixels[i]->color.z);
-         pngImage.setPixel(pixels[i]->coordinate.x, pixels[i]->coordinate.y, rgb_value);
+         rgb_value = qRgb(parser.pixelsVector[i]->color.x, parser.pixelsVector[i]->color.y, parser.pixelsVector[i]->color.z);
+         pngImage.setPixel(parser.pixelsVector[i]->coordinate.x, parser.pixelsVector[i]->coordinate.y, rgb_value);
      }
-     pngImage.save("save.png");
+     pngImage.save("shit.png");
 }
 
 
