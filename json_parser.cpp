@@ -231,8 +231,8 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
 
 
-
-Ray JSONParser::createPrimaryRay() {
+// should be void no reason to return a ray from here, only used to call shadowRay()
+void JSONParser::createPrimaryRay() {
 
     cout << "IN THE PRIMARY RAY FUNCTION" << endl;
 
@@ -244,90 +244,67 @@ Ray JSONParser::createPrimaryRay() {
 
     Ray finalRay;
 
-    // Sphere *tempSphere;  //this will store the object that is intersected
-//    MotherOfObjects *tempObject;
-
     cout << "____SIZE OF OBJECT VECTOR: " << vecObjects.size() << endl;
+    cout << endl;
+    cout << endl;
 
    MotherOfObjects *tempObject;
 
-    for (int i = 0; i < height; ++i) {
-      for (int j = 0; j < width; ++j) {
+    for (int i = 0; i < height; i++) {
 
-        //create a primary ray for each pixel coordinate value
+      for (int j = 0; j < width; j++) {
+
+        // cout << "RAY is being send through pixel value: (" << i << "," << j << ")";
         Ray primaryRay = calculatePrimaryRay(i, j);
-
         double nearest_t;
-        for (int k = 0; k < vecObjects.size(); ++k) {
+
+           if (i == 62 && j == 118) {
+               cout << "______BREAKPOINT" << endl;
+           }
+
+        for (int k = 0; k < vecObjects.size(); k++) {
+
+//            cout << "iteration of k---> " << k << endl;
+
           tempObject = vecObjects[k];
-          // cout << "tempObject.center.x : " << tempObject->center.x << endl;
-          // cout << "tempObject.center.y : " << tempObject->center.y<< endl;
-          // cout << "tempObject.center.z : " << tempObject->center.z << endl;
-          if (tempObject->intersect(primaryRay, nearest_t)) {
-            //this is intersecting object[k]
-            cout << endl;
-            cout << "SUCCESS :: this intersects!!!" << endl;
-            cout << endl;
+
+            if (tempObject->intersect(primaryRay, nearest_t)) {
+//                 cout << endl;
+//                 cout << "nearest intersection" << nearest_t << endl;
+//                 cout << "SUCCESS :: this intersects at point: (" << i << "," << j << ")" << endl;
+//                 cout << endl;
+
+                //because it intersected, we have to run the shadow ray
+                //point of intersection
+                cout << endl;
+                cout << "intersecting at: (" << i << "," << j <<  ")" << endl;
+                Coordinate poi(i, j, nearest_t);
+                shadowRayTracer(poi, tempObject, i, j);
+
           }
           else {
-            cout << "---" << endl;
-          }
-        } // end vecObject for loop
-      } //end j for loop
-    } //end i for loop
+              // cout << " ::::: DOES NOT INTERSECT DOE" << endl;
+              //return a black pixel, but we can just do this in the shadow function
+            }
+        }
+      }
+    }
 
-
-
-//     Pixels pixel;
-//
-//     cout << "does it reach this?" << endl;
-//
-//     //iterate through all pixels
-//     for (int i = 0; i < height; i++) {
-//         for (int j = 0; i < width; j++) {
-//
-//             //calculate primary ray
-//             //JUST DO THIS ENTIRE FUNCTION ALL IN HERE!
-//             Ray primaryRay = calculatePrimaryRay(i, j); //NEED TO CALCULATE THIS <- call primary ray function
-//
-//             double nearest_t = INFINITY;
-//             bool intersect =  false;
-//
-//             for (int object_iterator = 0; object_iterator < vecSphere->size(); object_iterator++) {
-//                 tempObject = &vecSphere->at(object_iterator);
-//                 intersect = tempSphere->intersect(primaryRay, nearest_t);
-//                 if (intersect) {
-//                     //if it intersects, then mark the place
-//                     tempSphere = &vecSphere->at(object_iterator);
-//                 }
-//             }
-//             //if it doesn't hit an object
-// //            if (tempSphere == nullptr) {
-//             if (true) {
-//                 pixel.coordinate.x = i;
-//                 pixel.coordinate.y = j;
-//                 pixel.coordinate.z = 0;
-//                 pixel.color.r = 0;
-//                 pixel.color.g = 0;
-//                 pixel.color.b = 0;
-//             }
-//             else {
-//                 //callShadowRay function()
-//
-//                 //get the point of intersection to pass into the callshadow ray function!
-//             }
-//
-//         }
-//     } //end of forloop i
-    return finalRay;
+    // return finalRay;
 }
 
+
 Ray JSONParser::calculatePrimaryRay(int i, int j) {
+
     Coordinate first_point = camera.center - camera.normal * camera.focus;
-    Coordinate second_point(i, j, 0);
+//    Coordinate second_point(i, j, 0);
+    Coordinate second_point;
+    second_point.x = camera.resolution.resolution_two*(i - (camera.size.size_two / 2));
+    second_point.y = camera.resolution.resolution_one*(j - (camera.size.size_one / 2));
+    second_point.z = 0;
 
     Coordinate temporary = second_point - first_point;
-    Coordinate direction = temporary; // need to normalize this shit
+    Coordinate direction = temporary.normalize();
 
     Ray finalRay;
     finalRay.origin = first_point;
@@ -341,35 +318,74 @@ Ray JSONParser::calculatePrimaryRay(int i, int j) {
 
 
 //pass in the point of intersection
-Ray JSONParser::shadowRayTracer(Coordinate poi, MotherOfObjects* object) {
+void JSONParser::shadowRayTracer(Coordinate pointOfIntersection, MotherOfObjects* object, int i, int j) {
+
+  cout << "IN THE SHADOW RAY FUNCTION" << endl;
 
     //this is where we check the lights
     double nearest_t;
 
     for (int i = 0; i < vecLights.size(); i++) {
-        Coordinate p2 = vecLights.at(i)->loc - poi;
+        cout << "FIRST VECLIGHTS LOOP" << endl;
+        Coordinate p2 = vecLights.at(i)->loc - pointOfIntersection;
+        cout << "FIRST VECLIGHT LOOP PAST COORDINATE" << endl;
+        Coordinate p2_normal = p2.normalize();
         //create shadow ray
-        Ray shadowRay(poi, p2);
+        Ray shadowRay(pointOfIntersection, p2_normal);
 
         for (int j = 0; j < vecObjects.size(); j++) {
-            if (object != vecObjects.at(j)) {
+            
+            cout << "VECOBJECTS FOR LOOP" << endl;
 
-                //if it doesn't intersect the same object
-                //if intersects another object, then color black
-                if (vecObjects[j]->intersect(shadowRay, nearest_t)) {
-                    break;
+            if (object != vecObjects.at(j)) {
+//            if (true) {
+            
+                //if the object is not in this
+                cout << "INSIDE OF WHERE I SET THE PIXELS" << endl;
+
+                MotherOfObjects *tempObjects;
+                tempObjects = vecObjects[j];
+
+                if (tempObjects->intersect(shadowRay, nearest_t)) {
+
+                  // Pixels *newPixel = new Pixels;
+                  Pixels *newPixel = new Pixels;
+                  //CHANGE THIS TO RGB
+                  newPixel->coordinate.x = i;
+                  newPixel->coordinate.y = j;
+                  newPixel->color.x = 233;
+                    
+                    cout << "newPixel->coordinate.x: " << newPixel->coordinate.x << endl;
+                    
+                  newPixel->color.y = 0;
+                  newPixel->color.z = 0;
+                  pixelsVector.push_back(newPixel);
+
+                  cout << "pushed pixel at coordinates ()" << newPixel->coordinate.x << "," << newPixel->coordinate.y << ")" << endl;
+
+                  // break;
                 }
                 else {
-//                    double scale = vecObjects.at(j)->normal.dotProduct(shadowRay) * vecObjects.at(j)->lambert;
-//                    Coordinate pixel_color = scale * vecLights.at(i).intensity * vecObjects.at(i)->color;
+                    
+                    cout << "DID NOT INTERSECT" << endl;
 
+                    //get the light intensity, make sure it's MAX of all lights
+                    //compare to previous maximum, store this value
+                    //calculations can be outside
+                    //scale inside
+
+//                 double scale = vecObjects.at(j)->normal.dotProduct(shadowRay) * vecObjects.at(j)->lambert;
+//                 Coordinate pixel_color = scale * vecLights.at(i).intensity * vecObjects.at(i)->color;
                 }
-
             }
-
+            else {
+                cout << "NO INTERSETCT for shadowRay to light" << endl;
+            }
         }
 
+        cout << "Size of Pixels Array: " << pixelsVector.size() << endl;
+        cout << endl;
+        cout << endl;
+
     }
-
-
 }

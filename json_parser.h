@@ -32,7 +32,8 @@ using namespace std;
 
 struct Pixels {
     Coordinate coordinate;
-    // Color color;
+//    Color color;
+    Coordinate color;
 };
 
 
@@ -53,12 +54,13 @@ public:
     //CAN PROBABLY GET RID OF ALL OF THIS SHIT
     vector<Sphere> *vecSphere;
     vector<Plane> *vecPlane;
+
     vector<Pixels*> pixelsVector;
 
     JSONParser();
     bool Parse(QTextStream &stream, int num);
-    Ray createPrimaryRay();
-    Ray shadowRayTracer(Coordinate poi, MotherOfObjects* object);
+    void createPrimaryRay();
+    void shadowRayTracer(Coordinate poi, MotherOfObjects* object, int i, int j);
     Ray calculatePrimaryRay(int i, int j);
 
 };

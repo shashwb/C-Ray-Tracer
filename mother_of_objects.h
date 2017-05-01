@@ -11,9 +11,9 @@
 using namespace std;
 
 
-// struct Color {
-//     int r, g, b;
-// };
+ struct Color {
+     int r, g, b;
+ };
 
 struct Coordinate {
     double x, y, z;

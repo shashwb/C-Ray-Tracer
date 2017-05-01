@@ -20,24 +20,24 @@
 using namespace std;
 
 
-void pngViewer(JSONParser parser, QString outputName) {
+void pngViewer(JSONParser parser) {
 
-    // vector<Pixels *> pixels = parser.pixelsVector;
-    //
-    // //image init
-    // int width = parser.camera->size.size_one;
-    // int height = parser.camera->size.size_two;
-    //
-    // QImage pngImage(width, height, QImage::Format_RGB32);
-    //
-    // //go through pixels list
-    // for (int i = 0; i < pixels.size(); i++) {
-    //     QRgb rgb_value;
-    //     rgb_value = qRgb(pixels[i]->color.r, pixels[i]->color.g, pixels[i]->color.b);
-    //     pngImage.setPixel(pixels[i]->coordinate.x, pixels[i]->coordinate.y, rgb_value);
-    //
-    // }
-    // pngImage.save("save.png");
+     vector<Pixels *> pixels = parser.pixelsVector;
+
+     //image init
+     int width = parser.camera.size.size_one;
+     int height = parser.camera.size.size_two;
+
+     QImage pngImage(width, height, QImage::Format_RGB32);
+
+     //go through pixels list
+     for (int i = 0; i < pixels.size(); i++) {
+         QRgb rgb_value;
+         //these need to be changed to an actual "color" struct!!!!
+         rgb_value = qRgb(pixels[i]->color.x, pixels[i]->color.y, pixels[i]->color.z);
+         pngImage.setPixel(pixels[i]->coordinate.x, pixels[i]->coordinate.y, rgb_value);
+     }
+     pngImage.save("save.png");
 }
 
 
@@ -45,7 +45,7 @@ void pngViewer(JSONParser parser, QString outputName) {
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
-    
+
     cout << "MAIN FUNCTION" << endl;
 
     JSONParser parser;
@@ -76,7 +76,10 @@ int main(int argc, char *argv[])
           cout << "everything else looks good! Procced!" << endl;
           parser.Parse(streamParse, 1); //default number of threads
 
-          Ray primaryRay = parser.createPrimaryRay();
+          // Ray primaryRay = parser.createPrimaryRay();
+          parser.createPrimaryRay();
+
+          pngViewer(parser);
 
             // pngViewer(parser, QString::fromStdString(argv[2]));
 //        }
