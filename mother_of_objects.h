@@ -44,7 +44,10 @@ struct Coordinate {
 struct Ray {
     Coordinate origin, direction;
     Ray() {}
-    Ray(const Coordinate &origin, Coordinate &direction) : origin(origin), direction(direction) {}
+    Ray(const Coordinate &o, Coordinate &d) {
+        origin = o;
+        direction = d;
+    }
 };
 
 

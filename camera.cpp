@@ -16,6 +16,12 @@ Camera::Camera(Coordinate center_value, int focus_value,
     resolution = res_value;
 }
 
+Camera::Camera(Coordinate center_value, int focus_value, Coordinate normal_value) {
+    center = center_value;
+    focus = focus_value;
+    normal = normal_value;
+}
+
 void Camera::print() {
     qDebug() << "created a Camera object";
 }

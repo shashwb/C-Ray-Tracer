@@ -22,8 +22,6 @@ using namespace std;
 
 void pngViewer(JSONParser parser) {
 
-//     vector<Pixels *> pixels = parser.pixelsVector;
-
      //image init
      int width = parser.camera.size.size_one;
      int height = parser.camera.size.size_two;
@@ -33,11 +31,31 @@ void pngViewer(JSONParser parser) {
      //go through pixels list
      for (int i = 0; i < parser.pixelsVector.size(); i++) {
          QRgb rgb_value;
+         
+         
+         int rgb_red = static_cast<int>(parser.pixelsVector[i]->color.z);
+         
          //these need to be changed to an actual "color" struct!!!!
-         rgb_value = qRgb(parser.pixelsVector[i]->color.x, parser.pixelsVector[i]->color.y, parser.pixelsVector[i]->color.z);
-         pngImage.setPixel(parser.pixelsVector[i]->coordinate.x, parser.pixelsVector[i]->coordinate.y, rgb_value);
+         rgb_value = qRgb(static_cast<int>(parser.pixelsVector[i]->color.x), static_cast<int>(parser.pixelsVector[i]->color.y), static_cast<int>(parser.pixelsVector[i]->color.z));
+         
+         if (static_cast<int>(parser.pixelsVector[i]->color.x) != 0
+             && static_cast<int>(parser.pixelsVector[i]->color.y != 0)
+             && static_cast<int>(parser.pixelsVector[i]->color.z) != 0) {
+             cout << "RGB value of Pixel-> " << static_cast<int>(parser.pixelsVector[i]->color.x) << " " << static_cast<int>(parser.pixelsVector[i]->color.y) << " " << static_cast<int>(parser.pixelsVector[i]->color.z) << endl;
+             
+             pngImage.setPixel(static_cast<int>(parser.pixelsVector[i]->color.x), static_cast<int>(parser.pixelsVector[i]->color.y), static_cast<int>(parser.pixelsVector[i]->color.z));
+             
+             cout << "pixel value set!!!" << endl;
+         }
+         else {
+//             cout << "all pixel values are zero...." << endl;
+         }
+//         pngImage.setPixel(static_cast<int>(parser.pixelsVector[i]->color.x), static_cast<int>(parser.pixelsVector[i]->color.y), static_cast<int>(parser.pixelsVector[i]->color.z));
      }
-     pngImage.save("shit.png");
+     pngImage.save("kendricklamar.png");
+    
+    cout << endl;
+    cout << "Created a file output!" << endl;
 }
 
 

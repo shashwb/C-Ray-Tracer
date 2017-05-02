@@ -23,7 +23,7 @@ public:
 
     // member function
     Sphere();
-    Sphere(Coordinate center_value, Coordinate color_value, double lambert_value, double radius_value);
+    Sphere(Coordinate center_value, Coordinate color_value, double lambert_value, double radius_value, string type);
     void print();
     bool intersect(Ray ray, double &out);
     Coordinate getCenter();
