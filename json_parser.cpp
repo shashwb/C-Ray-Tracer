@@ -83,21 +83,18 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
         camera.size.size_two = sizeList.at(1).toDouble();
         
 
-        
-
         QJsonArray jsonLights = jObject["lights"].toArray();
         QVariantMap lightsMap = mainMap["lights"].toMap();
 
-        cout << endl;
-        cout << "////// LIGHTS" << endl;
-        cout << "size of the vecLights before everything: " << vecLights.size() << endl;
+//        cout << endl;
+//        cout << "////// LIGHTS" << endl;
+//        cout << "size of the vecLights before everything: " << vecLights.size() << endl;
         vecLights.clear();
-        cout << "clearing...." << endl;
-        cout << "size of vecLights after clearing: " << vecLights.size() << endl;
+//        cout << "clearing...." << endl;
+//        cout << "size of vecLights after clearing: " << vecLights.size() << endl;
 
         for (QJsonValue lightsValue : jsonLights) {
 		        QJsonObject lightObj = lightsValue.toObject();
-
             
             QVariantMap lightVariant = lightObj.toVariantMap();
             QVariantMap lightLocationMap = lightVariant["location"].toMap();
@@ -133,15 +130,20 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             QVariantMap objectColor = objectVariant["color"].toMap();
               
             Coordinate center_value(objectCenter["x"].toDouble(), objectCenter["y"].toDouble(), objectCenter["z"].toDouble());
-            Coordinate color_value(objectColor["r"].toInt(), objectColor["g"].toInt(), objectColor["b"].toInt());
+            Color color_value(objectColor["r"].toInt(), objectColor["g"].toInt(), objectColor["b"].toInt());
             double lambert_value = objectObj["lambert"].toDouble();
             double radius_value = objectObj["lambert"].toDouble();
             QString type = objectObj["type"].toString();
             string type_value = type.toStdString();
               
             Sphere *newSphere = new Sphere(center_value, color_value, lambert_value, radius_value, type_value);
-
-            cout << "newSphere->lambert: " << newSphere->lambert << endl;
+            newSphere->setColor(color_value);
+            newSphere->setCenter(center_value);
+            newSphere->setRadius(radius_value);
+//            newSphere->setRadius(radius_value);
+              
+            cout << "BREAK HERE" << endl;
+            cout << "newSphere->lambert: " << newSphere->lambert_one << endl;
             cout << "newSphere->radius: " << newSphere->radius << endl;
 
             vecObjects.push_back(newSphere);
@@ -164,6 +166,7 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
               double lambert_value = objectObj["lambert"].toDouble();
               
               Plane *newPlane = new Plane(center_value, normal_value, color_value, lambert_value);
+//              newPlane->setColor(color_value);
               newPlane->type = "plane";
               
 
@@ -196,6 +199,18 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 void JSONParser::createPrimaryRay() {
 
     cout << "IN THE PRIMARY RAY FUNCTION" << endl;
@@ -218,12 +233,9 @@ void JSONParser::createPrimaryRay() {
       for (int j = 0; j < width; j++) {
 
         Ray primaryRay = calculatePrimaryRay(i, j);
-        double nearest_t;
-
+        double nearest_t = 0;
 
         for (int k = 0; k < vecObjects.size(); k++) {
-
-//            cout << "iteration of k---> " << k << endl;
 
           tempObject = vecObjects[k];
 
@@ -231,12 +243,16 @@ void JSONParser::createPrimaryRay() {
                 
                 if (i == 62 && j == 118) {
                     cout << endl;
+                    cout << "::::::::::::::::::::::::::::::::::::::::::::" << endl;
+                    cout << "::::::::::::::::::::::::::::::::::::::::::::" << endl;
+                    cout << "::::::::::::::::::::::::::::::::::::::::::::" << endl;
                     cout << "::::::::::::::::::::::::::::::::::::::::::::WE DID IT!!!!" << endl;
+                    cout << "::::::::::::::::::::::::::::::::::::::::::::" << endl;
+                    cout << "::::::::::::::::::::::::::::::::::::::::::::" << endl;
+                    cout << "::::::::::::::::::::::::::::::::::::::::::::" << endl;
                     cout << endl;
                 }
-                else {
-                    cout << "___________________________________________THIS IS NOT THE PROPER INTERSECTION" << endl;
-                }
+                    cout << "___________________________________________" << endl;
                 
                 
                 cout << endl;
@@ -244,15 +260,21 @@ void JSONParser::createPrimaryRay() {
                 Coordinate poi = primaryRay.origin + primaryRay.direction * nearest_t;
                 shadowRayTracer(poi, tempObject, i, j);
 
-          }
-          else {
-              // cout << " ::::: DOES NOT INTERSECT DOE" << endl;
-              //return a black pixel, but we can just do this in the shadow function
+            } else {
+                cout << "pixel value: (" << i << "," << j << ") did not intersect" << endl;
             }
         }
       }
     }
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -262,7 +284,7 @@ Ray JSONParser::calculatePrimaryRay(int i, int j) {
     Coordinate second_point;
     second_point.x = camera.resolution.resolution_two*(i - (camera.size.size_two / 2));
     second_point.y = camera.resolution.resolution_one*(j - (camera.size.size_one / 2));
-    second_point.z = 0;
+    second_point.z = 10;
 
     Coordinate temporary = second_point - first_point;
     Coordinate direction = temporary.normalize();
@@ -271,11 +293,20 @@ Ray JSONParser::calculatePrimaryRay(int i, int j) {
     finalRay.origin = first_point;
     finalRay.direction = direction;
 
-    primaryRay.origin = first_point;
-    primaryRay.direction = direction;
+//    primaryRay.origin = first_point;
+//    primaryRay.direction = direction;
 
     return finalRay;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -284,60 +315,25 @@ Ray JSONParser::calculatePrimaryRay(int i, int j) {
 void JSONParser::shadowRayTracer(Coordinate pointOfIntersection, MotherOfObjects* object, int i, int j) {
     
     double max_intensity = 0;
-
-
-    //goes through the entire vector of Lights
+    double scale = 0;
+    
     for (int vecIndex = 0; vecIndex < vecLights.size(); vecIndex++) {
         
         Coordinate p2 = vecLights[vecIndex]->loc - pointOfIntersection;
         Coordinate p2_normal = p2.normalize();
         
-        //create shadow ray
         Ray shadowRay(pointOfIntersection, p2_normal);
-        cout << "Ray origin -> " << shadowRay.origin.x << " " << shadowRay.origin.y << " " << shadowRay.origin.z << endl;
-        cout << "Ray direction -> " << shadowRay.direction.x << " " << shadowRay.direction.y << " " << shadowRay.direction.z << endl;
         double nearest_t;
-        double scale = 300;
+
         
-            if (object->type == "plane") {
-                scale = object->normal.dotProduct(shadowRay.direction) * object->lambert;
-            }
-            if (object->type == "sphere") {
-                    cout << "NEED TO CALCULATE SPHERE NORMAL VECTOR" << endl;
-            }
-        cout << "skips????" << endl;
-    
-            // iterating through the entire vector, set the maximum light intensity of all of the lights
-            if (vecLights[vecIndex]->intensity > max_intensity) {
-                max_intensity = vecLights[vecIndex]->intensity;
-                cout << "MAX INTENSITY SET: " << max_intensity << endl;
-            }
-            
-            if (scale >= 0) {
-                cout << "SCALE IS GREATER THAN 0: PROCEED" << endl;
-                //overload multiplication
-                Coordinate pixel_color = object->color * scale * max_intensity;
-                
-                //create a new pixel to push back
-                Pixels *newPixel = new Pixels;
-                //CHANGE THIS TO RGB (later)
-                newPixel->coordinate.x = i;
-                newPixel->coordinate.y = j;
-                newPixel->coordinate.z = 0;
-                newPixel->color = pixel_color;
-                pixelsVector.push_back(newPixel);
-                cout << "pushed back into the pixel vector, new size: " << pixelsVector.size() << endl;
-            }
-            else {
-                cout << "scale is not greater than 0...sheeeit" << endl;
-            }
+//        cout << "Ray origin -> " << shadowRay.origin.x << " " << shadowRay.origin.y << " " << shadowRay.origin.z << endl;
+//        cout << "Ray direction -> " << shadowRay.direction.x << " " << shadowRay.direction.y << " " << shadowRay.direction.z << endl;
         
-        
-        
+        //if shadow ray intersects an object
         for (int vecObj = 0; vecObj < vecObjects.size(); vecObj++) {
             
-            cout << "VECOBJECTS FOR LOOP" << endl;
-
+            
+            //if an object is in the way of the light
             if (object != vecObjects.at(vecObj)) {
                 
                 cout << "////////////////////////////////////////" << endl;
@@ -351,24 +347,50 @@ void JSONParser::shadowRayTracer(Coordinate pointOfIntersection, MotherOfObjects
                   newPixel->coordinate.x = i;
                   newPixel->coordinate.y = j;
                   newPixel->coordinate.z = 0;
-                  newPixel->color.x = 0;
-                  newPixel->color.y = 0;
-                  newPixel->color.z = 0;
+                  newPixel->color.r = 0;
+                  newPixel->color.g = 0;
+                  newPixel->color.b = 0;
                   pixelsVector.push_back(newPixel);
 
                   cout << "pushed pixel at coordinates (" << newPixel->coordinate.x << "," << newPixel->coordinate.y << ")" << endl;
-
                   // break;
                 }
             }
-            else {
-                cout << "NO INTERSETCT for shadowRay to light" << endl;
-            }
-        } //END OF FOR LOOP
-
-        cout << "Size of Pixels Array: " << pixelsVector.size() << endl;
-        cout << endl;
-        cout << endl;
+        }
+        
+        if (object->type.compare("sphere")) {
+            cout << "INSIDE SPHERE COMPARE" << endl;
+            Coordinate sphereNormal = pointOfIntersection - object->center;
+            double lam_value = vecObjects[vecIndex]->lambert;
+            double scale_addition = sphereNormal.dotProduct(shadowRay.direction) * lam_value;
+            scale = scale + scale_addition;
+        }
+        
+        // iterating through the entire vector, set the maximum light intensity of all of the lights
+        if (vecLights[vecIndex]->intensity > max_intensity) {
+            max_intensity = vecLights[vecIndex]->intensity;
+            cout << "MAX INTENSITY SET: " << max_intensity << endl;
+        }
+        
+        if (scale > 0) {
+            cout << "THE SCALE IS ->" << scale << endl;
+            Coordinate object_color = object->getColor();
+            Coordinate pixel_color = object_color * scale * max_intensity;
+            Pixels *newPixel = new Pixels;
+            newPixel->coordinate.x = i;
+            newPixel->coordinate.y = j;
+            newPixel->coordinate.z = 0;
+            newPixel->color.r = pixel_color.x;
+            newPixel->color.g = pixel_color.y;
+            newPixel->color.b = pixel_color.z;
+            pixelsVector.push_back(newPixel);
+            
+            cout << "pushed pixel at coordinates (" << newPixel->coordinate.x << "," << newPixel->coordinate.y << ")" << endl;
+            cout << "Size of Pixels Array: " << pixelsVector.size() << endl;
+            cout << endl;
+            cout << endl;
+        }
+        
 
     }
 }

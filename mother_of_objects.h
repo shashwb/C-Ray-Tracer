@@ -11,9 +11,7 @@
 using namespace std;
 
 
- struct Color {
-     int r, g, b;
- };
+
 
 struct Coordinate {
     double x, y, z;
@@ -50,12 +48,32 @@ struct Ray {
     }
 };
 
+struct Color {
+    int r, g, b;
+    
+    Color() {}
+    Color(int r, int g, int b) : r(r), g(g), b(b) {}
+    
+    Color operator * (double value) {
+        int red = static_cast<int>(r * value);
+        int green = static_cast<int>(g * value);
+        int blue = static_cast<int>(b * value);
+        return Color(red, green, blue);
+    }
+    
+    Color operator * (Coordinate &v) {
+        return Color(r * v.x, g * v.y, b * v.z);
+    }
+    
+};
+
 
 class MotherOfObjects
 {
 
 public:
-  double lambert;
+ //
+    double lambert = 1;
   Coordinate center;
   Coordinate color;
   string type;
@@ -68,8 +86,12 @@ public:
     MotherOfObjects();
     virtual void print() = 0;
     virtual bool intersect(Ray ray, double &out) = 0;
-    virtual Coordinate getCenter() = 0;
-
+    Coordinate getColor();
+    void setColor(Color color);
+    Coordinate getCenter();
+    void setCenter(Coordinate center_value);
+    void setRadius(double radius_value);
+    double getRadius();
 };
 
 #endif // MOTHER_OF_OBJECTS_H

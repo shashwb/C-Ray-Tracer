@@ -6,13 +6,13 @@ Sphere::Sphere() : MotherOfObjects()
 
 }
 
-Sphere::Sphere(Coordinate center_value, Coordinate color_value, double lambert_value, double radius_value, string type_value) : MotherOfObjects() {
+Sphere::Sphere(Coordinate center_value, Color color_value, double lambert_value, double radius_value, string type_value) : MotherOfObjects() {
 
     this->center = center_value;
     this->color = color_value;
-    this->lambert = lambert_value;
+    this->lambert_one = lambert_value;
     this->radius = radius_value;
-    type = type_value;
+    this->type = "sphere";
 
 }
 
@@ -61,3 +61,4 @@ bool Sphere::intersect(Ray ray, double &out) {
     return true;
 
 }
+

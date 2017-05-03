@@ -15,15 +15,15 @@ class Sphere : public MotherOfObjects
 public:
 
     // member variables
-    double lambert;
+    double lambert_one;
     Coordinate center;
     double radius;
-    Coordinate color;
+    Color color;
     string type;
 
     // member function
     Sphere();
-    Sphere(Coordinate center_value, Coordinate color_value, double lambert_value, double radius_value, string type);
+    Sphere(Coordinate center_value, Color color_value, double lambert_value, double radius_value, string type);
     void print();
     bool intersect(Ray ray, double &out);
     Coordinate getCenter();

@@ -32,8 +32,8 @@ using namespace std;
 
 struct Pixels {
     Coordinate coordinate;
-//    Color color;
-    Coordinate color;
+    Color color;
+//    Coordinate color;
 };
 
 

@@ -32,24 +32,31 @@ void pngViewer(JSONParser parser) {
      for (int i = 0; i < parser.pixelsVector.size(); i++) {
          QRgb rgb_value;
          
+         parser.pixelsVector[i];
          
-         int rgb_red = static_cast<int>(parser.pixelsVector[i]->color.z);
+         
+         int rgb_red = parser.pixelsVector[i]->color.r;
          
          //these need to be changed to an actual "color" struct!!!!
-         rgb_value = qRgb(static_cast<int>(parser.pixelsVector[i]->color.x), static_cast<int>(parser.pixelsVector[i]->color.y), static_cast<int>(parser.pixelsVector[i]->color.z));
+         rgb_value = qRgb(parser.pixelsVector[i]->color.r, parser.pixelsVector[i]->color.g, parser.pixelsVector[i]->color.b);
          
-         if (static_cast<int>(parser.pixelsVector[i]->color.x) != 0
-             && static_cast<int>(parser.pixelsVector[i]->color.y != 0)
-             && static_cast<int>(parser.pixelsVector[i]->color.z) != 0) {
-             cout << "RGB value of Pixel-> " << static_cast<int>(parser.pixelsVector[i]->color.x) << " " << static_cast<int>(parser.pixelsVector[i]->color.y) << " " << static_cast<int>(parser.pixelsVector[i]->color.z) << endl;
+//         if (static_cast<int>(parser.pixelsVector[i]->color.x) != 0
+//             && static_cast<int>(parser.pixelsVector[i]->color.y != 0)
+//             && static_cast<int>(parser.pixelsVector[i]->color.z) != 0) {
+             cout << "RGB value of Pixel-> " << parser.pixelsVector[i]->color.r << " " << parser.pixelsVector[i]->color.g << " " << parser.pixelsVector[i]->color.b << endl;
              
-             pngImage.setPixel(static_cast<int>(parser.pixelsVector[i]->color.x), static_cast<int>(parser.pixelsVector[i]->color.y), static_cast<int>(parser.pixelsVector[i]->color.z));
-             
+             pngImage.setPixel(parser.pixelsVector[i]->color.r, parser.pixelsVector[i]->color.g, rgb_value);
+//         for (int n = 0; n < width; n++) {
+//             for (int k = 0; k < height; k++) {
+//                 pngImage.setPixel(n, n, rgb_value);
+//             }
+     
+    
              cout << "pixel value set!!!" << endl;
-         }
-         else {
+//         }
+//         else {
 //             cout << "all pixel values are zero...." << endl;
-         }
+//         }
 //         pngImage.setPixel(static_cast<int>(parser.pixelsVector[i]->color.x), static_cast<int>(parser.pixelsVector[i]->color.y), static_cast<int>(parser.pixelsVector[i]->color.z));
      }
      pngImage.save("kendricklamar.png");
