@@ -67,48 +67,31 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
         camera.center.x = camera_centerMap["x"].toDouble();
         camera.center.y = camera_centerMap["y"].toDouble();
         camera.center.z = camera_centerMap["z"].toDouble();
-
         camera.focus = cameraMap["focus"].toInt();
         QVariantMap normalMap = cameraMap["normal"].toMap();
         camera.normal.x = normalMap["x"].toDouble();
         camera.normal.y = normalMap["y"].toDouble();
         camera.normal.z = normalMap["z"].toDouble();
-
         QVariantList resolutionList = cameraMap["resolution"].toList();
         camera.resolution.resolution_one = resolutionList.first().toDouble();
         camera.resolution.resolution_two = resolutionList.at(1).toDouble();
-
         QVariantList sizeList = cameraMap["size"].toList();
         camera.size.size_one = sizeList.first().toDouble();
         camera.size.size_two = sizeList.at(1).toDouble();
-        
-
         QJsonArray jsonLights = jObject["lights"].toArray();
         QVariantMap lightsMap = mainMap["lights"].toMap();
 
-//        cout << endl;
-//        cout << "////// LIGHTS" << endl;
-//        cout << "size of the vecLights before everything: " << vecLights.size() << endl;
         vecLights.clear();
-//        cout << "clearing...." << endl;
-//        cout << "size of vecLights after clearing: " << vecLights.size() << endl;
+
 
         for (QJsonValue lightsValue : jsonLights) {
-		        QJsonObject lightObj = lightsValue.toObject();
-            
+            QJsonObject lightObj = lightsValue.toObject();
             QVariantMap lightVariant = lightObj.toVariantMap();
             QVariantMap lightLocationMap = lightVariant["location"].toMap();
-            
-            
-            
-            //get instensity
             double intensity_value = lightObj["intensity"].toDouble();
             Coordinate location_value(lightLocationMap["x"].toDouble(), lightLocationMap["y"].toDouble(), lightLocationMap["y"].toDouble());
-            
             Lights *newLight = new Lights(location_value, intensity_value);
-
             vecLights.push_back(newLight);
-
             cout << "PUSH BACK A LIGHT, current size of vector: " << vecLights.size() << endl;
             cout << endl;
 	      }
@@ -121,9 +104,6 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
         for (QJsonValue objectsValue : jsonObjects) {
           QJsonObject objectObj = objectsValue.toObject();
           if (objectObj["type"].toString() == "sphere") {
-            cout << endl;
-            cout << "THIS FUCKING OBJECT IS A SPHERE" << endl;
-
 
             QVariantMap objectVariant = objectObj.toVariantMap();
             QVariantMap objectCenter = objectVariant["center"].toMap();
@@ -140,36 +120,25 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             newSphere->setColor(color_value);
             newSphere->setCenter(center_value);
             newSphere->setRadius(radius_value);
-//            newSphere->setRadius(radius_value);
-              
-            cout << "BREAK HERE" << endl;
-            cout << "newSphere->lambert: " << newSphere->lambert_one << endl;
-            cout << "newSphere->radius: " << newSphere->radius << endl;
 
             vecObjects.push_back(newSphere);
             cout << "PUSHED BACK A SPHERE, current size of vector: " << vecObjects.size() << endl;
 
           }
-
           else if (objectObj["type"].toString() == "plane") {
-            cout << endl;
-            cout << "THIS FUCKING OBJECT IS A PLANE" << endl;
-
             QVariantMap objectVariant = objectObj.toVariantMap();
             QVariantMap objectCenter = objectVariant["center"].toMap();
             QVariantMap objectColor = objectVariant["color"].toMap();
             QVariantMap objectNormal = objectVariant["normal"].toMap();
               
-              Coordinate center_value(objectCenter["x"].toDouble(), objectCenter["y"].toDouble(), objectCenter["z"].toDouble());
-              Coordinate color_value(objectColor["r"].toInt(), objectColor["g"].toInt(), objectColor["b"].toInt());
-              Coordinate normal_value(objectNormal["x"].toInt(), objectNormal["y"].toInt(), objectNormal["z"].toInt());
-              double lambert_value = objectObj["lambert"].toDouble();
+            Coordinate center_value(objectCenter["x"].toDouble(), objectCenter["y"].toDouble(), objectCenter["z"].toDouble());
+            Coordinate color_value(objectColor["r"].toInt(), objectColor["g"].toInt(), objectColor["b"].toInt());
+            Coordinate normal_value(objectNormal["x"].toInt(), objectNormal["y"].toInt(), objectNormal["z"].toInt());
+            double lambert_value = objectObj["lambert"].toDouble();
               
-              Plane *newPlane = new Plane(center_value, normal_value, color_value, lambert_value);
+            Plane *newPlane = new Plane(center_value, normal_value, color_value, lambert_value);
 //              newPlane->setColor(color_value);
               newPlane->type = "plane";
-              
-
             vecObjects.push_back(newPlane);
             cout << "PUSHED BACK A PLANE, current size of vector: " << vecObjects.size() << endl;
           }
@@ -178,21 +147,6 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
             return false;
           }
         }
-        cout << endl;
-        cout << "FINAL SIZE OF THE OBJECT VECTOR: " << vecObjects.size() << endl;
-
-//      cout << endl;
-//      cout << "////// CAMERA" << endl;
-//      cout << "Camera->center.x: " << camera.center.x << endl;
-//      cout << "Camera->center.y: " << camera.center.y << endl;
-//      cout << "Camera->center.z: " << camera.center.z << endl;
-//      cout << "Camera->focus: " << camera.focus << endl;
-//      cout << "Camera->normal.x: " << camera.normal.x << endl;
-//      cout << "Camera->normal.y: " << camera.normal.y << endl;
-//      cout << "Camera->normal.z: " << camera.normal.z << endl;
-//      cout << "Camera->size: " << camera.size.size_one << " " << camera.size.size_two << endl;
-//      cout << "Camera->resolution: " << camera.resolution.resolution_one << " " << camera.resolution.resolution_two << endl;
-//      cout << endl;
         return true;
     }
     return false;
@@ -213,21 +167,9 @@ bool JSONParser::Parse(QTextStream &stream, int num) {
 
 void JSONParser::createPrimaryRay() {
 
-    cout << "IN THE PRIMARY RAY FUNCTION" << endl;
-
     int height = camera.size.size_one;
     int width = camera.size.size_two;
-
-    cout << "the height (pixels): " << height << endl;
-    cout << "the width (pixels): " << width << endl;
-
-    Ray finalRay;
-
-    cout << "____SIZE OF OBJECT VECTOR: " << vecObjects.size() << endl;
-    cout << endl;
-    cout << endl;
-
-   MotherOfObjects *tempObject;
+    MotherOfObjects *tempObject;
 
     for (int i = 0; i < height; i++) {
       for (int j = 0; j < width; j++) {
@@ -239,7 +181,7 @@ void JSONParser::createPrimaryRay() {
 
           tempObject = vecObjects[k];
 
-            if (tempObject->intersect(primaryRay, nearest_t)) {
+            if (vecObjects[k]->intersect(primaryRay, nearest_t)) {
                 
                 if (i == 62 && j == 118) {
                     cout << endl;
@@ -311,7 +253,6 @@ Ray JSONParser::calculatePrimaryRay(int i, int j) {
 
 
 
-//pass in the point of intersection
 void JSONParser::shadowRayTracer(Coordinate pointOfIntersection, MotherOfObjects* object, int i, int j) {
     
     double max_intensity = 0;
@@ -324,16 +265,9 @@ void JSONParser::shadowRayTracer(Coordinate pointOfIntersection, MotherOfObjects
         
         Ray shadowRay(pointOfIntersection, p2_normal);
         double nearest_t;
-
         
-//        cout << "Ray origin -> " << shadowRay.origin.x << " " << shadowRay.origin.y << " " << shadowRay.origin.z << endl;
-//        cout << "Ray direction -> " << shadowRay.direction.x << " " << shadowRay.direction.y << " " << shadowRay.direction.z << endl;
-        
-        //if shadow ray intersects an object
         for (int vecObj = 0; vecObj < vecObjects.size(); vecObj++) {
             
-            
-            //if an object is in the way of the light
             if (object != vecObjects.at(vecObj)) {
                 
                 cout << "////////////////////////////////////////" << endl;
@@ -353,7 +287,6 @@ void JSONParser::shadowRayTracer(Coordinate pointOfIntersection, MotherOfObjects
                   pixelsVector.push_back(newPixel);
 
                   cout << "pushed pixel at coordinates (" << newPixel->coordinate.x << "," << newPixel->coordinate.y << ")" << endl;
-                  // break;
                 }
             }
         }

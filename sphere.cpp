@@ -50,7 +50,7 @@ bool Sphere::intersect(Ray ray, double &out) {
         std::swap(out1, out2);
     }
     if (out1 < 0) {
-        out1 = out2;    //if out1 is negative use the other one (out2)
+        out1 = out2;
         if (out1 < 0) {
             return false;
         }

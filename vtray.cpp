@@ -22,47 +22,25 @@ using namespace std;
 
 void pngViewer(JSONParser parser) {
 
-     //image init
      int width = parser.camera.size.size_one;
      int height = parser.camera.size.size_two;
-
      QImage pngImage(width, height, QImage::Format_RGB32);
 
      //go through pixels list
      for (int i = 0; i < parser.pixelsVector.size(); i++) {
          QRgb rgb_value;
-         
-         parser.pixelsVector[i];
-         
-         
-         int rgb_red = parser.pixelsVector[i]->color.r;
-         
-         //these need to be changed to an actual "color" struct!!!!
          rgb_value = qRgb(parser.pixelsVector[i]->color.r, parser.pixelsVector[i]->color.g, parser.pixelsVector[i]->color.b);
+         cout << "RGB value of Pixel-> " << parser.pixelsVector[i]->color.r << " " << parser.pixelsVector[i]->color.g << " " << parser.pixelsVector[i]->color.b << endl;
          
-//         if (static_cast<int>(parser.pixelsVector[i]->color.x) != 0
-//             && static_cast<int>(parser.pixelsVector[i]->color.y != 0)
-//             && static_cast<int>(parser.pixelsVector[i]->color.z) != 0) {
-             cout << "RGB value of Pixel-> " << parser.pixelsVector[i]->color.r << " " << parser.pixelsVector[i]->color.g << " " << parser.pixelsVector[i]->color.b << endl;
-             
-             pngImage.setPixel(parser.pixelsVector[i]->color.r, parser.pixelsVector[i]->color.g, rgb_value);
-//         for (int n = 0; n < width; n++) {
-//             for (int k = 0; k < height; k++) {
-//                 pngImage.setPixel(n, n, rgb_value);
-//             }
-     
-    
-             cout << "pixel value set!!!" << endl;
-//         }
-//         else {
-//             cout << "all pixel values are zero...." << endl;
-//         }
-//         pngImage.setPixel(static_cast<int>(parser.pixelsVector[i]->color.x), static_cast<int>(parser.pixelsVector[i]->color.y), static_cast<int>(parser.pixelsVector[i]->color.z));
+         pngImage.setPixel(parser.pixelsVector[i]->coordinate.x, parser.pixelsVector[i]->coordinate.y, rgb_value);
+         
+         cout << "pixel value set!!!" << endl;
+         
      }
-     pngImage.save("kendricklamar.png");
     
+     pngImage.save("kendricklamar.png");
     cout << endl;
-    cout << "Created a file output!" << endl;
+    cout << "FILE OUTPUT!" << endl;
 }
 
 

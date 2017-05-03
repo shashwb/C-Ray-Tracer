@@ -33,7 +33,6 @@ using namespace std;
 struct Pixels {
     Coordinate coordinate;
     Color color;
-//    Coordinate color;
 };
 
 
@@ -41,20 +40,10 @@ class JSONParser
 {
 public:
 
-    Sphere sphere;  // we don't need a premade one
-    Lights light;   //we don't need a premade one, made once we read in the json
-    Plane plane;
     Camera camera;
 
     vector<MotherOfObjects*> vecObjects;  //vector of objects!!
     vector<Lights*> vecLights;
-
-    Ray primaryRay;
-
-    //CAN PROBABLY GET RID OF ALL OF THIS SHIT
-    vector<Sphere> *vecSphere;
-    vector<Plane> *vecPlane;
-
     vector<Pixels*> pixelsVector;
 
     JSONParser();

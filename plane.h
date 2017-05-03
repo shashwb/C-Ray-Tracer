@@ -24,7 +24,7 @@ public:
     Coordinate normal;
     Coordinate color;
     double lambert;
-   string type;
+    string type;
 
 private:
 

@@ -30,11 +30,8 @@ public:
     string type;
 
     Camera();
-
     Camera(Coordinate center_value, int focus_value, Coordinate normal_value, Resolution res_value, Size size_value);
-    
     Camera(Coordinate center_value, int focus_value, Coordinate normal_value);
-
     void print();
 
 private:

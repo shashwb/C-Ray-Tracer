@@ -1,8 +1,6 @@
 #ifndef MOTHER_OF_OBJECTS_H
 #define MOTHER_OF_OBJECTS_H
 
-// #include "json_parser.h"
-
 #include <string>
 #include <iostream>
 #include <QDebug>
@@ -74,14 +72,11 @@ class MotherOfObjects
 public:
  //
     double lambert = 1;
-  Coordinate center;
-  Coordinate color;
-  string type;
-  Coordinate normal;
-  double radius;
-
-//  Ray ray;
-//  Coordinate coordinate;
+    Coordinate center;
+    Coordinate color;
+    string type;
+    Coordinate normal;
+    double radius;
 
     MotherOfObjects();
     virtual void print() = 0;
