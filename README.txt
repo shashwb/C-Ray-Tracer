@@ -1,7 +1,5 @@
 Seth Balodi
-ECE 3574 Applied Software Design
-Design Document
-Project 3 : Ray Tracer
+C++ Ray Tracer Algorithm
 
 For this assignment, we had to implement modules that would allow for parsing
 of a JSON file into data structures which would then be used to set up a Ray
