@@ -1,6 +1,17 @@
 Seth Balodi
 C++ Ray Tracer Algorithm
 
+
+![My image](https://user-images.githubusercontent.com/7054302/27884598-e1fa3128-61a2-11e7-86bf-3d5af0cd1662.png)
+![My image](https://user-images.githubusercontent.com/7054302/27884601-e35866c0-61a2-11e7-9396-1345740649c1.png)
+![My image](https://user-images.githubusercontent.com/7054302/27884604-e5a989ae-61a2-11e7-8f0c-5dd03a603f47.png)
+![My image](https://user-images.githubusercontent.com/7054302/27884608-e7e666b0-61a2-11e7-9b30-7b6c81e49626.png)
+![My image](https://user-images.githubusercontent.com/7054302/27884611-e98e49ec-61a2-11e7-9b02-8caf19c5a182.png)
+![My image](https://user-images.githubusercontent.com/7054302/27884620-ebb072e0-61a2-11e7-91c2-4e4809c0be63.png)
+![My image](https://user-images.githubusercontent.com/7054302/27884625-ee69c66c-61a2-11e7-8f13-37dcc9e1aa36.png)
+
+
+
 For this assignment, we had to implement modules that would allow for parsing
 of a JSON file into data structures which would then be used to set up a Ray
 Tracing algorithm which would eventually use the QT framework to output a PNG file
